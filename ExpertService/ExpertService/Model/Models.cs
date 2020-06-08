@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -93,7 +94,8 @@ namespace ExpertService.Model
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public TimeSpan RestTime { get; set; }
-        public TimeSpan TotalTime { get => EndTime.Subtract(StartTime).Subtract(RestTime); }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public TimeSpan TotalTime { get => EndTime.Subtract(StartTime).Subtract(RestTime); private set { } }
         public CalismaDonemi CalismaDonemi { get; set; }
     }
     public class Odenenler
