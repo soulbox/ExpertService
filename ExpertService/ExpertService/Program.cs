@@ -16,7 +16,8 @@ namespace ExpertService
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            var ass = Model.DbManager.DB.Dosya.ToList();
+            Application.Run(new Main());
         }
     }
 }

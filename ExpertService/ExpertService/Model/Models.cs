@@ -107,6 +107,7 @@ namespace ExpertService.Model
     }
     public class Talepler
     {
+        [Key ]
         public int TalepId { get; set; }
         public int DosyaId { get; set; }
         public Tanımlamalar.TalepTipi TalepTipi { get; set; }
