@@ -94,8 +94,12 @@ namespace ExpertService.Model
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public TimeSpan RestTime { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public TimeSpan TotalTime { get => EndTime.Subtract(StartTime).Subtract(RestTime); private set { } }
+        //[DatabaseGenerated(DatabaseGeneratedOption.Computed )]
+        //public TimeSpan? TotalTime { get => EndTime.Subtract(StartTime).Subtract(RestTime); private set { } }
+        public TimeSpan NetTime { get => WorkTime.Subtract(RestTime ); }
+        public TimeSpan WorkTime { get => EndTime.Subtract(StartTime); }
+
+
         public CalismaDonemi CalismaDonemi { get; set; }
     }
     public class Odenenler
