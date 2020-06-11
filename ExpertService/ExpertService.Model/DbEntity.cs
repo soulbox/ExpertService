@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ExpertService.Model.Tables;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
@@ -10,15 +12,23 @@ namespace ExpertService.Model
 {
     public class DbEntity : DbContext
     {
-        public DbEntity() :
-            base("name=ExperDBEntities")
+        public DbEntity()
+            : base("name=ExperDBEntities")
         {
+           new DbMigrationsConfiguration<DbEntity>().AutomaticMigrationsEnabled=true ;
+
+            //Database.Connection.ConnectionString="Data Source=213.142.144.186;Initial Catalog=ExpertDb;User Id=ExpertDb;Password=Power2020!;Integrated Security=true";
             Database.SetInitializer<DbEntity>(new DropCreateDatabaseIfModelChanges<DbEntity>());
+            
         }
+        public DbSet<UserTable> UserTables { get; set; }
         public DbSet<Dosya> Dosya { get; set; }
         public DbSet<CalismaDonemi > CalismaDonemi { get; set; }
         public DbSet<ZamanCizelgesi> ZamanCizelgesi { get; set; }
-        public DbSet<Odenenler> Odenenler { get; set; }
+        public DbSet<UcretBilgileri > UcretBilgileri { get; set; }
+        public DbSet<Talepler > Talepler { get; set; }
+
+
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
@@ -31,6 +41,7 @@ namespace ExpertService.Model
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             base.OnModelCreating(modelBuilder);
         }
-       
+
+
     }
 }

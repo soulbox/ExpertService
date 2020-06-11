@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//using ExpertServis.Model;
+using ExpertService.Model;
+using System;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExpertService
+namespace ExpertServis.WindowForm
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ExpertService
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var ass = Model.DbManager.DB.Dosya.ToList();
+            var gg = DbManager.DB.Dosya.Count();
             Application.Run(new Main());
         }
     }

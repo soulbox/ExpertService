@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExpertService
+namespace ExpertServis.WindowForm
 {
-    public partial class Main : Form
+    public partial class Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         public Main()
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        }
     }
-}
+
