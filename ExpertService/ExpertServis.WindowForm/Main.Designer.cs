@@ -36,20 +36,28 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.ElementDosyaParent = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ElementDosyaChild = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.ElementParentÇalışmaDönemi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ElementCildCalismaDonemi = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ElementCalismaZamanı = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator2 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.ElementParentTalepler = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ElementChildTalepler = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator3 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.ElementParentUcretBilgileri = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.ElementChildUcretBilgileri = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator4 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             this.fluentDesignFormContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolbarFormManager1
@@ -66,15 +74,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 31);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(654, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 428);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 537);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(654, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(858, 0);
             // 
             // barDockControlLeft
             // 
@@ -82,15 +90,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 31);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 397);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 506);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(654, 31);
+            this.barDockControlRight.Location = new System.Drawing.Point(858, 31);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 397);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 506);
             // 
             // fluentDesignFormContainer1
             // 
@@ -98,108 +106,174 @@
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(245, 31);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(409, 397);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(613, 506);
             this.fluentDesignFormContainer1.TabIndex = 1;
-            // 
-            // accordionControl1
-            // 
-            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement1,
-            this.accordionControlElement5,
-            this.accordionControlElement3,
-            this.accordionControlElement4});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
-            this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(245, 397);
-            this.accordionControl1.TabIndex = 2;
-            // 
-            // fluentDesignFormControl1
-            // 
-            this.fluentDesignFormControl1.FluentDesignForm = this;
-            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(654, 31);
-            this.fluentDesignFormControl1.TabIndex = 3;
-            this.fluentDesignFormControl1.TabStop = false;
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement2});
-            this.accordionControlElement1.Expanded = true;
-            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Dosyalar";
-            //this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
-            // 
-            // accordionControlElement2
-            // 
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement2.Text = "Element2";
-            // 
-            // accordionControlElement3
-            // 
-            this.accordionControlElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement3.ImageOptions.Image")));
-            this.accordionControlElement3.Name = "accordionControlElement3";
-            this.accordionControlElement3.Text = "Talepler";
-            // 
-            // accordionControlElement4
-            // 
-            this.accordionControlElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement4.ImageOptions.Image")));
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Text = "Odenenler";
-            // 
-            // accordionControlElement5
-            // 
-            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement6});
-            this.accordionControlElement5.Expanded = true;
-            this.accordionControlElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement5.ImageOptions.Image")));
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Text = "Çalışma Dönemi";
-            //this.accordionControlElement5.Click += new System.EventHandler(this.accordionControlElement5_Click);
-            // 
-            // accordionControlElement6
-            // 
-            this.accordionControlElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement6.ImageOptions.Image")));
-            this.accordionControlElement6.Name = "accordionControlElement6";
-            this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "Zaman Çizelgesi";
             // 
             // panelControl1
             // 
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(409, 397);
+            this.panelControl1.Size = new System.Drawing.Size(613, 506);
             this.panelControl1.TabIndex = 0;
             // 
-            // Login
+            // accordionControl1
+            // 
+            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ElementDosyaParent,
+            this.accordionControlSeparator1,
+            this.ElementParentÇalışmaDönemi,
+            this.accordionControlSeparator2,
+            this.ElementParentTalepler,
+            this.accordionControlSeparator3,
+            this.ElementParentUcretBilgileri,
+            this.accordionControlSeparator4});
+            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
+            this.accordionControl1.Size = new System.Drawing.Size(245, 506);
+            this.accordionControl1.TabIndex = 2;
+            // 
+            // ElementDosyaParent
+            // 
+            this.ElementDosyaParent.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ElementDosyaChild});
+            this.ElementDosyaParent.Expanded = true;
+            this.ElementDosyaParent.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.bofileattachment_32x32;
+            this.ElementDosyaParent.Name = "ElementDosyaParent";
+            this.ElementDosyaParent.Text = "Dosyalar";
+            // 
+            // ElementDosyaChild
+            // 
+            this.ElementDosyaChild.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.bofileattachment_16x16;
+            this.ElementDosyaChild.Name = "ElementDosyaChild";
+            this.ElementDosyaChild.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ElementDosyaChild.Text = "Dosya1";
+            // 
+            // accordionControlSeparator1
+            // 
+            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            // 
+            // ElementParentÇalışmaDönemi
+            // 
+            this.ElementParentÇalışmaDönemi.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ElementCildCalismaDonemi});
+            this.ElementParentÇalışmaDönemi.Expanded = true;
+            this.ElementParentÇalışmaDönemi.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons, DevExpress.XtraBars.Navigation.HeaderElementAlignment.Left),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl)});
+            this.ElementParentÇalışmaDönemi.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.adateoccurring_32x32;
+            this.ElementParentÇalışmaDönemi.Name = "ElementParentÇalışmaDönemi";
+            this.ElementParentÇalışmaDönemi.Text = "Çalışma Dönemi";
+            // 
+            // ElementCildCalismaDonemi
+            // 
+            this.ElementCildCalismaDonemi.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ElementCalismaZamanı});
+            this.ElementCildCalismaDonemi.Expanded = true;
+            this.ElementCildCalismaDonemi.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.adateoccurring_16x16;
+            this.ElementCildCalismaDonemi.Name = "ElementCildCalismaDonemi";
+            this.ElementCildCalismaDonemi.Text = "Dönem1";
+            // 
+            // ElementCalismaZamanı
+            // 
+            this.ElementCalismaZamanı.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.showworktimeonly_16x16;
+            this.ElementCalismaZamanı.Name = "ElementCalismaZamanı";
+            this.ElementCalismaZamanı.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ElementCalismaZamanı.Text = "Pazartesi";
+            this.ElementCalismaZamanı.Click += new System.EventHandler(this.accordionControlElement6_Click);
+            // 
+            // accordionControlSeparator2
+            // 
+            this.accordionControlSeparator2.Name = "accordionControlSeparator2";
+            // 
+            // ElementParentTalepler
+            // 
+            this.ElementParentTalepler.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ElementChildTalepler});
+            this.ElementParentTalepler.Expanded = true;
+            this.ElementParentTalepler.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.financial_32x32;
+            this.ElementParentTalepler.Name = "ElementParentTalepler";
+            this.ElementParentTalepler.Text = "Talepler";
+            // 
+            // ElementChildTalepler
+            // 
+            this.ElementChildTalepler.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.financial_16x16;
+            this.ElementChildTalepler.Name = "ElementChildTalepler";
+            this.ElementChildTalepler.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ElementChildTalepler.Text = "Talep1";
+            // 
+            // accordionControlSeparator3
+            // 
+            this.accordionControlSeparator3.Name = "accordionControlSeparator3";
+            // 
+            // ElementParentUcretBilgileri
+            // 
+            this.ElementParentUcretBilgileri.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.ElementChildUcretBilgileri});
+            this.ElementParentUcretBilgileri.Expanded = true;
+            this.ElementParentUcretBilgileri.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.salesperiodmonth_32x32;
+            this.ElementParentUcretBilgileri.Name = "ElementParentUcretBilgileri";
+            this.ElementParentUcretBilgileri.Text = "Odenenler";
+            // 
+            // ElementChildUcretBilgileri
+            // 
+            this.ElementChildUcretBilgileri.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.salesanalysis_16x16;
+            this.ElementChildUcretBilgileri.Name = "ElementChildUcretBilgileri";
+            this.ElementChildUcretBilgileri.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ElementChildUcretBilgileri.Text = "Ücret Bilgileri1";
+            // 
+            // accordionControlSeparator4
+            // 
+            this.accordionControlSeparator4.Name = "accordionControlSeparator4";
+            // 
+            // fluentDesignFormControl1
+            // 
+            this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(858, 31);
+            this.fluentDesignFormControl1.TabIndex = 3;
+            this.fluentDesignFormControl1.TabStop = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(120, 84);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "simpleButton1";
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 428);
+            this.ClientSize = new System.Drawing.Size(858, 537);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
-            this.Name = "Login";
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Main.IconOptions.LargeImage")));
+            this.IconOptions.ShowIcon = false;
+            this.Name = "Main";
             this.NavigationControl = this.accordionControl1;
             this.Text = "Expert Service";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
             this.fluentDesignFormContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,13 +288,21 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementDosyaParent;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementParentTalepler;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementParentUcretBilgileri;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementParentÇalışmaDönemi;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator2;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator3;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator4;
+        public DevExpress.XtraBars.Navigation.AccordionControlElement ElementCalismaZamanı;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementCildCalismaDonemi;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementDosyaChild;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementChildTalepler;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement ElementChildUcretBilgileri;
     }
 }
 

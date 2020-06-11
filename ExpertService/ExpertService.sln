@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertServis.WindowForm", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertService.Model", "ExpertService.Model\ExpertService.Model.csproj", "{1C623014-D40F-4885-9A75-5FCCD5FDEFC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClassTemplate", "SimpleClassTemplate\SimpleClassTemplate.csproj", "{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,14 @@ Global
 		{1C623014-D40F-4885-9A75-5FCCD5FDEFC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C623014-D40F-4885-9A75-5FCCD5FDEFC0}.Release|x86.ActiveCfg = Release|Any CPU
 		{1C623014-D40F-4885-9A75-5FCCD5FDEFC0}.Release|x86.Build.0 = Release|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Debug|x86.Build.0 = Debug|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Release|x86.ActiveCfg = Release|Any CPU
+		{4BACF57D-FF8D-4454-96A4-F3CAEA14ED40}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
