@@ -118,37 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bofileattachment_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bofileattachment_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="showworktimeonly_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\showworktimeonly_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="financial_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\financial_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="salesperiodmonth_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\salesperiodmonth_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="date&amp;time" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\date&amp;time.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="financial_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\financial_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="adateoccurring_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adateoccurring_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shortdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shortdate.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="adateoccurring_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adateoccurring_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bofileattachment_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bofileattachment_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="financial_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\financial_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contact_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contact_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="adateoccurring_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adateoccurring_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="date&amp;time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\date&amp;time.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="showtestreport_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\showtestreport_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shortdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shortdate.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="salesperiodmonth_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salesperiodmonth_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="showworktimeonly_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\showworktimeonly_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="adateoccurring_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adateoccurring_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bofileattachment_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bofileattachment_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="salesanalysis_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salesanalysis_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apply_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apply_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -83,6 +83,16 @@ namespace ExpertServis.WindowForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap apply_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("apply_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bofileattachment_16x16 {
             get {
                 object obj = ResourceManager.GetObject("bofileattachment_16x16", resourceCulture);
@@ -96,6 +106,16 @@ namespace ExpertServis.WindowForm.Properties {
         internal static System.Drawing.Bitmap bofileattachment_32x32 {
             get {
                 object obj = ResourceManager.GetObject("bofileattachment_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contact_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("contact_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -157,6 +177,16 @@ namespace ExpertServis.WindowForm.Properties {
             get {
                 object obj = ResourceManager.GetObject("shortdate", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap showtestreport_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("showtestreport_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

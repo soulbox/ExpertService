@@ -12,7 +12,7 @@ namespace ExpertService.Model.Tables
         [Key]
         public int UcretId { get; set; }
         public int DosyaId { get; set; }
-        public int Açıklama { get; set; }
+        public Tanımlamalar.ÜcretTipi  Açıklama { get; set; }
         public decimal Tutar { get; set; }
         public Dosya Dosya { get; set; }
     }

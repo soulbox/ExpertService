@@ -12,7 +12,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = true ;
             AutomaticMigrationDataLossAllowed = true;
             ContextKey = "ExpertService.Model.DbEntity";
             //Seed(DbManager.DB);
@@ -45,12 +45,90 @@
                     UserId = 1,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 01, 31),
-                    KayıtTarihi = DateTime.Now,
+                    KayıtTarihi = new DateTime(2020, 6, 12),
                     Açıklama = "DENEME",
                     DosyaNo = "GLF20200005",
                     Soyadı = "Aygün",
+                    ZamanAsimi = false
+                },
+                new Dosya()
+                {
+                    DosyaId = 2,
+                    UserId = 1,
+                    AnaDosyaID = 1,
+                    Adı = "Kadir",
+                    DavaTarihi = new DateTime(2019, 02, 28),
+                    KayıtTarihi = new DateTime(2020, 6, 12),
+                    Açıklama = "DENEME",
+                    DosyaNo = "GLF20200006",
+                    Soyadı = "Aygün",
                     ZamanAsimi = false,
-                });
+                },
+                new Dosya()
+                {
+                    DosyaId = 3,
+                    UserId = 1,
+                    Adı = "Kadir",
+                    DavaTarihi = new DateTime(2019, 02, 28),
+                    KayıtTarihi = new DateTime(2020, 6, 12),
+                    Açıklama = "DENEME",
+                    DosyaNo = "GLF20200006",
+                    Soyadı = "Aygün",
+                    ZamanAsimi = false,
+                }, 
+                new Dosya()
+                {
+                    DosyaId = 4,
+                    UserId = 1,
+                    AnaDosyaID = 2,
+                    Adı = "Kadir",
+                    DavaTarihi = new DateTime(2019, 02, 28),
+                    KayıtTarihi = new DateTime(2020, 6, 12),
+                    Açıklama = "DENEME",
+                    DosyaNo = "GLF20200006",
+                    Soyadı = "Aygün",
+                    ZamanAsimi = false,
+                }, 
+                new Dosya()
+                {
+                    DosyaId = 5,
+                    UserId = 1,
+                    AnaDosyaID = 2,
+                    Adı = "Kadir",
+                    DavaTarihi = new DateTime(2019, 02, 28),
+                    KayıtTarihi = new DateTime(2020, 6, 12),
+                    Açıklama = "DENEME",
+                    DosyaNo = "GLF20200006",
+                    Soyadı = "Aygün",
+                    ZamanAsimi = false,
+                },
+                new Dosya()
+                {
+                    DosyaId = 6,
+                    UserId = 1,
+                    AnaDosyaID = 4,
+                    Adı = "Kadir",
+                    DavaTarihi = new DateTime(2019, 02, 28),
+                    KayıtTarihi = new DateTime(2020, 6, 12),
+                    Açıklama = "DENEME",
+                    DosyaNo = "GLF20200006",
+                    Soyadı = "Aygün",
+                    ZamanAsimi = false,
+                },
+                new Dosya()
+                {
+                    DosyaId = 7,
+                    UserId = 1,
+                    AnaDosyaID = 4,
+                    Adı = "Kadir",
+                    DavaTarihi = new DateTime(2019, 02, 28),
+                    KayıtTarihi = new DateTime(2020, 6, 12),
+                    Açıklama = "DENEME",
+                    DosyaNo = "GLF20200006",
+                    Soyadı = "Aygün",
+                    ZamanAsimi = false,
+                }
+                );
             context.CalismaDonemi.AddOrUpdate(x => x.DonemId
             , new CalismaDonemi()
             {
@@ -121,6 +199,19 @@
 
                         });
                     }
+                    else if (j == 7)
+                    {
+                        liste.Add(new ZamanCizelgesi()
+                        {
+                            ZamanId = index,
+                            DonemId = i,
+                            Gün = (Model.Tables.Tanımlamalar.Günler)j,
+                            StartTime = new TimeSpan(0, 0, 0),
+                            EndTime = new TimeSpan(0, 0, 0),
+                            RestTime = new TimeSpan(0, 0, 0),
+
+                        });
+                    }
                     else
                     {
                         liste.Add(new ZamanCizelgesi()
@@ -147,12 +238,22 @@
                 taleps.Add(new Talepler()
                 {
                     DosyaId = 1,
-                    TalepId=1,
+                    TalepId = 1,
                     TalepTipi = item,
-                    Hesapla = false,                    
+                    Hesapla = false,
                 });
             }
-            context.Talepler.AddOrUpdate(x=>x.TalepId, taleps.ToArray());
+            context.Talepler.AddOrUpdate(x => x.TalepId, taleps.ToArray());
+
+            context.UcretBilgileri.AddOrUpdate(x => x.UcretId,
+                new UcretBilgileri()
+                {
+                    DosyaId = 1,
+                    UcretId = 1,
+                    Açıklama = Tanımlamalar.ÜcretTipi.ÇıplakBrüt,
+                    Tutar = 7000,
+
+                });
 
         }
     }

@@ -16,7 +16,7 @@ namespace ExpertService.Model.Tables
             Yol,
             Yemek
         }
-        public static Dictionary<TalepTipi, string> TalepKalemleri { get; set; } = new Dictionary<TalepTipi, string>()
+         static Dictionary<TalepTipi, string> TalepKalemleri { get; set; } = new Dictionary<TalepTipi, string>()
         {
            { TalepTipi.KıdemTazminatı ,"Kıdem Tazminatı Alacağı" },
            { TalepTipi.ihbarTazminatı  ,"İhbar Tazminatı Alacağı"},
@@ -29,6 +29,7 @@ namespace ExpertService.Model.Tables
            { TalepTipi.işeBaşlatmamaTaz , "İşe Başlatmama Taz."},
            { TalepTipi.BoştaGeçenSüre  , "Boşta Geçen Süre Üc."}
         };
+        public static string GetTalepKalemleri(TalepTipi tip) => TalepKalemleri.FirstOrDefault(x => x.Key == tip).Value;
         public enum TalepTipi
         {
             KıdemTazminatı,
