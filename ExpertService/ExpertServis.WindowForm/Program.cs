@@ -25,7 +25,7 @@ namespace ExpertServis.WindowForm
             var user = DbManager.DB.UserTables
                 //.Include(x => x.Dosyalar)
                 //.Include(x => x.Dosyalar)
-                .Where(x)
+                //.Where(x)
                 .Include(x => x.Dosyalar.Select(a => a.CalismaDonemis))
                 .Include(x => x.Dosyalar.Select(a => a.UcretBilgileris))
                 .Include(x => x.Dosyalar.Select(a => a.CalismaDonemis.Select(c => c.ZamanCizelgesis)))
