@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExpertService.Model.Tables
+namespace ExpertService.Model
 {
-    public class UserTable
+    public class UserTable : BaseProp
     {
         [Key]
         public int UserId { get; set; }
@@ -21,7 +21,6 @@ namespace ExpertService.Model.Tables
         public string Surname { get; set; }
         public string Adres { get; set; }
         public string Tel { get; set; }
-        public DateTime KayıtTarihi { get; set; }
 
         public ICollection<Dosya> Dosyalar { get; set; }
 

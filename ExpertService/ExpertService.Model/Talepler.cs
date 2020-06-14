@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExpertService.Model.Tables
+namespace ExpertService.Model
 {
-    public class Talepler
+    public class Talepler : BaseProp
     {
         [Key]
         public int TalepId { get; set; }

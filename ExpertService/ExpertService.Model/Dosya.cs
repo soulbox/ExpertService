@@ -6,18 +6,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExpertService.Model.Tables
+namespace ExpertService.Model
 {
-    public class Dosya
+    public class Dosya : BaseProp
     {
+        public Dosya()
+        {
+            CalismaDonemis = new List<CalismaDonemi>();
+            UcretBilgileris = new List<UcretBilgileri>();
+            Taleplers = new List<Talepler>();
+            EkDosya = new List<Dosya>();
+            AnaDosya = new Dosya();
+        }
         [Key]
         public int DosyaId { get; set; }
+
+        public Int64 TCNO { get; set; }
         public string Adı { get; set; }
         public string Soyadı { get; set; }
         public string DosyaNo { get; set; }
         public string Açıklama { get; set; }
         public DateTime DavaTarihi { get; set; }
-        public DateTime KayıtTarihi { get; set; }
         public Boolean ZamanAsimi { get; set; }
         public ICollection<CalismaDonemi> CalismaDonemis { get; set; }
         public ICollection<UcretBilgileri> UcretBilgileris { get; set; }
@@ -27,7 +36,7 @@ namespace ExpertService.Model.Tables
         //Ek Dosyalar  
         //[ForeignKey("DosyaId")]
         public int? AnaDosyaID { get; set; }
-        [ForeignKey("AnaDosyaID")]
+        //[ForeignKey("AnaDosyaID")]
         public virtual ICollection<Dosya> EkDosya { get; set; }
 
         public virtual Dosya AnaDosya { get; set; }

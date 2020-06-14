@@ -1,6 +1,6 @@
-﻿namespace ExpertService.Model.Migrations
+﻿namespace ExpertService.DAL.Migrations
 {
-    using ExpertService.Model.Tables;
+    using ExpertService.Model;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -8,7 +8,7 @@
     using System.Linq;
     using System.Security.Cryptography.X509Certificates;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ExpertService.Model.DbEntity>
+    internal sealed class Configuration : DbMigrationsConfiguration<DbEntity>
     {
         public Configuration()
         {
@@ -19,7 +19,7 @@
 
         }
 
-        protected override void Seed(ExpertService.Model.DbEntity context)
+        protected override void Seed(DbEntity context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -36,7 +36,6 @@
                     Name = "admin",
                     Surname = "admin",
                     Tel = "admin",
-                    KayıtTarihi = new DateTime(2020, 06, 11)
                 });
             context.Dosya.AddOrUpdate(x => x.DosyaId,
                 new Dosya()
@@ -44,12 +43,12 @@
                     DosyaId = 1,
                     UserId = 1,
                     Adı = "Kadir",
-                    DavaTarihi = new DateTime(2019, 01, 31),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
-                    DosyaNo = "GLF20200005",
-                    Soyadı = "Aygün",
-                    ZamanAsimi = false
+                    DavaTarihi = new DateTime(2019, 01, 31),                   
+                    Açıklama = "DENEME1",
+                    DosyaNo = "GLF20200001",
+                    Soyadı = "Aygün1",
+                    ZamanAsimi = false,
+                    TCNO=0
                 },
                 new Dosya()
                 {
@@ -57,24 +56,27 @@
                     UserId = 1,
                     AnaDosyaID = 1,
                     Adı = "Kadir",
-                    DavaTarihi = new DateTime(2019, 02, 28),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
-                    DosyaNo = "GLF20200006",
-                    Soyadı = "Aygün",
+                    DavaTarihi = new DateTime(2019, 02, 28),                    
+                    Açıklama = "DENEME2",
+                    DosyaNo = "GLF20200002",
+                    Soyadı = "Aygün2",
                     ZamanAsimi = false,
+                    TCNO = 0
+
                 },
                 new Dosya()
                 {
                     DosyaId = 3,
                     UserId = 1,
+                    AnaDosyaID = 1,
                     Adı = "Kadir",
-                    DavaTarihi = new DateTime(2019, 02, 28),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
-                    DosyaNo = "GLF20200006",
-                    Soyadı = "Aygün",
+                    DavaTarihi = new DateTime(2019, 02, 28),                    
+                    Açıklama = "DENEME3",
+                    DosyaNo = "GLF20200003",
+                    Soyadı = "Aygün3",
                     ZamanAsimi = false,
+                    TCNO = 0
+
                 }, 
                 new Dosya()
                 {
@@ -83,11 +85,13 @@
                     AnaDosyaID = 2,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
-                    DosyaNo = "GLF20200006",
-                    Soyadı = "Aygün",
+                    
+                    Açıklama = "DENEME4",
+                    DosyaNo = "GLF20200004",
+                    Soyadı = "Aygün4",
                     ZamanAsimi = false,
+                    TCNO = 0
+
                 }, 
                 new Dosya()
                 {
@@ -96,37 +100,41 @@
                     AnaDosyaID = 2,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
-                    DosyaNo = "GLF20200006",
-                    Soyadı = "Aygün",
+                    
+                    Açıklama = "DENEME5",
+                    DosyaNo = "GLF20200005",
+                    Soyadı = "Aygün5",
                     ZamanAsimi = false,
+                    TCNO = 0
+
                 },
                 new Dosya()
                 {
                     DosyaId = 6,
                     UserId = 1,
-                    AnaDosyaID = 4,
+                    //AnaDosyaID = 4,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
+                    
+                    Açıklama = "DENEME6",
                     DosyaNo = "GLF20200006",
-                    Soyadı = "Aygün",
+                    Soyadı = "Aygün6",
                     ZamanAsimi = false,
                 },
                 new Dosya()
                 {
                     DosyaId = 7,
                     UserId = 1,
-                    AnaDosyaID = 4,
+                    AnaDosyaID = 5,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    KayıtTarihi = new DateTime(2020, 6, 12),
-                    Açıklama = "DENEME",
-                    DosyaNo = "GLF20200006",
-                    Soyadı = "Aygün",
+                    
+                    Açıklama = "DENEME7",
+                    DosyaNo = "GLF20200007",
+                    Soyadı = "Aygün7",
                     ZamanAsimi = false,
+                    TCNO = 0
+
                 }
                 );
             context.CalismaDonemi.AddOrUpdate(x => x.DonemId
@@ -192,7 +200,7 @@
                         {
                             ZamanId = index,
                             DonemId = i,
-                            Gün = (Model.Tables.Tanımlamalar.Günler)j,
+                            Gün = (Tanımlamalar.Günler)j,
                             StartTime = new TimeSpan(9, 0, 0),
                             EndTime = new TimeSpan(16, 0, 0),
                             RestTime = new TimeSpan(1, 0, 0),
@@ -205,7 +213,7 @@
                         {
                             ZamanId = index,
                             DonemId = i,
-                            Gün = (Model.Tables.Tanımlamalar.Günler)j,
+                            Gün = (Tanımlamalar.Günler)j,
                             StartTime = new TimeSpan(0, 0, 0),
                             EndTime = new TimeSpan(0, 0, 0),
                             RestTime = new TimeSpan(0, 0, 0),
@@ -218,7 +226,7 @@
                         {
                             ZamanId = index,
                             DonemId = i,
-                            Gün = (Model.Tables.Tanımlamalar.Günler)j,
+                            Gün = (Tanımlamalar.Günler)j,
                             StartTime = new TimeSpan(9, 0, 0),
                             EndTime = new TimeSpan(20, 30, 0),
                             RestTime = new TimeSpan(1, 30, 0),

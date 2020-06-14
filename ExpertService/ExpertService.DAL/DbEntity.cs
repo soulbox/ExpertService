@@ -1,4 +1,4 @@
-﻿using ExpertService.Model.Tables;
+﻿using ExpertService.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExpertService.Model
+namespace ExpertService.DAL
 {
     public class DbEntity : DbContext
     {
@@ -42,10 +42,11 @@ namespace ExpertService.Model
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            //modelBuilder.Entity<Dosya>()
-            //    .HasMany(x => x.EkDosya)
-            //    .WithRequired(x => x.AnaDosya)
-            //    .HasForeignKey(x => x.AnaDosyaID);
+            modelBuilder.Entity<Dosya>()
+                 .HasOptional(b => b.AnaDosya)
+                 .WithMany(b => b.EkDosya)
+                 .HasForeignKey(a => a.AnaDosyaID);
+
             base.OnModelCreating(modelBuilder);
         }
 

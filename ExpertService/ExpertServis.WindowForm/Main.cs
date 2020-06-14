@@ -1,7 +1,7 @@
 ﻿using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraTab.Buttons;
-using ExpertService.Model.Tables;
+using ExpertService.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,10 +23,13 @@ namespace ExpertServis.WindowForm
         {
             User = user;
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //var a = new Forms.DosyaForm();
+            //Container.AddControl(a);
             ElementDosyaParent.Elements.Clear();
             ElementParentTalepler.Elements.Clear();
             ElementParentUcretBilgileri.Elements.Clear();
@@ -42,12 +45,14 @@ namespace ExpertServis.WindowForm
             element.Elements.Clear();
             User.Dosyalar?
                 .Where(prediticate == null ? a => true : prediticate)
+                .OrderBy(x=>x.AnaDosyaID)
                 .ForEach(x =>
             {
                 var yeni = new AccordionControlElement()
                 {
                     Image = GetImage(ElementTipi.dosyachild),
-                    Style = ElementStyle.Item,
+                    //Style = x.EkDosya?.Count > 0 ? ElementStyle.Group : ElementStyle.Item,
+                    Style = ElementStyle.Group ,
                     Tag = x,
                     Text = $"{x.Adı } {x.Soyadı }-{x.DavaTarihi.ToShortDateString()}"
                     //Text = $"{x.Adı } {x.Soyadı }"
@@ -55,12 +60,35 @@ namespace ExpertServis.WindowForm
                 };
                 element.Elements.Add(yeni);
                 yeni.Click += Element_Click;
-                //ÇalışmaDönemiDodur(x);
-                //TalepDoldur(x);
-                //ÜcretBilgileriDoldur(x);
+                DosyalarıDoldur(x, yeni);
             });
         }
+        void DosyalarıDoldur(Dosya dossya, AccordionControlElement element)
+        {
+            foreach (var x in dossya.EkDosya)
+            {
 
+                if (x.DosyaId==5)
+                {
+
+                }
+                var yeni = new AccordionControlElement()
+                {
+                    Image = GetImage(ElementTipi.EkDosya),
+                    //Style = x.EkDosya?.Count  == 0 ? ElementStyle.Item : ElementStyle.Group,
+                    Style = ElementStyle.Group,
+
+                    Tag = x,
+                    Text = $"{x.Adı } {x.Soyadı }-{x.DavaTarihi.ToShortDateString()}",  
+
+                };
+               
+                element.Elements.Add(yeni);
+                yeni.Click += Element_Click;
+                if (x.EkDosya?.Count > 0)
+                    DosyalarıDoldur(x, yeni);
+            }
+        }
         private void Element_Click(object sender, EventArgs e)
         {
             var element = (AccordionControlElement)sender;
@@ -70,6 +98,10 @@ namespace ExpertServis.WindowForm
                     ÇalışmaDönemiDodur(x);
                     TalepDoldur(x);
                     ÜcretBilgileriDoldur(x);
+                    Container.Controls.Clear();
+                    var form = new Forms.DosyaForm(x);
+                    form.Dock = DockStyle.Fill;
+                    Container.Controls.Add(form);
                     break;
                 default:
                     break;
@@ -140,6 +172,7 @@ namespace ExpertServis.WindowForm
 
                     };
                     element.Elements.Add(yeni);
+
                 });
         }
         void ÜcretBilgileriDoldur(Dosya dosya, Func<UcretBilgileri, bool> predicate = null)
@@ -171,6 +204,12 @@ namespace ExpertServis.WindowForm
         private void ElementTest_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ElementDosyaParent_Click(object sender, EventArgs e)
+        {
+            Container.Controls.Clear();
+            Container.Controls.Add(new Forms.DosyaForm());
         }
     }
 }

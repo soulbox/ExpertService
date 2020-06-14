@@ -4,11 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ExpertService.Model.Tables.Tanımlamalar;
+using static ExpertService.Model.Tanımlamalar;
 
-namespace ExpertService.Model.Tables
+namespace ExpertService.Model
 {
-    public class ZamanCizelgesi
+    public class ZamanCizelgesi : BaseProp
     {
         [Key]
         public int ZamanId { get; set; }

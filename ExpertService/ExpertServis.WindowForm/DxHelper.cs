@@ -26,6 +26,8 @@ namespace ExpertServis.WindowForm
             {ElementTipi.TaleplerParent  , Properties.Resources.financial_32x32 },
             {ElementTipi.TaleplerChild   , Properties.Resources.financial_16x16 },
             {ElementTipi.UcretBilgileri    , Properties.Resources.salesanalysis_16x16 },
+            {ElementTipi.EkDosya    , Properties.Resources.attach_16x16 },
+
 
 
 
@@ -41,7 +43,8 @@ namespace ExpertServis.WindowForm
             ÇalışmaZamanı,
             TaleplerParent,
             TaleplerChild,
-            UcretBilgileri
+            UcretBilgileri,
+            EkDosya
         }
         public class MydxNavigator
         {
