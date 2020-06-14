@@ -203,6 +203,16 @@ namespace ExpertServis.WindowForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap paycheque_32px {
+            get {
+                object obj = ResourceManager.GetObject("paycheque_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap recurrence_32x32 {
             get {
                 object obj = ResourceManager.GetObject("recurrence_32x32", resourceCulture);

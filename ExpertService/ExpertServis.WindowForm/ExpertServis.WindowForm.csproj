@@ -185,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\paycheque_32px.png" />
     <None Include="Resources\paycheque_16px.png" />
     <None Include="Resources\attach_16x16.png" />
     <None Include="Resources\delete_32x32.png" />

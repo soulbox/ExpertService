@@ -130,8 +130,7 @@
             this.accordionControl1.Controls.Add(this.accordionContentContainer1);
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.ElementBilgi,
-            this.ElementRapor});
+            this.ElementBilgi});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
@@ -151,7 +150,7 @@
             // accordionContentContainer1
             // 
             this.accordionContentContainer1.Name = "accordionContentContainer1";
-            this.accordionContentContainer1.Size = new System.Drawing.Size(231, 161);
+            this.accordionContentContainer1.Size = new System.Drawing.Size(208, 161);
             this.accordionContentContainer1.TabIndex = 3;
             // 
             // ElementBilgi
@@ -164,7 +163,9 @@
             this.ElementParentTalepler,
             this.accordionControlSeparator3,
             this.ElementParentUcretBilgileri,
-            this.accordionControlSeparator4});
+            this.accordionControlSeparator4,
+            this.ElementRapor});
+            this.ElementBilgi.Expanded = true;
             this.ElementBilgi.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.contact_32x32;
             this.ElementBilgi.Name = "ElementBilgi";
             this.ElementBilgi.Text = "Bilgiler";
@@ -276,8 +277,9 @@
             // 
             // ElementParentKıdemTaz
             // 
-            this.ElementParentKıdemTaz.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.paycheque_16px;
+            this.ElementParentKıdemTaz.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.paycheque_32px;
             this.ElementParentKıdemTaz.Name = "ElementParentKıdemTaz";
+            this.ElementParentKıdemTaz.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ElementParentKıdemTaz.Text = "Kıdem Tazminatı";
             // 
             // ElementTest
