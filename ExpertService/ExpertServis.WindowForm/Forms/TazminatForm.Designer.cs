@@ -77,7 +77,7 @@
             this.dateKayıtTarihi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dateKayıtTarihi.EditValue = null;
             this.dateKayıtTarihi.Enabled = false;
-            this.dateKayıtTarihi.Location = new System.Drawing.Point(276, 51);
+            this.dateKayıtTarihi.Location = new System.Drawing.Point(276, 50);
             this.dateKayıtTarihi.Name = "dateKayıtTarihi";
             this.dateKayıtTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -91,7 +91,7 @@
             this.dateDavaTarihi.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dateDavaTarihi.EditValue = null;
             this.dateDavaTarihi.Enabled = false;
-            this.dateDavaTarihi.Location = new System.Drawing.Point(276, 27);
+            this.dateDavaTarihi.Location = new System.Drawing.Point(276, 26);
             this.dateDavaTarihi.Name = "dateDavaTarihi";
             this.dateDavaTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -103,7 +103,7 @@
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl6.Location = new System.Drawing.Point(164, 54);
+            this.labelControl6.Location = new System.Drawing.Point(164, 53);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(106, 13);
             this.labelControl6.TabIndex = 16;
@@ -112,7 +112,7 @@
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl5.Location = new System.Drawing.Point(154, 30);
+            this.labelControl5.Location = new System.Drawing.Point(154, 29);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(116, 13);
             this.labelControl5.TabIndex = 15;
@@ -122,7 +122,7 @@
             // 
             this.textEdit4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit4.Enabled = false;
-            this.textEdit4.Location = new System.Drawing.Point(276, 228);
+            this.textEdit4.Location = new System.Drawing.Point(276, 227);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(225, 20);
             this.textEdit4.TabIndex = 33;
@@ -131,7 +131,7 @@
             // 
             this.textEdit5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit5.Enabled = false;
-            this.textEdit5.Location = new System.Drawing.Point(276, 203);
+            this.textEdit5.Location = new System.Drawing.Point(276, 202);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Size = new System.Drawing.Size(225, 20);
             this.textEdit5.TabIndex = 32;
@@ -139,7 +139,7 @@
             // labelControl8
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl8.Location = new System.Drawing.Point(92, 231);
+            this.labelControl8.Location = new System.Drawing.Point(92, 230);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(178, 13);
             this.labelControl8.TabIndex = 31;
@@ -148,7 +148,7 @@
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl9.Location = new System.Drawing.Point(194, 206);
+            this.labelControl9.Location = new System.Drawing.Point(194, 205);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(76, 13);
             this.labelControl9.TabIndex = 30;
@@ -158,7 +158,7 @@
             // 
             this.textEdit6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit6.Enabled = false;
-            this.textEdit6.Location = new System.Drawing.Point(276, 178);
+            this.textEdit6.Location = new System.Drawing.Point(276, 177);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(225, 20);
             this.textEdit6.TabIndex = 29;
@@ -166,7 +166,7 @@
             // labelControl10
             // 
             this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl10.Location = new System.Drawing.Point(196, 181);
+            this.labelControl10.Location = new System.Drawing.Point(196, 180);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(74, 13);
             this.labelControl10.TabIndex = 28;
@@ -177,7 +177,7 @@
             this.dateEdit1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dateEdit1.EditValue = null;
             this.dateEdit1.Enabled = false;
-            this.dateEdit1.Location = new System.Drawing.Point(276, 77);
+            this.dateEdit1.Location = new System.Drawing.Point(276, 76);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -189,7 +189,7 @@
             // labelControl7
             // 
             this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl7.Location = new System.Drawing.Point(145, 80);
+            this.labelControl7.Location = new System.Drawing.Point(145, 79);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(125, 13);
             this.labelControl7.TabIndex = 36;
@@ -199,7 +199,7 @@
             // 
             this.textEdit7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit7.Enabled = false;
-            this.textEdit7.Location = new System.Drawing.Point(276, 103);
+            this.textEdit7.Location = new System.Drawing.Point(276, 102);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Size = new System.Drawing.Size(225, 20);
             this.textEdit7.TabIndex = 39;
@@ -207,7 +207,7 @@
             // labelControl11
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl11.Location = new System.Drawing.Point(226, 106);
+            this.labelControl11.Location = new System.Drawing.Point(226, 105);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(44, 13);
             this.labelControl11.TabIndex = 38;
@@ -217,7 +217,7 @@
             // 
             this.textEdit8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit8.Enabled = false;
-            this.textEdit8.Location = new System.Drawing.Point(276, 128);
+            this.textEdit8.Location = new System.Drawing.Point(276, 127);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(225, 20);
             this.textEdit8.TabIndex = 41;
@@ -225,7 +225,7 @@
             // labelControl12
             // 
             this.labelControl12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl12.Location = new System.Drawing.Point(237, 131);
+            this.labelControl12.Location = new System.Drawing.Point(237, 130);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(33, 13);
             this.labelControl12.TabIndex = 40;
@@ -235,7 +235,7 @@
             // 
             this.textEdit9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit9.Enabled = false;
-            this.textEdit9.Location = new System.Drawing.Point(276, 153);
+            this.textEdit9.Location = new System.Drawing.Point(276, 152);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Size = new System.Drawing.Size(225, 20);
             this.textEdit9.TabIndex = 43;
@@ -243,7 +243,7 @@
             // labelControl13
             // 
             this.labelControl13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl13.Location = new System.Drawing.Point(115, 156);
+            this.labelControl13.Location = new System.Drawing.Point(115, 155);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(155, 13);
             this.labelControl13.TabIndex = 42;
@@ -253,7 +253,7 @@
             // 
             this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(276, 253);
+            this.textEdit1.Location = new System.Drawing.Point(276, 252);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(225, 20);
             this.textEdit1.TabIndex = 45;
@@ -261,7 +261,7 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl1.Location = new System.Drawing.Point(110, 256);
+            this.labelControl1.Location = new System.Drawing.Point(110, 255);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(160, 13);
             this.labelControl1.TabIndex = 44;
@@ -271,7 +271,7 @@
             // 
             this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(276, 279);
+            this.textEdit2.Location = new System.Drawing.Point(276, 278);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(225, 20);
             this.textEdit2.TabIndex = 47;
@@ -279,7 +279,7 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl2.Location = new System.Drawing.Point(81, 282);
+            this.labelControl2.Location = new System.Drawing.Point(81, 281);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(189, 13);
             this.labelControl2.TabIndex = 46;
@@ -289,7 +289,7 @@
             // 
             this.textEdit3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(276, 305);
+            this.textEdit3.Location = new System.Drawing.Point(276, 304);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(225, 20);
             this.textEdit3.TabIndex = 49;
@@ -297,7 +297,7 @@
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl3.Location = new System.Drawing.Point(110, 308);
+            this.labelControl3.Location = new System.Drawing.Point(110, 307);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(161, 13);
             this.labelControl3.TabIndex = 48;
@@ -307,7 +307,7 @@
             // 
             this.textEdit10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit10.Enabled = false;
-            this.textEdit10.Location = new System.Drawing.Point(276, 331);
+            this.textEdit10.Location = new System.Drawing.Point(276, 330);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Size = new System.Drawing.Size(225, 20);
             this.textEdit10.TabIndex = 51;
@@ -315,7 +315,7 @@
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl4.Location = new System.Drawing.Point(14, 334);
+            this.labelControl4.Location = new System.Drawing.Point(14, 333);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(257, 13);
             this.labelControl4.TabIndex = 50;
@@ -353,7 +353,7 @@
             this.Controls.Add(this.labelControl5);
             this.Enabled = false;
             this.Name = "TazminatForm";
-            this.Size = new System.Drawing.Size(514, 394);
+            this.Size = new System.Drawing.Size(514, 377);
             ((System.ComponentModel.ISupportInitialize)(this.dateKayıtTarihi.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateKayıtTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateDavaTarihi.Properties.CalendarTimeProperties)).EndInit();
