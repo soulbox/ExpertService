@@ -32,7 +32,7 @@ namespace ExpertServis.WindowForm
         private void Form1_Load(object sender, EventArgs e)
         {
             //var a = new Forms.DosyaForm();
-            Container.AddControl(new Forms.CalismaZamaniForm());
+            Container.AddControl(new Forms.CalismaZamaniForm(User.Dosyalar.FirstOrDefault().CalismaDonemis.FirstOrDefault()));
             ElementDosyaParent.Elements.Clear();
             ElementParentTalepler.Elements.Clear();
             ElementParentUcretBilgileri.Elements.Clear();

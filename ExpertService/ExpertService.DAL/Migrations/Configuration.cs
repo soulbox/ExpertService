@@ -12,7 +12,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true ;
+            AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
             ContextKey = "ExpertService.Model.DbEntity";
             //Seed(DbManager.DB);
@@ -43,12 +43,12 @@
                     DosyaId = 1,
                     UserId = 1,
                     Adı = "Kadir",
-                    DavaTarihi = new DateTime(2019, 01, 31),                   
+                    DavaTarihi = new DateTime(2019, 01, 31),
                     Açıklama = "DENEME1",
                     DosyaNo = "GLF20200001",
                     Soyadı = "Aygün1",
                     ZamanAsimi = false,
-                    TCNO=0
+                    TCNO = 0
                 },
                 new Dosya()
                 {
@@ -56,7 +56,7 @@
                     UserId = 1,
                     AnaDosyaID = 1,
                     Adı = "Kadir",
-                    DavaTarihi = new DateTime(2019, 02, 28),                    
+                    DavaTarihi = new DateTime(2019, 02, 28),
                     Açıklama = "DENEME2",
                     DosyaNo = "GLF20200002",
                     Soyadı = "Aygün2",
@@ -70,14 +70,14 @@
                     UserId = 1,
                     AnaDosyaID = 1,
                     Adı = "Kadir",
-                    DavaTarihi = new DateTime(2019, 02, 28),                    
+                    DavaTarihi = new DateTime(2019, 02, 28),
                     Açıklama = "DENEME3",
                     DosyaNo = "GLF20200003",
                     Soyadı = "Aygün3",
                     ZamanAsimi = false,
                     TCNO = 0
 
-                }, 
+                },
                 new Dosya()
                 {
                     DosyaId = 4,
@@ -85,14 +85,14 @@
                     AnaDosyaID = 2,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    
+
                     Açıklama = "DENEME4",
                     DosyaNo = "GLF20200004",
                     Soyadı = "Aygün4",
                     ZamanAsimi = false,
                     TCNO = 0
 
-                }, 
+                },
                 new Dosya()
                 {
                     DosyaId = 5,
@@ -100,7 +100,7 @@
                     AnaDosyaID = 2,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    
+
                     Açıklama = "DENEME5",
                     DosyaNo = "GLF20200005",
                     Soyadı = "Aygün5",
@@ -115,7 +115,7 @@
                     //AnaDosyaID = 4,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    
+
                     Açıklama = "DENEME6",
                     DosyaNo = "GLF20200006",
                     Soyadı = "Aygün6",
@@ -128,7 +128,7 @@
                     AnaDosyaID = 5,
                     Adı = "Kadir",
                     DavaTarihi = new DateTime(2019, 02, 28),
-                    
+
                     Açıklama = "DENEME7",
                     DosyaNo = "GLF20200007",
                     Soyadı = "Aygün7",
@@ -194,46 +194,16 @@
             {
                 for (int j = 1; j <= 7; j++)
                 {
-                    if (j == 6)
+                    liste.Add(new ZamanCizelgesi()
                     {
-                        liste.Add(new ZamanCizelgesi()
-                        {
-                            ZamanId = index,
-                            DonemId = i,
-                            Gün = (Tanımlamalar.Günler)j,
-                            StartTime = new TimeSpan(9, 0, 0),
-                            EndTime = new TimeSpan(16, 0, 0),
-                            RestTime = new TimeSpan(1, 0, 0),
+                        ZamanId = index,
+                        DonemId = i,
+                        Gün = (Tanımlamalar.Günler)j,
+                        StartTime = j == 6 ? new TimeSpan(9, 0, 0) : j == 7 ? new TimeSpan(0, 0, 0) : new TimeSpan(9, 0, 0),
+                        EndTime = j == 6 ? new TimeSpan(16, 0, 0) : j == 7 ? new TimeSpan(0, 0, 0) : new TimeSpan(20, 30, 0),
+                        RestTime = j == 6 ? new TimeSpan(1, 0, 0) : j == 7 ? new TimeSpan(0, 0, 0) : new TimeSpan(1, 30, 0),
 
-                        });
-                    }
-                    else if (j == 7)
-                    {
-                        liste.Add(new ZamanCizelgesi()
-                        {
-                            ZamanId = index,
-                            DonemId = i,
-                            Gün = (Tanımlamalar.Günler)j,
-                            StartTime = new TimeSpan(0, 0, 0),
-                            EndTime = new TimeSpan(0, 0, 0),
-                            RestTime = new TimeSpan(0, 0, 0),
-
-                        });
-                    }
-                    else
-                    {
-                        liste.Add(new ZamanCizelgesi()
-                        {
-                            ZamanId = index,
-                            DonemId = i,
-                            Gün = (Tanımlamalar.Günler)j,
-                            StartTime = new TimeSpan(9, 0, 0),
-                            EndTime = new TimeSpan(20, 30, 0),
-                            RestTime = new TimeSpan(1, 30, 0),
-
-                        });
-                    }
-
+                    });
 
                     index++;
                 }

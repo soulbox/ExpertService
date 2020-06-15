@@ -8,7 +8,7 @@ namespace ExpertService.Model
 {
     public static class Tanımlamalar
     {
-        
+
         public enum ÜcretTipi
         {
             ÇıplakBrüt,
@@ -16,7 +16,7 @@ namespace ExpertService.Model
             Yol,
             Yemek
         }
-         static Dictionary<TalepTipi, string> TalepKalemleri { get; set; } = new Dictionary<TalepTipi, string>()
+        static Dictionary<TalepTipi, string> TalepKalemleri { get; set; } = new Dictionary<TalepTipi, string>()
         {
            { TalepTipi.KıdemTazminatı ,"Kıdem Tazminatı Alacağı" },
            { TalepTipi.ihbarTazminatı  ,"İhbar Tazminatı Alacağı"},
@@ -46,13 +46,13 @@ namespace ExpertService.Model
 
         public enum Günler
         {
-            Pazartesi,
-            Salı,
-            Çarşamba,
-            Perşembe,
-            Cuma,
-            Cumartesi,
-            Pazar
+            Pazartesi = 1,
+            Salı = 2,
+            Çarşamba = 3,
+            Perşembe = 4,
+            Cuma = 5,
+            Cumartesi = 6,
+            Pazar = 7,
         }
 
     }

@@ -8,40 +8,53 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using ExpertService.Model;
 
 namespace ExpertServis.WindowForm.Forms
 {
     public partial class CalismaZamaniForm : DevExpress.XtraEditors.XtraUserControl
     {
-        public CalismaZamaniForm()
+        public CalismaDonemi Dönem { get; set; }
+        public CalismaZamaniForm(CalismaDonemi dönem)
         {
+            Dönem = dönem;
             InitializeComponent();
         }
 
         private void CalismaZamaniForm_Load(object sender, EventArgs e)
         {
-            //timeEdit1.Properties.Mask.EditMask = @"HH\:mm";
-            //timeEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            foreach (var item    in this.Controls )
+            GetValues();
+
+        }
+
+        private void footer1_Load(object sender, EventArgs e)
+        {
+
+        }
+        void GetValues()
+        {
+            foreach (var item in this.Controls)
             {
-                var tspan = item  as DevExpress.XtraEditors.TimeSpanEdit ;
-                var tedit = item as DevExpress.XtraEditors.TimeEdit ;
-                if (tspan != null)
-                {
-                    var mask = tspan.Properties.Mask;
-                    mask.EditMask = @"hh\:mm";
-                    mask.UseMaskAsDisplayFormat = true;
-                    mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-                }
-                if (tedit!=null)
+
+                var tedit = item as DevExpress.XtraEditors.TimeEdit;
+                if (tedit != null)
                 {
                     var mask = tedit.Properties.Mask;
-                    mask.EditMask = @"hh\:mm";
+                    mask.EditMask = @"HH\:mm";
                     mask.UseMaskAsDisplayFormat = true;
-                    mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-
+                    mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+                    var propname = tedit.Name .Substring(0, tedit.Name.Length - 1);
+                    var Gün = (Tanımlamalar.Günler)Enum.Parse(typeof(Tanımlamalar.Günler), tedit.Name .Replace(propname, ""));
+                    var GünItem = Dönem.ZamanCizelgesis.FirstOrDefault(x => x.Gün == Gün);
+                    var value = GetPropValue(GünItem, propname);
+                    tedit.EditValue = value;
                 }
             }
+        }
+
+        public static object GetPropValue(object src, string propName)
+        {
+            return src.GetType().GetProperty(propName).GetValue(src, null);
         }
     }
 }

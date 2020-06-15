@@ -39,70 +39,63 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.timeSpanEdit1 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit2 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit3 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit4 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit5 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit6 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit7 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit8 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit9 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit10 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit11 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit12 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit13 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit14 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit15 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit16 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit17 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit18 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit19 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit20 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit21 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit22 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit23 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit24 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit29 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit30 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit31 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeSpanEdit32 = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit2 = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit3 = new DevExpress.XtraEditors.TimeEdit();
-            this.timeEdit4 = new DevExpress.XtraEditors.TimeEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit15.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit17.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit19.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit20.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit21.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit22.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit23.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit24.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit29.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit30.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit31.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit32.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit4.Properties)).BeginInit();
+            this.StartTime1 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime1 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime1 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime1 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime2 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime2 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime2 = new DevExpress.XtraEditors.TimeEdit();
+            this.StartTime2 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime3 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime3 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime3 = new DevExpress.XtraEditors.TimeEdit();
+            this.StartTime3 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime4 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime4 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime4 = new DevExpress.XtraEditors.TimeEdit();
+            this.StartTime4 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime5 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime5 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime5 = new DevExpress.XtraEditors.TimeEdit();
+            this.StartTime5 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime6 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime6 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime6 = new DevExpress.XtraEditors.TimeEdit();
+            this.StartTime6 = new DevExpress.XtraEditors.TimeEdit();
+            this.NetTime7 = new DevExpress.XtraEditors.TimeEdit();
+            this.RestTime7 = new DevExpress.XtraEditors.TimeEdit();
+            this.EndTime7 = new DevExpress.XtraEditors.TimeEdit();
+            this.StartTime7 = new DevExpress.XtraEditors.TimeEdit();
+            this.footer1 = new ExpertServis.WindowForm.Forms.Footer();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime7.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -193,418 +186,335 @@
             this.labelControl11.TabIndex = 14;
             this.labelControl11.Text = "Toplam Saati";
             // 
-            // timeSpanEdit1
+            // StartTime1
             // 
-            this.timeSpanEdit1.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit1.Location = new System.Drawing.Point(153, 41);
-            this.timeSpanEdit1.Name = "timeSpanEdit1";
-            this.timeSpanEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime1.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime1.Location = new System.Drawing.Point(153, 41);
+            this.StartTime1.Name = "StartTime1";
+            this.StartTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit1.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit1.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit1.TabIndex = 39;
+            this.StartTime1.Properties.Mask.EditMask = "t";
+            this.StartTime1.Size = new System.Drawing.Size(87, 20);
+            this.StartTime1.TabIndex = 67;
             // 
-            // timeSpanEdit2
+            // EndTime1
             // 
-            this.timeSpanEdit2.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit2.Location = new System.Drawing.Point(246, 41);
-            this.timeSpanEdit2.Name = "timeSpanEdit2";
-            this.timeSpanEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime1.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime1.Location = new System.Drawing.Point(246, 41);
+            this.EndTime1.Name = "EndTime1";
+            this.EndTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit2.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit2.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit2.TabIndex = 40;
+            this.EndTime1.Size = new System.Drawing.Size(87, 20);
+            this.EndTime1.TabIndex = 68;
             // 
-            // timeSpanEdit3
+            // NetTime1
             // 
-            this.timeSpanEdit3.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit3.Location = new System.Drawing.Point(339, 41);
-            this.timeSpanEdit3.Name = "timeSpanEdit3";
-            this.timeSpanEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime1.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime1.Location = new System.Drawing.Point(432, 41);
+            this.NetTime1.Name = "NetTime1";
+            this.NetTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit3.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit3.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit3.TabIndex = 41;
+            this.NetTime1.Size = new System.Drawing.Size(87, 20);
+            this.NetTime1.TabIndex = 70;
             // 
-            // timeSpanEdit4
+            // RestTime1
             // 
-            this.timeSpanEdit4.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit4.Location = new System.Drawing.Point(432, 41);
-            this.timeSpanEdit4.Name = "timeSpanEdit4";
-            this.timeSpanEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime1.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime1.Location = new System.Drawing.Point(339, 41);
+            this.RestTime1.Name = "RestTime1";
+            this.RestTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit4.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit4.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit4.TabIndex = 42;
+            this.RestTime1.Size = new System.Drawing.Size(87, 20);
+            this.RestTime1.TabIndex = 69;
             // 
-            // timeSpanEdit5
+            // NetTime2
             // 
-            this.timeSpanEdit5.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit5.Location = new System.Drawing.Point(432, 67);
-            this.timeSpanEdit5.Name = "timeSpanEdit5";
-            this.timeSpanEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime2.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime2.Location = new System.Drawing.Point(432, 67);
+            this.NetTime2.Name = "NetTime2";
+            this.NetTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit5.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit5.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit5.TabIndex = 46;
+            this.NetTime2.Size = new System.Drawing.Size(87, 20);
+            this.NetTime2.TabIndex = 74;
             // 
-            // timeSpanEdit6
+            // RestTime2
             // 
-            this.timeSpanEdit6.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit6.Location = new System.Drawing.Point(339, 67);
-            this.timeSpanEdit6.Name = "timeSpanEdit6";
-            this.timeSpanEdit6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime2.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime2.Location = new System.Drawing.Point(339, 67);
+            this.RestTime2.Name = "RestTime2";
+            this.RestTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit6.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit6.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit6.TabIndex = 45;
+            this.RestTime2.Size = new System.Drawing.Size(87, 20);
+            this.RestTime2.TabIndex = 73;
             // 
-            // timeSpanEdit7
+            // EndTime2
             // 
-            this.timeSpanEdit7.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit7.Location = new System.Drawing.Point(246, 67);
-            this.timeSpanEdit7.Name = "timeSpanEdit7";
-            this.timeSpanEdit7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime2.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime2.Location = new System.Drawing.Point(246, 67);
+            this.EndTime2.Name = "EndTime2";
+            this.EndTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit7.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit7.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit7.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit7.TabIndex = 44;
+            this.EndTime2.Size = new System.Drawing.Size(87, 20);
+            this.EndTime2.TabIndex = 72;
             // 
-            // timeSpanEdit8
+            // StartTime2
             // 
-            this.timeSpanEdit8.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit8.Location = new System.Drawing.Point(153, 67);
-            this.timeSpanEdit8.Name = "timeSpanEdit8";
-            this.timeSpanEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime2.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime2.Location = new System.Drawing.Point(153, 67);
+            this.StartTime2.Name = "StartTime2";
+            this.StartTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit8.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit8.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit8.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit8.TabIndex = 43;
+            this.StartTime2.Properties.Mask.EditMask = "t";
+            this.StartTime2.Size = new System.Drawing.Size(87, 20);
+            this.StartTime2.TabIndex = 71;
             // 
-            // timeSpanEdit9
+            // NetTime3
             // 
-            this.timeSpanEdit9.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit9.Location = new System.Drawing.Point(432, 119);
-            this.timeSpanEdit9.Name = "timeSpanEdit9";
-            this.timeSpanEdit9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime3.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime3.Location = new System.Drawing.Point(432, 93);
+            this.NetTime3.Name = "NetTime3";
+            this.NetTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit9.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit9.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit9.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit9.TabIndex = 54;
+            this.NetTime3.Size = new System.Drawing.Size(87, 20);
+            this.NetTime3.TabIndex = 78;
             // 
-            // timeSpanEdit10
+            // RestTime3
             // 
-            this.timeSpanEdit10.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit10.Location = new System.Drawing.Point(339, 119);
-            this.timeSpanEdit10.Name = "timeSpanEdit10";
-            this.timeSpanEdit10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime3.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime3.Location = new System.Drawing.Point(339, 93);
+            this.RestTime3.Name = "RestTime3";
+            this.RestTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit10.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit10.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit10.TabIndex = 53;
+            this.RestTime3.Size = new System.Drawing.Size(87, 20);
+            this.RestTime3.TabIndex = 77;
             // 
-            // timeSpanEdit11
+            // EndTime3
             // 
-            this.timeSpanEdit11.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit11.Location = new System.Drawing.Point(246, 119);
-            this.timeSpanEdit11.Name = "timeSpanEdit11";
-            this.timeSpanEdit11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime3.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime3.Location = new System.Drawing.Point(246, 93);
+            this.EndTime3.Name = "EndTime3";
+            this.EndTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit11.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit11.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit11.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit11.TabIndex = 52;
+            this.EndTime3.Size = new System.Drawing.Size(87, 20);
+            this.EndTime3.TabIndex = 76;
             // 
-            // timeSpanEdit12
+            // StartTime3
             // 
-            this.timeSpanEdit12.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit12.Location = new System.Drawing.Point(153, 119);
-            this.timeSpanEdit12.Name = "timeSpanEdit12";
-            this.timeSpanEdit12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime3.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime3.Location = new System.Drawing.Point(153, 93);
+            this.StartTime3.Name = "StartTime3";
+            this.StartTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit12.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit12.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit12.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit12.TabIndex = 51;
+            this.StartTime3.Properties.Mask.EditMask = "t";
+            this.StartTime3.Size = new System.Drawing.Size(87, 20);
+            this.StartTime3.TabIndex = 75;
             // 
-            // timeSpanEdit13
+            // NetTime4
             // 
-            this.timeSpanEdit13.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit13.Location = new System.Drawing.Point(432, 93);
-            this.timeSpanEdit13.Name = "timeSpanEdit13";
-            this.timeSpanEdit13.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime4.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime4.Location = new System.Drawing.Point(432, 119);
+            this.NetTime4.Name = "NetTime4";
+            this.NetTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit13.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit13.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit13.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit13.TabIndex = 50;
+            this.NetTime4.Size = new System.Drawing.Size(87, 20);
+            this.NetTime4.TabIndex = 82;
             // 
-            // timeSpanEdit14
+            // RestTime4
             // 
-            this.timeSpanEdit14.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit14.Location = new System.Drawing.Point(339, 93);
-            this.timeSpanEdit14.Name = "timeSpanEdit14";
-            this.timeSpanEdit14.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime4.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime4.Location = new System.Drawing.Point(339, 119);
+            this.RestTime4.Name = "RestTime4";
+            this.RestTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit14.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit14.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit14.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit14.TabIndex = 49;
+            this.RestTime4.Size = new System.Drawing.Size(87, 20);
+            this.RestTime4.TabIndex = 81;
             // 
-            // timeSpanEdit15
+            // EndTime4
             // 
-            this.timeSpanEdit15.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit15.Location = new System.Drawing.Point(246, 93);
-            this.timeSpanEdit15.Name = "timeSpanEdit15";
-            this.timeSpanEdit15.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime4.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime4.Location = new System.Drawing.Point(246, 119);
+            this.EndTime4.Name = "EndTime4";
+            this.EndTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit15.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit15.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit15.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit15.TabIndex = 48;
+            this.EndTime4.Size = new System.Drawing.Size(87, 20);
+            this.EndTime4.TabIndex = 80;
             // 
-            // timeSpanEdit16
+            // StartTime4
             // 
-            this.timeSpanEdit16.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit16.Location = new System.Drawing.Point(153, 93);
-            this.timeSpanEdit16.Name = "timeSpanEdit16";
-            this.timeSpanEdit16.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime4.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime4.Location = new System.Drawing.Point(153, 119);
+            this.StartTime4.Name = "StartTime4";
+            this.StartTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit16.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit16.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit16.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit16.TabIndex = 47;
+            this.StartTime4.Properties.Mask.EditMask = "t";
+            this.StartTime4.Size = new System.Drawing.Size(87, 20);
+            this.StartTime4.TabIndex = 79;
             // 
-            // timeSpanEdit17
+            // NetTime5
             // 
-            this.timeSpanEdit17.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit17.Location = new System.Drawing.Point(432, 170);
-            this.timeSpanEdit17.Name = "timeSpanEdit17";
-            this.timeSpanEdit17.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime5.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime5.Location = new System.Drawing.Point(432, 145);
+            this.NetTime5.Name = "NetTime5";
+            this.NetTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit17.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit17.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit17.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit17.TabIndex = 62;
+            this.NetTime5.Size = new System.Drawing.Size(87, 20);
+            this.NetTime5.TabIndex = 86;
             // 
-            // timeSpanEdit18
+            // RestTime5
             // 
-            this.timeSpanEdit18.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit18.Location = new System.Drawing.Point(339, 170);
-            this.timeSpanEdit18.Name = "timeSpanEdit18";
-            this.timeSpanEdit18.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime5.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime5.Location = new System.Drawing.Point(339, 145);
+            this.RestTime5.Name = "RestTime5";
+            this.RestTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit18.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit18.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit18.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit18.TabIndex = 61;
+            this.RestTime5.Size = new System.Drawing.Size(87, 20);
+            this.RestTime5.TabIndex = 85;
             // 
-            // timeSpanEdit19
+            // EndTime5
             // 
-            this.timeSpanEdit19.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit19.Location = new System.Drawing.Point(246, 170);
-            this.timeSpanEdit19.Name = "timeSpanEdit19";
-            this.timeSpanEdit19.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime5.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime5.Location = new System.Drawing.Point(246, 145);
+            this.EndTime5.Name = "EndTime5";
+            this.EndTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit19.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit19.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit19.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit19.TabIndex = 60;
+            this.EndTime5.Size = new System.Drawing.Size(87, 20);
+            this.EndTime5.TabIndex = 84;
             // 
-            // timeSpanEdit20
+            // StartTime5
             // 
-            this.timeSpanEdit20.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit20.Location = new System.Drawing.Point(153, 170);
-            this.timeSpanEdit20.Name = "timeSpanEdit20";
-            this.timeSpanEdit20.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime5.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime5.Location = new System.Drawing.Point(153, 145);
+            this.StartTime5.Name = "StartTime5";
+            this.StartTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit20.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit20.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit20.TabIndex = 59;
+            this.StartTime5.Properties.Mask.EditMask = "t";
+            this.StartTime5.Size = new System.Drawing.Size(87, 20);
+            this.StartTime5.TabIndex = 83;
             // 
-            // timeSpanEdit21
+            // NetTime6
             // 
-            this.timeSpanEdit21.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit21.Location = new System.Drawing.Point(432, 144);
-            this.timeSpanEdit21.Name = "timeSpanEdit21";
-            this.timeSpanEdit21.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime6.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime6.Location = new System.Drawing.Point(432, 171);
+            this.NetTime6.Name = "NetTime6";
+            this.NetTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit21.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit21.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit21.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit21.TabIndex = 58;
+            this.NetTime6.Size = new System.Drawing.Size(87, 20);
+            this.NetTime6.TabIndex = 90;
             // 
-            // timeSpanEdit22
+            // RestTime6
             // 
-            this.timeSpanEdit22.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit22.Location = new System.Drawing.Point(339, 144);
-            this.timeSpanEdit22.Name = "timeSpanEdit22";
-            this.timeSpanEdit22.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime6.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime6.Location = new System.Drawing.Point(339, 171);
+            this.RestTime6.Name = "RestTime6";
+            this.RestTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit22.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit22.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit22.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit22.TabIndex = 57;
+            this.RestTime6.Size = new System.Drawing.Size(87, 20);
+            this.RestTime6.TabIndex = 89;
             // 
-            // timeSpanEdit23
+            // EndTime6
             // 
-            this.timeSpanEdit23.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit23.Location = new System.Drawing.Point(246, 144);
-            this.timeSpanEdit23.Name = "timeSpanEdit23";
-            this.timeSpanEdit23.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime6.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime6.Location = new System.Drawing.Point(246, 171);
+            this.EndTime6.Name = "EndTime6";
+            this.EndTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit23.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit23.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit23.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit23.TabIndex = 56;
+            this.EndTime6.Size = new System.Drawing.Size(87, 20);
+            this.EndTime6.TabIndex = 88;
             // 
-            // timeSpanEdit24
+            // StartTime6
             // 
-            this.timeSpanEdit24.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit24.Location = new System.Drawing.Point(153, 144);
-            this.timeSpanEdit24.Name = "timeSpanEdit24";
-            this.timeSpanEdit24.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime6.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime6.Location = new System.Drawing.Point(153, 171);
+            this.StartTime6.Name = "StartTime6";
+            this.StartTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit24.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit24.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit24.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit24.TabIndex = 55;
+            this.StartTime6.Properties.Mask.EditMask = "t";
+            this.StartTime6.Size = new System.Drawing.Size(87, 20);
+            this.StartTime6.TabIndex = 87;
             // 
-            // timeSpanEdit29
+            // NetTime7
             // 
-            this.timeSpanEdit29.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit29.Location = new System.Drawing.Point(432, 196);
-            this.timeSpanEdit29.Name = "timeSpanEdit29";
-            this.timeSpanEdit29.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NetTime7.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime7.Location = new System.Drawing.Point(432, 197);
+            this.NetTime7.Name = "NetTime7";
+            this.NetTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit29.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit29.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit29.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit29.TabIndex = 66;
+            this.NetTime7.Size = new System.Drawing.Size(87, 20);
+            this.NetTime7.TabIndex = 94;
             // 
-            // timeSpanEdit30
+            // RestTime7
             // 
-            this.timeSpanEdit30.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit30.Location = new System.Drawing.Point(339, 196);
-            this.timeSpanEdit30.Name = "timeSpanEdit30";
-            this.timeSpanEdit30.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.RestTime7.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.RestTime7.Location = new System.Drawing.Point(339, 197);
+            this.RestTime7.Name = "RestTime7";
+            this.RestTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit30.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit30.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit30.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit30.TabIndex = 65;
+            this.RestTime7.Size = new System.Drawing.Size(87, 20);
+            this.RestTime7.TabIndex = 93;
             // 
-            // timeSpanEdit31
+            // EndTime7
             // 
-            this.timeSpanEdit31.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit31.Location = new System.Drawing.Point(246, 196);
-            this.timeSpanEdit31.Name = "timeSpanEdit31";
-            this.timeSpanEdit31.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.EndTime7.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.EndTime7.Location = new System.Drawing.Point(246, 197);
+            this.EndTime7.Name = "EndTime7";
+            this.EndTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit31.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit31.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit31.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit31.TabIndex = 64;
+            this.EndTime7.Size = new System.Drawing.Size(87, 20);
+            this.EndTime7.TabIndex = 92;
             // 
-            // timeSpanEdit32
+            // StartTime7
             // 
-            this.timeSpanEdit32.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeSpanEdit32.Location = new System.Drawing.Point(153, 196);
-            this.timeSpanEdit32.Name = "timeSpanEdit32";
-            this.timeSpanEdit32.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.StartTime7.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.StartTime7.Location = new System.Drawing.Point(153, 197);
+            this.StartTime7.Name = "StartTime7";
+            this.StartTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeSpanEdit32.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.TimeSpan;
-            this.timeSpanEdit32.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.SpinButtons;
-            this.timeSpanEdit32.Size = new System.Drawing.Size(87, 20);
-            this.timeSpanEdit32.TabIndex = 63;
+            this.StartTime7.Properties.Mask.EditMask = "t";
+            this.StartTime7.Size = new System.Drawing.Size(87, 20);
+            this.StartTime7.TabIndex = 91;
             // 
-            // timeEdit1
+            // footer1
             // 
-            this.timeEdit1.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
-            this.timeEdit1.Location = new System.Drawing.Point(153, 244);
-            this.timeEdit1.Name = "timeEdit1";
-            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit1.Size = new System.Drawing.Size(87, 20);
-            this.timeEdit1.TabIndex = 67;
-            // 
-            // timeEdit2
-            // 
-            this.timeEdit2.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
-            this.timeEdit2.Location = new System.Drawing.Point(246, 244);
-            this.timeEdit2.Name = "timeEdit2";
-            this.timeEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit2.Size = new System.Drawing.Size(87, 20);
-            this.timeEdit2.TabIndex = 68;
-            // 
-            // timeEdit3
-            // 
-            this.timeEdit3.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
-            this.timeEdit3.Location = new System.Drawing.Point(432, 244);
-            this.timeEdit3.Name = "timeEdit3";
-            this.timeEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit3.Size = new System.Drawing.Size(87, 20);
-            this.timeEdit3.TabIndex = 70;
-            // 
-            // timeEdit4
-            // 
-            this.timeEdit4.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
-            this.timeEdit4.Location = new System.Drawing.Point(339, 244);
-            this.timeEdit4.Name = "timeEdit4";
-            this.timeEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit4.Size = new System.Drawing.Size(87, 20);
-            this.timeEdit4.TabIndex = 69;
+            this.footer1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.footer1.Location = new System.Drawing.Point(0, 290);
+            this.footer1.Name = "footer1";
+            this.footer1.Size = new System.Drawing.Size(631, 59);
+            this.footer1.TabIndex = 95;
+            this.footer1.Load += new System.EventHandler(this.footer1_Load);
             // 
             // CalismaZamaniForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.timeEdit3);
-            this.Controls.Add(this.timeEdit4);
-            this.Controls.Add(this.timeEdit2);
-            this.Controls.Add(this.timeEdit1);
-            this.Controls.Add(this.timeSpanEdit29);
-            this.Controls.Add(this.timeSpanEdit30);
-            this.Controls.Add(this.timeSpanEdit31);
-            this.Controls.Add(this.timeSpanEdit32);
-            this.Controls.Add(this.timeSpanEdit17);
-            this.Controls.Add(this.timeSpanEdit18);
-            this.Controls.Add(this.timeSpanEdit19);
-            this.Controls.Add(this.timeSpanEdit20);
-            this.Controls.Add(this.timeSpanEdit21);
-            this.Controls.Add(this.timeSpanEdit22);
-            this.Controls.Add(this.timeSpanEdit23);
-            this.Controls.Add(this.timeSpanEdit24);
-            this.Controls.Add(this.timeSpanEdit9);
-            this.Controls.Add(this.timeSpanEdit10);
-            this.Controls.Add(this.timeSpanEdit11);
-            this.Controls.Add(this.timeSpanEdit12);
-            this.Controls.Add(this.timeSpanEdit13);
-            this.Controls.Add(this.timeSpanEdit14);
-            this.Controls.Add(this.timeSpanEdit15);
-            this.Controls.Add(this.timeSpanEdit16);
-            this.Controls.Add(this.timeSpanEdit5);
-            this.Controls.Add(this.timeSpanEdit6);
-            this.Controls.Add(this.timeSpanEdit7);
-            this.Controls.Add(this.timeSpanEdit8);
-            this.Controls.Add(this.timeSpanEdit4);
-            this.Controls.Add(this.timeSpanEdit3);
-            this.Controls.Add(this.timeSpanEdit2);
-            this.Controls.Add(this.timeSpanEdit1);
+            this.Controls.Add(this.footer1);
+            this.Controls.Add(this.NetTime7);
+            this.Controls.Add(this.RestTime7);
+            this.Controls.Add(this.EndTime7);
+            this.Controls.Add(this.StartTime7);
+            this.Controls.Add(this.NetTime6);
+            this.Controls.Add(this.RestTime6);
+            this.Controls.Add(this.EndTime6);
+            this.Controls.Add(this.StartTime6);
+            this.Controls.Add(this.NetTime5);
+            this.Controls.Add(this.RestTime5);
+            this.Controls.Add(this.EndTime5);
+            this.Controls.Add(this.StartTime5);
+            this.Controls.Add(this.NetTime4);
+            this.Controls.Add(this.RestTime4);
+            this.Controls.Add(this.EndTime4);
+            this.Controls.Add(this.StartTime4);
+            this.Controls.Add(this.NetTime3);
+            this.Controls.Add(this.RestTime3);
+            this.Controls.Add(this.EndTime3);
+            this.Controls.Add(this.StartTime3);
+            this.Controls.Add(this.NetTime2);
+            this.Controls.Add(this.RestTime2);
+            this.Controls.Add(this.EndTime2);
+            this.Controls.Add(this.StartTime2);
+            this.Controls.Add(this.NetTime1);
+            this.Controls.Add(this.RestTime1);
+            this.Controls.Add(this.EndTime1);
+            this.Controls.Add(this.StartTime1);
             this.Controls.Add(this.labelControl11);
             this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.labelControl9);
@@ -617,40 +527,36 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "CalismaZamaniForm";
-            this.Size = new System.Drawing.Size(631, 575);
+            this.Size = new System.Drawing.Size(631, 349);
             this.Load += new System.EventHandler(this.CalismaZamaniForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit15.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit17.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit19.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit20.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit21.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit22.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit23.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit24.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit29.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit30.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit31.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSpanEdit32.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NetTime7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RestTime7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime7.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,37 +575,34 @@
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit1;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit2;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit3;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit4;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit5;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit6;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit7;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit8;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit9;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit10;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit11;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit12;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit13;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit14;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit15;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit16;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit17;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit18;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit19;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit20;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit21;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit22;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit23;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit24;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit29;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit30;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit31;
-        private DevExpress.XtraEditors.TimeSpanEdit timeSpanEdit32;
-        private DevExpress.XtraEditors.TimeEdit timeEdit1;
-        private DevExpress.XtraEditors.TimeEdit timeEdit2;
-        private DevExpress.XtraEditors.TimeEdit timeEdit3;
-        private DevExpress.XtraEditors.TimeEdit timeEdit4;
+        private DevExpress.XtraEditors.TimeEdit StartTime1;
+        private DevExpress.XtraEditors.TimeEdit EndTime1;
+        private DevExpress.XtraEditors.TimeEdit NetTime1;
+        private DevExpress.XtraEditors.TimeEdit RestTime1;
+        private DevExpress.XtraEditors.TimeEdit NetTime2;
+        private DevExpress.XtraEditors.TimeEdit RestTime2;
+        private DevExpress.XtraEditors.TimeEdit EndTime2;
+        private DevExpress.XtraEditors.TimeEdit StartTime2;
+        private DevExpress.XtraEditors.TimeEdit NetTime3;
+        private DevExpress.XtraEditors.TimeEdit RestTime3;
+        private DevExpress.XtraEditors.TimeEdit EndTime3;
+        private DevExpress.XtraEditors.TimeEdit StartTime3;
+        private DevExpress.XtraEditors.TimeEdit NetTime4;
+        private DevExpress.XtraEditors.TimeEdit RestTime4;
+        private DevExpress.XtraEditors.TimeEdit EndTime4;
+        private DevExpress.XtraEditors.TimeEdit StartTime4;
+        private DevExpress.XtraEditors.TimeEdit NetTime5;
+        private DevExpress.XtraEditors.TimeEdit RestTime5;
+        private DevExpress.XtraEditors.TimeEdit EndTime5;
+        private DevExpress.XtraEditors.TimeEdit StartTime5;
+        private DevExpress.XtraEditors.TimeEdit NetTime6;
+        private DevExpress.XtraEditors.TimeEdit RestTime6;
+        private DevExpress.XtraEditors.TimeEdit EndTime6;
+        private DevExpress.XtraEditors.TimeEdit StartTime6;
+        private DevExpress.XtraEditors.TimeEdit NetTime7;
+        private DevExpress.XtraEditors.TimeEdit RestTime7;
+        private DevExpress.XtraEditors.TimeEdit EndTime7;
+        private DevExpress.XtraEditors.TimeEdit StartTime7;
+        private Footer footer1;
     }
 }
