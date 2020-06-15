@@ -27,6 +27,8 @@ namespace ExpertServis.WindowForm
             {ElementTipi.TaleplerChild   , Properties.Resources.financial_16x16 },
             {ElementTipi.UcretBilgileri    , Properties.Resources.salesanalysis_16x16 },
             {ElementTipi.EkDosya    , Properties.Resources.attach_16x16 },
+            {ElementTipi.Tazminat    , Properties.Resources.paycheque_16px  },
+
 
 
 
@@ -44,11 +46,12 @@ namespace ExpertServis.WindowForm
             TaleplerParent,
             TaleplerChild,
             UcretBilgileri,
-            EkDosya
+            EkDosya,
+            Tazminat
         }
         public class MydxNavigator
         {
-            public List<AccordionControlElement> Dosyalar { get; set; }=new List<AccordionControlElement>();
+            public List<AccordionControlElement> Dosyalar { get; set; } = new List<AccordionControlElement>();
             public List<AccordionControlElement> Talepler { get; set; } = new List<AccordionControlElement>();
             //public List<AccordionControlElement> Dosyalar { get; set; } = new List<AccordionControlElement>();
 

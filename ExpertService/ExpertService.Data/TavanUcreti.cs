@@ -24,7 +24,7 @@ namespace ExpertService.Data
             client.DefaultRequestHeaders.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
           
             client.DefaultRequestHeaders.Add("Accept-Language","tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7");
-            Tavan = Tavan ?? GetList();
+            //Tavan = Tavan ?? GetList();
         }
         public static List<TavanDonem> TavanDonemleri { get => Tavan = Tavan ?? GetList(); }
 

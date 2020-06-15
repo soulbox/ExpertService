@@ -73,6 +73,7 @@
             this.Controls.Add(this.btneAdd);
             this.Name = "Footer";
             this.Size = new System.Drawing.Size(330, 59);
+            this.Load += new System.EventHandler(this.Footer_Load);
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NodaTime;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,5 +20,18 @@ namespace ExpertService.Model
         public Boolean FazlaMesaiAlındı { get; set; }
         public ICollection<ZamanCizelgesi> ZamanCizelgesis { get; set; }
         public Dosya Dosya { get; set; }
+        public Period Period { get => NodaTime.Period.Between(StartDate.ToLocalDate(), FinishDate.AddDays(1).ToLocalDate(), PeriodUnits.YearMonthDay); }
+        public int Yıl { get => Period.Years; }
+        public int Ay { get => Period.Months; }
+        public int Gün { get => Period.Days; }
+        public int ToplamGün { get => NodaTime.Period.Between(StartDate.ToLocalDate(), FinishDate.AddDays(1).ToLocalDate(), PeriodUnits.Days).Days; }
+
+    }
+    public static class MyExtensions
+    {
+        public static LocalDate ToLocalDate(this DateTime dateTime)
+        {
+            return new LocalDate(dateTime.Year, dateTime.Month, dateTime.Day);
+        }
     }
 }

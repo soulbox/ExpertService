@@ -1,12 +1,15 @@
 ﻿using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraTab.Buttons;
+using ExpertService.Data;
 using ExpertService.Model;
+using ExpertServis.WindowForm.Rapor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -29,7 +32,7 @@ namespace ExpertServis.WindowForm
         private void Form1_Load(object sender, EventArgs e)
         {
             //var a = new Forms.DosyaForm();
-            //Container.AddControl(a);
+            Container.AddControl(new Forms.CalismaZamaniForm());
             ElementDosyaParent.Elements.Clear();
             ElementParentTalepler.Elements.Clear();
             ElementParentUcretBilgileri.Elements.Clear();
@@ -45,14 +48,14 @@ namespace ExpertServis.WindowForm
             element.Elements.Clear();
             User.Dosyalar?
                 .Where(prediticate == null ? a => true : prediticate)
-                .OrderBy(x=>x.AnaDosyaID)
+                .OrderBy(x => x.AnaDosyaID)
                 .ForEach(x =>
             {
                 var yeni = new AccordionControlElement()
                 {
                     Image = GetImage(ElementTipi.dosyachild),
                     //Style = x.EkDosya?.Count > 0 ? ElementStyle.Group : ElementStyle.Item,
-                    Style = ElementStyle.Group ,
+                    Style = ElementStyle.Group,
                     Tag = x,
                     Text = $"{x.Adı } {x.Soyadı }-{x.DavaTarihi.ToShortDateString()}"
                     //Text = $"{x.Adı } {x.Soyadı }"
@@ -68,7 +71,7 @@ namespace ExpertServis.WindowForm
             foreach (var x in dossya.EkDosya)
             {
 
-                if (x.DosyaId==5)
+                if (x.DosyaId == 5)
                 {
 
                 }
@@ -79,10 +82,10 @@ namespace ExpertServis.WindowForm
                     Style = ElementStyle.Group,
 
                     Tag = x,
-                    Text = $"{x.Adı } {x.Soyadı }-{x.DavaTarihi.ToShortDateString()}",  
+                    Text = $"{x.Adı } {x.Soyadı }-{x.DavaTarihi.ToShortDateString()}",
 
                 };
-               
+
                 element.Elements.Add(yeni);
                 yeni.Click += Element_Click;
                 if (x.EkDosya?.Count > 0)
@@ -97,11 +100,24 @@ namespace ExpertServis.WindowForm
                 case Dosya x:
                     ÇalışmaDönemiDodur(x);
                     TalepDoldur(x);
-                    ÜcretBilgileriDoldur(x);
+                    ÜcretBilgileriDoldur(x);                
+                     RaporDoldur(x);
                     Container.Controls.Clear();
                     var form = new Forms.DosyaForm(x);
                     form.Dock = DockStyle.Fill;
                     Container.Controls.Add(form);
+                    break;
+                case CalismaDonemi x:
+                    Container.Controls.Clear();                    
+                    var f1 = new Forms.ÇalışmaDönemiForm(x);
+                    f1.Dock = DockStyle.Fill;
+                    Container.Controls.Add(f1);
+                    break;
+                case KıdemTazminatı a:
+                    Container.Controls.Clear();
+                    var TazminatForm = new Forms.TazminatForm(a);
+                    TazminatForm.Dock = DockStyle.Fill;
+                    Container.Controls.Add(TazminatForm);
                     break;
                 default:
                     break;
@@ -126,6 +142,7 @@ namespace ExpertServis.WindowForm
 
                     };
                     element.Elements.Add(yeni);
+                    yeni.Click += Element_Click;
                     ZamanCizelgesiDoldur(x);
                 });
         }
@@ -195,21 +212,36 @@ namespace ExpertServis.WindowForm
                     element.Elements.Add(yeni);
                 });
         }
-
-        private void accordionControlElement6_Click(object sender, EventArgs e)
+        void RaporDoldur(Dosya dosya)
         {
+            var element = ElementParentKıdemTaz;
+            element.Elements.Clear();
+            if (dosya == null || dosya.CalismaDonemis.Count == 0)
+            {
+                element.Style = ElementStyle.Item;
+                return;
+            }
+             element.Style = ElementStyle.Group ;
 
-        }
+            var KıdemTazminatı = new Rapor.KıdemTazminatı(TavanUcreti.TavanDonemleri, dosya);
+            var yeni = new AccordionControlElement()
+            {
+                Image = GetImage(ElementTipi.UcretBilgileri),
+                Style = ElementStyle.Item,
+                Tag = KıdemTazminatı,
+                Text = $"{KıdemTazminatı.ÖdenecekNetKıdemTazminatı.ToString("C2", CultureInfo.CreateSpecificCulture("tr-TR")) }"
 
-        private void ElementTest_Click(object sender, EventArgs e)
-        {
-
+            };
+            element.Elements.Add(yeni);
+            yeni.Click += Element_Click;
         }
 
         private void ElementDosyaParent_Click(object sender, EventArgs e)
         {
             Container.Controls.Clear();
-            Container.Controls.Add(new Forms.DosyaForm());
+            var form = new Forms.DosyaForm();
+            form.Dock = DockStyle.Fill;
+            Container.Controls.Add(form);
         }
     }
 }

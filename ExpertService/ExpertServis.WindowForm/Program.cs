@@ -40,7 +40,7 @@ namespace ExpertServis.WindowForm
                 //})
                 .FirstOrDefault();
             user.Dosyalar = user.Dosyalar.Where(x => x.AnaDosyaID == null).ToList();
-            //var an = TavanUcreti.TavanDonemleri;
+            var an = TavanUcreti.TavanDonemleri;
             Application.Run(new Main(user));
 
 

@@ -12,11 +12,11 @@ namespace ExpertService.Model
     {
         public Dosya()
         {
-            CalismaDonemis = new List<CalismaDonemi>();
-            UcretBilgileris = new List<UcretBilgileri>();
-            Taleplers = new List<Talepler>();
-            EkDosya = new List<Dosya>();
-            AnaDosya = new Dosya();
+            //CalismaDonemis = new List<CalismaDonemi>();
+            //UcretBilgileris = new List<UcretBilgileri>();
+            //Taleplers = new List<Talepler>();
+            //EkDosya = new List<Dosya>();
+            //AnaDosya = new Dosya();
         }
         [Key]
         public int DosyaId { get; set; }
@@ -36,6 +36,7 @@ namespace ExpertService.Model
         //Ek Dosyalar  
         //[ForeignKey("DosyaId")]
         public int? AnaDosyaID { get; set; }
+        public bool isComplete { get; set; } = false;
         //[ForeignKey("AnaDosyaID")]
         public virtual ICollection<Dosya> EkDosya { get; set; }
 

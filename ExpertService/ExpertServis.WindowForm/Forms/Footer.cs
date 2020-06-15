@@ -22,5 +22,10 @@ namespace ExpertServis.WindowForm.Forms
         {
             //Console.WriteLine("asdfgg");
         }
+
+        private void Footer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

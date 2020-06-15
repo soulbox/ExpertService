@@ -34,7 +34,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtDosyaNo = new DevExpress.XtraEditors.TextEdit();
             this.txtAdı = new DevExpress.XtraEditors.TextEdit();
@@ -45,6 +44,7 @@
             this.chckZaman = new DevExpress.XtraEditors.CheckEdit();
             this.txtAçıklama = new DevExpress.XtraEditors.MemoEdit();
             this.footer1 = new ExpertServis.WindowForm.Forms.Footer();
+            this.chckEkdosya = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDosyaNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdı.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyadı.Properties)).BeginInit();
@@ -55,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKayıtTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chckZaman.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAçıklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chckEkdosya.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -105,17 +106,9 @@
             this.labelControl6.TabIndex = 5;
             this.labelControl6.Text = "Kayıt Tarihi :";
             // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(30, 147);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(84, 13);
-            this.labelControl7.TabIndex = 6;
-            this.labelControl7.Text = "Zaman Aşımı :";
-            // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(53, 168);
+            this.labelControl8.Location = new System.Drawing.Point(53, 196);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(61, 13);
             this.labelControl8.TabIndex = 7;
@@ -154,7 +147,6 @@
             // dateDavaTarihi
             // 
             this.dateDavaTarihi.EditValue = null;
-            this.dateDavaTarihi.Enabled = false;
             this.dateDavaTarihi.Location = new System.Drawing.Point(120, 102);
             this.dateDavaTarihi.Name = "dateDavaTarihi";
             this.dateDavaTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -186,7 +178,7 @@
             // 
             // txtAçıklama
             // 
-            this.txtAçıklama.Location = new System.Drawing.Point(120, 165);
+            this.txtAçıklama.Location = new System.Drawing.Point(120, 193);
             this.txtAçıklama.Name = "txtAçıklama";
             this.txtAçıklama.Size = new System.Drawing.Size(321, 190);
             this.txtAçıklama.TabIndex = 16;
@@ -200,10 +192,19 @@
             this.footer1.TabIndex = 8;
             this.footer1.Load += new System.EventHandler(this.footer1_Load);
             // 
+            // chckEkdosya
+            // 
+            this.chckEkdosya.Location = new System.Drawing.Point(120, 169);
+            this.chckEkdosya.Name = "chckEkdosya";
+            this.chckEkdosya.Properties.Caption = "Ek Dosyamı?";
+            this.chckEkdosya.Size = new System.Drawing.Size(149, 18);
+            this.chckEkdosya.TabIndex = 17;
+            // 
             // DosyaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chckEkdosya);
             this.Controls.Add(this.chckZaman);
             this.Controls.Add(this.dateKayıtTarihi);
             this.Controls.Add(this.dateDavaTarihi);
@@ -213,7 +214,6 @@
             this.Controls.Add(this.txtDosyaNo);
             this.Controls.Add(this.footer1);
             this.Controls.Add(this.labelControl8);
-            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl3);
@@ -234,6 +234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKayıtTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chckZaman.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAçıklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chckEkdosya.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +248,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private Footer footer1;
         private DevExpress.XtraEditors.TextEdit txtDosyaNo;
@@ -258,5 +258,6 @@
         private DevExpress.XtraEditors.DateEdit dateKayıtTarihi;
         private DevExpress.XtraEditors.CheckEdit chckZaman;
         private DevExpress.XtraEditors.MemoEdit txtAçıklama;
+        private DevExpress.XtraEditors.CheckEdit chckEkdosya;
     }
 }
