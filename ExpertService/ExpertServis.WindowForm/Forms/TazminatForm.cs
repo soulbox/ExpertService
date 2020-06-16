@@ -27,6 +27,8 @@ namespace ExpertServis.WindowForm.Forms
 
         private void TazminatForm_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
+
             dgControl.DataSource = KıdemTazminatı.TavanUcretler.ToList();
 
 

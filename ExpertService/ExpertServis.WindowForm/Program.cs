@@ -1,6 +1,6 @@
 ﻿
 using System;
-using System.Data.Entity;
+//using System.Data.Entity;
 //using System.Data.Entity.Include;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ExpertService.DAL;
 using ExpertService.Data;
 using ExpertService.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExpertServis.WindowForm
 {
@@ -26,7 +27,7 @@ namespace ExpertServis.WindowForm
             var aaaa = DbManager.DB.UserTables.FirstOrDefault();
             Thread.Sleep(1000);
             var anadosya = DbManager.DB.Dosya.Where(x => x.AnaDosyaID == null).ToList();
-            var user = DbManager.DB.UserTables 
+            var user = DbManager.DB.UserTables
                 .Include(x => x.Dosyalar.Select(a => a.CalismaDonemis))
                 .Include(x => x.Dosyalar.Select(a => a.UcretBilgileris))
                 .Include(x => x.Dosyalar.Select(a => a.CalismaDonemis.Select(c => c.ZamanCizelgesis)))

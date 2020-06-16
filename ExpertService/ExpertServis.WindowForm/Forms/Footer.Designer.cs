@@ -37,9 +37,9 @@
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDelete.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.delete_32x32;
-            this.btnDelete.Location = new System.Drawing.Point(215, 13);
+            this.btnDelete.Location = new System.Drawing.Point(215, 15);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(99, 34);
+            this.btnDelete.Size = new System.Drawing.Size(99, 55);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Sil";
             // 
@@ -47,19 +47,21 @@
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnUpdate.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.recurrence_32x32;
-            this.btnUpdate.Location = new System.Drawing.Point(114, 13);
+            this.btnUpdate.Location = new System.Drawing.Point(114, 15);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(99, 34);
+            this.btnUpdate.Size = new System.Drawing.Size(99, 55);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Güncelle";
             // 
             // btneAdd
             // 
             this.btneAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btneAdd.Appearance.Options.UseTextOptions = true;
+            this.btneAdd.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.btneAdd.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.add_32x321;
-            this.btneAdd.Location = new System.Drawing.Point(13, 13);
+            this.btneAdd.Location = new System.Drawing.Point(13, 15);
             this.btneAdd.Name = "btneAdd";
-            this.btneAdd.Size = new System.Drawing.Size(99, 34);
+            this.btneAdd.Size = new System.Drawing.Size(95, 55);
             this.btneAdd.TabIndex = 0;
             this.btneAdd.Text = "Ekle";
             this.btneAdd.Click += new System.EventHandler(this.btneAdd_Click);
@@ -72,7 +74,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btneAdd);
             this.Name = "Footer";
-            this.Size = new System.Drawing.Size(330, 59);
+            this.Size = new System.Drawing.Size(330, 82);
             this.Load += new System.EventHandler(this.Footer_Load);
             this.ResumeLayout(false);
 

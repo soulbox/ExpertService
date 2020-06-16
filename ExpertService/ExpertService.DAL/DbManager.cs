@@ -12,7 +12,9 @@ namespace ExpertService.DAL
         public static DbEntity DB { get => entity; }
         static DbManager()
         {
+
             entity = new DbEntity();
+            //entity.c
         }
     }
 }

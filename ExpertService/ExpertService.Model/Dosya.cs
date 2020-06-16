@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,12 +12,12 @@ namespace ExpertService.Model
 {
     public class Dosya : BaseProp
     {
-        public Dosya()
+        public Dosya() 
         {
-            //CalismaDonemis = new List<CalismaDonemi>();
-            //UcretBilgileris = new List<UcretBilgileri>();
-            //Taleplers = new List<Talepler>();
-            //EkDosya = new List<Dosya>();
+            //CalismaDonemis = new HashSet<CalismaDonemi>();
+            //UcretBilgileris = new HashSet<UcretBilgileri>();
+            //Taleplers = new HashSet<Talepler>();
+            //EkDosya = new HashSet<Dosya>();
             //AnaDosya = new Dosya();
         }
         [Key]
@@ -34,13 +36,15 @@ namespace ExpertService.Model
         public int UserId { get; set; }
         public UserTable UserTable { get; set; }
         //Ek Dosyalar  
-        //[ForeignKey("DosyaId")]
+        //[Key ]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ForeignKey("AnaDosya")]
         public int? AnaDosyaID { get; set; }
-        public bool isComplete { get; set; } = false;
+        public DateTime? CompleteDate { get; set; } = (DateTime?)null;
         //[ForeignKey("AnaDosyaID")]
-        public virtual ICollection<Dosya> EkDosya { get; set; }
+        public ICollection<Dosya> EkDosya { get; set; }
 
-        public virtual Dosya AnaDosya { get; set; }
+        public Dosya AnaDosya { get; set; }
 
     }
 }

@@ -3,6 +3,7 @@ using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraTab.Buttons;
 using ExpertService.Data;
 using ExpertService.Model;
+using ExpertServis.WindowForm.Forms;
 using ExpertServis.WindowForm.Rapor;
 using System;
 using System.Collections.Generic;
@@ -22,32 +23,33 @@ namespace ExpertServis.WindowForm
     public partial class Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         public UserTable User { get; set; }
+        public static Main MainForm;
         public Main(UserTable user)
         {
             User = user;
             InitializeComponent();
+            MainForm = this;
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //var a = new Forms.DosyaForm();
-            Container.AddControl(new Forms.CalismaZamaniForm(User.Dosyalar.FirstOrDefault().CalismaDonemis.FirstOrDefault()));
+            //Container.AddControl(new TaleplerForm());
             ElementDosyaParent.Elements.Clear();
             ElementParentTalepler.Elements.Clear();
             ElementParentUcretBilgileri.Elements.Clear();
             ElementParentÇalışmaDönemi.Elements.Clear();
             ElementTest.HeaderControl = simpleButton2;
-
             DosyaDoldur();
         }
 
-        void DosyaDoldur(Func<Dosya, bool> prediticate = null)
+        public void DosyaDoldur(Func<Dosya, bool> prediticate = null)
         {
             var element = ElementDosyaParent;
             element.Elements.Clear();
             User.Dosyalar?
                 .Where(prediticate == null ? a => true : prediticate)
+                .Where(x => x.isActive)
                 .OrderBy(x => x.AnaDosyaID)
                 .ForEach(x =>
             {
@@ -68,6 +70,7 @@ namespace ExpertServis.WindowForm
         }
         void DosyalarıDoldur(Dosya dossya, AccordionControlElement element)
         {
+            if (dossya.EkDosya == null) return;
             foreach (var x in dossya.EkDosya)
             {
 
@@ -92,32 +95,30 @@ namespace ExpertServis.WindowForm
                     DosyalarıDoldur(x, yeni);
             }
         }
-        private void Element_Click(object sender, EventArgs e)
+        public void Element_Click(object sender, EventArgs e)
         {
             var element = (AccordionControlElement)sender;
+            Container.Controls.Clear();
             switch (element.Tag)
             {
                 case Dosya x:
                     ÇalışmaDönemiDodur(x);
                     TalepDoldur(x);
-                    ÜcretBilgileriDoldur(x);                
-                     RaporDoldur(x);
-                    Container.Controls.Clear();
-                    var form = new Forms.DosyaForm(x);
-                    form.Dock = DockStyle.Fill;
-                    Container.Controls.Add(form);
+                    ÜcretBilgileriDoldur(x);
+                    RaporDoldur(x);
+                    Container.Controls.Add(new Forms.DosyaForm(x));
                     break;
                 case CalismaDonemi x:
-                    Container.Controls.Clear();                    
-                    var f1 = new Forms.ÇalışmaDönemiForm(x);
-                    f1.Dock = DockStyle.Fill;
-                    Container.Controls.Add(f1);
+                    Container.Controls.Add(new Forms.ÇalışmaDönemiForm(x));
                     break;
-                case KıdemTazminatı a:
-                    Container.Controls.Clear();
-                    var TazminatForm = new Forms.TazminatForm(a);
-                    TazminatForm.Dock = DockStyle.Fill;
-                    Container.Controls.Add(TazminatForm);
+                case KıdemTazminatı x:
+                    Container.Controls.Add(new Forms.TazminatForm(x));
+                    break;
+                case Talepler x:
+                    Container.Controls.Add(new Forms.TaleplerForm(x));
+                    break;
+                case UcretBilgileri x:
+                    Container.Controls.Add(new Forms.ÜcretBilgileriForm(x));
                     break;
                 default:
                     break;
@@ -131,6 +132,8 @@ namespace ExpertServis.WindowForm
             element.Elements.Clear();
             dosya?.CalismaDonemis?
                 .Where(predicate == null ? a => true : predicate)
+                .Where(x => x.isActive)
+
                 .ForEach(x =>
                 {
                     var yeni = new AccordionControlElement()
@@ -153,6 +156,7 @@ namespace ExpertServis.WindowForm
             string format = @"hh\:mm";
             Donem?.ZamanCizelgesis?
                     .Where(predicate == null ? a => true : predicate)
+                    .Where(x => x.isActive)
                     .ForEach(x =>
                     {
                         var txt = $"{x.Gün.ToString()}-[{x.NetTime.ToString(format) }]";
@@ -176,6 +180,8 @@ namespace ExpertServis.WindowForm
             element.Elements.Clear();
             dosya?.Taleplers?
                 .Where(predicate == null ? a => true : predicate)
+                 .Where(x => x.isActive)
+
                 .ForEach(x =>
                 {
                     var yeni = new AccordionControlElement()
@@ -189,7 +195,7 @@ namespace ExpertServis.WindowForm
 
                     };
                     element.Elements.Add(yeni);
-
+                    yeni.Click += Element_Click;
                 });
         }
         void ÜcretBilgileriDoldur(Dosya dosya, Func<UcretBilgileri, bool> predicate = null)
@@ -199,6 +205,7 @@ namespace ExpertServis.WindowForm
             element.Elements.Clear();
             dosya?.UcretBilgileris?
                 .Where(predicate == null ? a => true : predicate)
+                .Where(x => x.isActive)
                 .ForEach(x =>
                 {
                     var yeni = new AccordionControlElement()
@@ -210,6 +217,8 @@ namespace ExpertServis.WindowForm
 
                     };
                     element.Elements.Add(yeni);
+                    yeni.Click += Element_Click;
+
                 });
         }
         void RaporDoldur(Dosya dosya)
@@ -221,7 +230,7 @@ namespace ExpertServis.WindowForm
                 element.Style = ElementStyle.Item;
                 return;
             }
-             element.Style = ElementStyle.Group ;
+            element.Style = ElementStyle.Group;
 
             var KıdemTazminatı = new Rapor.KıdemTazminatı(TavanUcreti.TavanDonemleri, dosya);
             var yeni = new AccordionControlElement()
@@ -242,6 +251,16 @@ namespace ExpertServis.WindowForm
             var form = new Forms.DosyaForm();
             form.Dock = DockStyle.Fill;
             Container.Controls.Add(form);
+        }
+
+        private void ElementParentTalepler_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

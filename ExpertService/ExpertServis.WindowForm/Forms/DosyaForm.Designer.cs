@@ -44,7 +44,6 @@
             this.chckZaman = new DevExpress.XtraEditors.CheckEdit();
             this.txtAçıklama = new DevExpress.XtraEditors.MemoEdit();
             this.footer1 = new ExpertServis.WindowForm.Forms.Footer();
-            this.chckEkdosya = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDosyaNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdı.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyadı.Properties)).BeginInit();
@@ -55,7 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKayıtTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chckZaman.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAçıklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chckEkdosya.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -116,6 +114,7 @@
             // 
             // txtDosyaNo
             // 
+            this.txtDosyaNo.EditValue = "asdlkjglkj";
             this.txtDosyaNo.Location = new System.Drawing.Point(120, 18);
             this.txtDosyaNo.Name = "txtDosyaNo";
             this.txtDosyaNo.Size = new System.Drawing.Size(149, 20);
@@ -123,6 +122,7 @@
             // 
             // txtAdı
             // 
+            this.txtAdı.EditValue = "Kadir";
             this.txtAdı.Location = new System.Drawing.Point(120, 39);
             this.txtAdı.Name = "txtAdı";
             this.txtAdı.Size = new System.Drawing.Size(149, 20);
@@ -130,6 +130,7 @@
             // 
             // txtSoyadı
             // 
+            this.txtSoyadı.EditValue = "Aygün8";
             this.txtSoyadı.Location = new System.Drawing.Point(120, 60);
             this.txtSoyadı.Name = "txtSoyadı";
             this.txtSoyadı.Size = new System.Drawing.Size(149, 20);
@@ -137,6 +138,7 @@
             // 
             // txtTCNO
             // 
+            this.txtTCNO.EditValue = "13103235064";
             this.txtTCNO.Location = new System.Drawing.Point(120, 81);
             this.txtTCNO.Name = "txtTCNO";
             this.txtTCNO.Properties.Mask.EditMask = "f0";
@@ -146,7 +148,7 @@
             // 
             // dateDavaTarihi
             // 
-            this.dateDavaTarihi.EditValue = null;
+            this.dateDavaTarihi.EditValue = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             this.dateDavaTarihi.Location = new System.Drawing.Point(120, 102);
             this.dateDavaTarihi.Name = "dateDavaTarihi";
             this.dateDavaTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -158,7 +160,7 @@
             // 
             // dateKayıtTarihi
             // 
-            this.dateKayıtTarihi.EditValue = null;
+            this.dateKayıtTarihi.EditValue = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             this.dateKayıtTarihi.Location = new System.Drawing.Point(120, 123);
             this.dateKayıtTarihi.Name = "dateKayıtTarihi";
             this.dateKayıtTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -170,6 +172,7 @@
             // 
             // chckZaman
             // 
+            this.chckZaman.EditValue = true;
             this.chckZaman.Location = new System.Drawing.Point(120, 145);
             this.chckZaman.Name = "chckZaman";
             this.chckZaman.Properties.Caption = "Zaman Aşımı Var mı?";
@@ -178,6 +181,7 @@
             // 
             // txtAçıklama
             // 
+            this.txtAçıklama.EditValue = "asd";
             this.txtAçıklama.Location = new System.Drawing.Point(120, 193);
             this.txtAçıklama.Name = "txtAçıklama";
             this.txtAçıklama.Size = new System.Drawing.Size(321, 190);
@@ -186,25 +190,16 @@
             // footer1
             // 
             this.footer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footer1.Location = new System.Drawing.Point(0, 409);
+            this.footer1.Location = new System.Drawing.Point(0, 389);
             this.footer1.Name = "footer1";
-            this.footer1.Size = new System.Drawing.Size(506, 59);
+            this.footer1.Size = new System.Drawing.Size(506, 79);
             this.footer1.TabIndex = 8;
             this.footer1.Load += new System.EventHandler(this.footer1_Load);
-            // 
-            // chckEkdosya
-            // 
-            this.chckEkdosya.Location = new System.Drawing.Point(120, 169);
-            this.chckEkdosya.Name = "chckEkdosya";
-            this.chckEkdosya.Properties.Caption = "Ek Dosyamı?";
-            this.chckEkdosya.Size = new System.Drawing.Size(149, 18);
-            this.chckEkdosya.TabIndex = 17;
             // 
             // DosyaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chckEkdosya);
             this.Controls.Add(this.chckZaman);
             this.Controls.Add(this.dateKayıtTarihi);
             this.Controls.Add(this.dateDavaTarihi);
@@ -234,7 +229,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateKayıtTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chckZaman.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAçıklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chckEkdosya.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +252,5 @@
         private DevExpress.XtraEditors.DateEdit dateKayıtTarihi;
         private DevExpress.XtraEditors.CheckEdit chckZaman;
         private DevExpress.XtraEditors.MemoEdit txtAçıklama;
-        private DevExpress.XtraEditors.CheckEdit chckEkdosya;
     }
 }
