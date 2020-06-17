@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace ExpertService.Model
 {
-    public class UcretBilgileri : BaseProp
+    public class UcretBilgileri : BaseEntity
     {
-        [Key]
-        public int UcretId { get; set; }
+
         public int DosyaId { get; set; }
         public Tanımlamalar.ÜcretTipi  Açıklama { get; set; }
         public decimal Tutar { get; set; }

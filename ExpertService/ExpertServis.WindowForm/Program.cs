@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using ExpertService.DAL;
 using ExpertService.Data;
 using ExpertService.Model;
 using Microsoft.EntityFrameworkCore;
+using Z.EntityFramework.Plus;
 
 namespace ExpertServis.WindowForm
 {
@@ -24,24 +26,21 @@ namespace ExpertServis.WindowForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var aaaa = DbManager.DB.UserTables.FirstOrDefault();
+
             Thread.Sleep(1000);
-            var anadosya = DbManager.DB.Dosya.Where(x => x.AnaDosyaID == null).ToList();
-            var user = DbManager.DB.UserTables
-                .Include(x => x.Dosyalar.Select(a => a.CalismaDonemis))
-                .Include(x => x.Dosyalar.Select(a => a.UcretBilgileris))
-                .Include(x => x.Dosyalar.Select(a => a.CalismaDonemis.Select(c => c.ZamanCizelgesis)))
-                .Include(x => x.Dosyalar.Select(a => a.Taleplers))
-                .Include(x => x.Dosyalar.Select(a => a.EkDosya))
-                //.Where(x => x.Dosyalar.Any (a => a.AnaDosyaID==null))
-                //.Select(x => new
-                //{
-                //    x,
-                //    Dosyalar = x.Dosyalar.Where(a => a.AnaDosyaID == null)
-                //})
-                .FirstOrDefault();
-            user.Dosyalar = user.Dosyalar.Where(x => x.AnaDosyaID == null).ToList();
-            var an = TavanUcreti.TavanDonemleri;
+            var db = DbManager.DB;
+            var user = db.UserTable
+                .Include(x => x.Dosya)
+                    .ThenInclude(x => x.UcretBilgileris)
+                .Include(x => x.Dosya)
+                    .ThenInclude(x => x.Taleplers)
+                .Include(x => x.Dosya )
+                    .ThenInclude(x => x.CalismaDonemis )
+                        .ThenInclude(x=>x.ZamanCizelgesis)
+                .Include(x => x.Dosya)
+                    .ThenInclude(x => x.EkDosya)
+                    .FirstOrDefault();
+            var an = TavanUcreti.TavanDonemleri;         
             Application.Run(new Main(user));
 
 

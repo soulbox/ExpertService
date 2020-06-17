@@ -47,7 +47,8 @@ namespace ExpertServis.WindowForm
         {
             var element = ElementDosyaParent;
             element.Elements.Clear();
-            User.Dosyalar?
+            User.Dosya?
+                .Where(x => x.AnaDosyaID == null && x.isActive)
                 .Where(prediticate == null ? a => true : prediticate)
                 .Where(x => x.isActive)
                 .OrderBy(x => x.AnaDosyaID)
@@ -71,13 +72,12 @@ namespace ExpertServis.WindowForm
         void DosyalarıDoldur(Dosya dossya, AccordionControlElement element)
         {
             if (dossya.EkDosya == null) return;
-            foreach (var x in dossya.EkDosya)
+            var ekdosyalar = dossya.EkDosya
+                .Where(x => x.isActive)
+                .ToList();
+            foreach (var x in ekdosyalar)
             {
 
-                if (x.DosyaId == 5)
-                {
-
-                }
                 var yeni = new AccordionControlElement()
                 {
                     Image = GetImage(ElementTipi.EkDosya),
@@ -225,7 +225,7 @@ namespace ExpertServis.WindowForm
         {
             var element = ElementParentKıdemTaz;
             element.Elements.Clear();
-            if (dosya == null || dosya.CalismaDonemis.Count == 0)
+            if (dosya == null || dosya.CalismaDonemis?.Count == 0)
             {
                 element.Style = ElementStyle.Item;
                 return;

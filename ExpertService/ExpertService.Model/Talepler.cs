@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace ExpertService.Model
 {
-    public class Talepler : BaseProp
+    public class Talepler : BaseEntity
     {
-        [Key]
-        public int TalepId { get; set; }
+
         public int DosyaId { get; set; }
 
         //public decimal Tutar { get; set; }

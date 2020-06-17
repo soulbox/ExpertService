@@ -43,7 +43,7 @@ namespace ExpertServis.WindowForm.Forms
 
 
             dgDonemControl.DataSource = KıdemTazminatı.Dosya.CalismaDonemis
-                .OrderByDescending(x => x.DonemId)
+                .OrderByDescending(x => x.Id)
                 .Select(x => new { x.StartDate, x.FinishDate, x.Yıl, x.Ay, x.Gün, x.ToplamGün })
                 .ToList();
 

@@ -8,10 +8,13 @@ using System.Threading.Tasks;
 
 namespace ExpertService.Model
 {
-    public class CalismaDonemi : BaseProp
+    public class CalismaDonemi : BaseEntity
     {
-        [Key]
-        public int DonemId { get; set; }
+        public CalismaDonemi()
+        {
+            ZamanCizelgesis = new HashSet<ZamanCizelgesi>();
+
+        }
         public int DosyaId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }

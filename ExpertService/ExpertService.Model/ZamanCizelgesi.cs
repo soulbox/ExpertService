@@ -8,10 +8,9 @@ using static ExpertService.Model.Tanımlamalar;
 
 namespace ExpertService.Model
 {
-    public class ZamanCizelgesi : BaseProp
+    public class ZamanCizelgesi : BaseEntity
     {
-        [Key]
-        public int ZamanId { get; set; }
+
         public int DonemId { get; set; }
         public Günler Gün { get; set; }
         public TimeSpan StartTime { get; set; }

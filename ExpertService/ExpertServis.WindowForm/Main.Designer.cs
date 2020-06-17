@@ -349,7 +349,6 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraEditors.PanelControl Container;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator2;
@@ -370,6 +369,7 @@
         public DevExpress.XtraBars.Navigation.AccordionControlElement ElementParentÇalışmaDönemi;
         public DevExpress.XtraBars.Navigation.AccordionControlElement ElementParentKıdemTaz;
         public DevExpress.XtraBars.Navigation.AccordionControlElement ElementDosyaParent;
+        public DevExpress.XtraEditors.PanelControl Container;
     }
 }
 

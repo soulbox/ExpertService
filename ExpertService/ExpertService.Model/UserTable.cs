@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace ExpertService.Model
 {
-    public class UserTable : BaseProp
+    public class UserTable : BaseEntity
     {
-        [Key]
-        public int UserId { get; set; }
+
         [Required]
         public string UserName { get; set; }
         [Required]
@@ -21,8 +20,7 @@ namespace ExpertService.Model
         public string Surname { get; set; }
         public string Adres { get; set; }
         public string Tel { get; set; }
-
-        public ICollection<Dosya> Dosyalar { get; set; }
+        public ICollection<Dosya> Dosya { get; set; }
 
 
     }

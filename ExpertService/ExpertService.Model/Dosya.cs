@@ -10,18 +10,17 @@ using System.Threading.Tasks;
 
 namespace ExpertService.Model
 {
-    public class Dosya : BaseProp
+    public class Dosya : BaseEntity
     {
         public Dosya() 
         {
-            //CalismaDonemis = new HashSet<CalismaDonemi>();
-            //UcretBilgileris = new HashSet<UcretBilgileri>();
-            //Taleplers = new HashSet<Talepler>();
-            //EkDosya = new HashSet<Dosya>();
+            CalismaDonemis = new HashSet<CalismaDonemi>();
+            UcretBilgileris = new HashSet<UcretBilgileri>();
+            Taleplers = new HashSet<Talepler>();
+            EkDosya = new HashSet<Dosya>();
             //AnaDosya = new Dosya();
         }
-        [Key]
-        public int DosyaId { get; set; }
+
 
         public Int64 TCNO { get; set; }
         public string Adı { get; set; }
@@ -34,7 +33,7 @@ namespace ExpertService.Model
         public ICollection<UcretBilgileri> UcretBilgileris { get; set; }
         public ICollection<Talepler> Taleplers { get; set; }
         public int UserId { get; set; }
-        public UserTable UserTable { get; set; }
+        public UserTable User { get; set; }
         //Ek Dosyalar  
         //[Key ]
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -43,7 +42,6 @@ namespace ExpertService.Model
         public DateTime? CompleteDate { get; set; } = (DateTime?)null;
         //[ForeignKey("AnaDosyaID")]
         public ICollection<Dosya> EkDosya { get; set; }
-
         public Dosya AnaDosya { get; set; }
 
     }

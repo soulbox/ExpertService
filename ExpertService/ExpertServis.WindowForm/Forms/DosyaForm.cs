@@ -14,6 +14,7 @@ using NodaTime;
 using ExpertService.DAL;
 //using System.Data.Entity.Migrations;
 using DevExpress.ExpressApp.Win.Templates;
+using DevExpress.Utils.Extensions;
 
 namespace ExpertServis.WindowForm.Forms
 {
@@ -67,72 +68,114 @@ namespace ExpertServis.WindowForm.Forms
 
         }
 
-        Dosya SetValues(Dosya dos, bool isActive)
+        Dosya SetValues(Dosya dos, bool isActive, int? anadosyaId)
         {
-            dos.DosyaNo = txtDosyaNo.Text;
-            dos.Adı = txtAdı.Text;
-            dos.Soyadı = txtSoyadı.Text;
-            dos.TCNO = long.Parse(txtTCNO.Text);
-            dos.DavaTarihi = (DateTime)dateDavaTarihi.EditValue;
-            dos.ZamanAsimi = chckZaman.Checked;
-            dos.Açıklama = txtAçıklama.Text;
+            if (isActive)
+            {
+                dos.DosyaNo = txtDosyaNo.Text;
+                dos.Adı = txtAdı.Text;
+                dos.Soyadı = txtSoyadı.Text;
+                dos.TCNO = long.Parse(txtTCNO.Text);
+                dos.DavaTarihi = (DateTime)dateDavaTarihi.EditValue;
+                dos.ZamanAsimi = chckZaman.Checked;
+                dos.Açıklama = txtAçıklama.Text;
+                dos.UserId = MainForm.User.Id;
+                dos.AnaDosyaID = anadosyaId;
+                dos.UpdatedDate = dos.Id > 0 ? DateTime.Now : (DateTime?)null;
+            }
+            else 
+                dos.DeletedDate =DateTime.Now ;
             dos.isActive = isActive;
-            dos.UpdatedDate = dos.DosyaId > 0 ? DateTime.Now : (DateTime?)null;
-            dos.DeletedDate = !isActive ? DateTime.Now : (DateTime?)null;
-            dos.AnaDosyaID = hasDosya ? dosya.DosyaId : (int?)null;
-            dos.UserId = MainForm.User.UserId;
             return dos;
         }
         Dosya YeniDosyaOluştur()
         {
-            return SetValues(new Dosya(), true);
+
+            return SetValues(new Dosya(), true, (int?)null);
         }
         Dosya EkdosyaOluştur()
         {
-            return SetValues(new Dosya(), true);
+            return SetValues(new Dosya(), true, dosya.Id);
         }
         Dosya DosyaGüncelle(Dosya dos)
         {
 
-            return SetValues(dos, true);
+            return SetValues(dos, true, dosya.AnaDosyaID);
         }
         Dosya DosyaSil(Dosya dos)
         {
+            return SetValues(dos, false, dos.AnaDosyaID);
+        }
+        void EkdosyaSil(Dosya ekdosya)
+        {
+            ekdosya.EkDosya.ToList().ForEach(x =>
+            {
+                DosyaSil(x);
+                if (ekdosya.EkDosya?.Count > 0)
+                    EkdosyaSil(x);
+            });
 
-            return SetValues(dos, false);
         }
         private void BtneAdd_Click(object sender, EventArgs e)
         {
-            if (!hasDosya)//yenidosya
+            var yeni = !hasDosya ? YeniDosyaOluştur() : EkdosyaOluştur();
+            DbManager.DB.Dosya.Add(yeni);
+            if (DbManager.DB.SaveChanges() > 0)
             {
-                var yeni = YeniDosyaOluştur();
+                MainForm.User.Dosya.Add(yeni);
+                MainForm.DosyaDoldur();
+                Msg("Eklendi");
+                MainForm.Container.Controls.Clear();
+            }
 
-                using (DbEntity DB = new DbEntity())
-                {
-                    //DB.Dosya.AddOrUpdate(yeni);
-                    
-                    DB.SaveChanges();
-                }
+        }
 
-                DbManager.DB.Dosya.Add(yeni);
+        void Msg(string message) => XtraMessageBox.Show(message);
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            if (XtraMessageBox.Show($"{dosya.DosyaNo} Güncellensin mi?", "Güncelle", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                DosyaGüncelle(dosya);
+
                 if (DbManager.DB.SaveChanges() > 0)
                 {
-                    MainForm.User.Dosyalar.Add(yeni);
+                    //MainForm.User.Dosya.Add(yeni);
                     MainForm.DosyaDoldur();
-                    MessageBox.Show("Eklendi");
+                    Msg("Güncellendi.");
+                    MainForm.Container.Controls.Clear();
+
                 }
             }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var str = "";
+            if (dosya.EkDosya?.Count > 0)
+                str = $"Dosya No:{dosya.DosyaNo}\nBu dosyaya ait ek dosyalarla beraber silisin mi?";
+            else str = $"{dosya.DosyaNo } Silinsin mi?";
+
+            if (XtraMessageBox.Show($"{str } Silinsin mi?", "Sil", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                if (dosya.EkDosya?.Count > 0)
+                {
+                    DosyaSil(dosya);
+                    EkdosyaSil(dosya);
+                }
+                else
+                    DosyaSil(dosya);
+                if (DbManager.DB.SaveChanges() > 0)
+                {
+                    //MainForm.User.Dosya.Add(yeni);
+                    MainForm.DosyaDoldur();
+                    Msg("Silindi!.");
+                    MainForm.Container.Controls.Clear();
+
+                }
+            }
         }
 
-        private void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+
 
 
 

@@ -41,7 +41,7 @@ namespace ExpertServis.WindowForm.Rapor
         }
         public void Hesapla()
         {
-            if (Dosya.CalismaDonemis.Count == 0) return;
+            if (Dosya.CalismaDonemis == null) return;
             ToplamÇalışma();
             if (Dosya.CalismaDonemis?.Count > 1)
                 FasılalıÇalışma = true;
