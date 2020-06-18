@@ -251,6 +251,7 @@
     <Compile Include="Forms\DosyaForm.Designer.cs">
       <DependentUpon>DosyaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Ext.cs" />
     <Compile Include="Forms\Footer.cs">
       <SubType>UserControl</SubType>
     </Compile>

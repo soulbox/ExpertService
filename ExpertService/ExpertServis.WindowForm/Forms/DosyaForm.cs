@@ -15,11 +15,14 @@ using ExpertService.DAL;
 //using System.Data.Entity.Migrations;
 using DevExpress.ExpressApp.Win.Templates;
 using DevExpress.Utils.Extensions;
+using static ExpertService.DAL.DbManager;
+
 
 namespace ExpertServis.WindowForm.Forms
 {
     public partial class DosyaForm : DevExpress.XtraEditors.XtraUserControl
     {
+
         public Dosya dosya { get; set; }
         public Main MainForm { get; set; }
         public DosyaForm(Dosya DosyaParam)
@@ -81,10 +84,9 @@ namespace ExpertServis.WindowForm.Forms
                 dos.Açıklama = txtAçıklama.Text;
                 dos.UserId = MainForm.User.Id;
                 dos.AnaDosyaID = anadosyaId;
-                dos.UpdatedDate = dos.Id > 0 ? DateTime.Now : (DateTime?)null;
+                //dos.UpdatedDate = dos.Id > 0 ? DateTime.Now : (DateTime?)null;
             }
-            else 
-                dos.DeletedDate =DateTime.Now ;
+            //dos.DeletedDate = DateTime.Now;
             dos.isActive = isActive;
             return dos;
         }
@@ -119,30 +121,32 @@ namespace ExpertServis.WindowForm.Forms
         private void BtneAdd_Click(object sender, EventArgs e)
         {
             var yeni = !hasDosya ? YeniDosyaOluştur() : EkdosyaOluştur();
-            DbManager.DB.Dosya.Add(yeni);
-            if (DbManager.DB.SaveChanges() > 0)
+
+            UnitWork.DosyaRepo.Add(yeni);
+            if (UnitWork.Complete() > 0)
             {
                 MainForm.User.Dosya.Add(yeni);
-                MainForm.DosyaDoldur();
                 Msg("Eklendi");
-                MainForm.Container.Controls.Clear();
+                MainForm.Form1_Load(null, null);
+
             }
 
         }
-
         void Msg(string message) => XtraMessageBox.Show(message);
+
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             if (XtraMessageBox.Show($"{dosya.DosyaNo} Güncellensin mi?", "Güncelle", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 DosyaGüncelle(dosya);
 
-                if (DbManager.DB.SaveChanges() > 0)
+                if (UnitWork.Complete() > 0)
                 {
                     //MainForm.User.Dosya.Add(yeni);
-                    MainForm.DosyaDoldur();
+                    //MainForm.DosyaDoldur();
                     Msg("Güncellendi.");
-                    MainForm.Container.Controls.Clear();
+                    MainForm.Form1_Load(null, null);
+
 
                 }
             }
@@ -164,12 +168,14 @@ namespace ExpertServis.WindowForm.Forms
                 }
                 else
                     DosyaSil(dosya);
-                if (DbManager.DB.SaveChanges() > 0)
+                if (UnitWork.Complete() > 0)
                 {
                     //MainForm.User.Dosya.Add(yeni);
-                    MainForm.DosyaDoldur();
+                    //MainForm.DosyaDoldur();
                     Msg("Silindi!.");
-                    MainForm.Container.Controls.Clear();
+                    //MainForm.Container.Controls.Clear();
+                    MainForm.Form1_Load(null, null);
+
 
                 }
             }

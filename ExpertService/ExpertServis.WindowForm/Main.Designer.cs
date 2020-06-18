@@ -136,7 +136,7 @@
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(248, 620);
             this.accordionControl1.TabIndex = 2;
-            this.accordionControl1.Click += new System.EventHandler(this.accordionControl1_Click);
+        
             // 
             // simpleButton2
             // 
@@ -205,6 +205,7 @@
             this.ElementParentÇalışmaDönemi.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.adateoccurring_32x32;
             this.ElementParentÇalışmaDönemi.Name = "ElementParentÇalışmaDönemi";
             this.ElementParentÇalışmaDönemi.Text = "Çalışma Dönemi";
+            this.ElementParentÇalışmaDönemi.Click += new System.EventHandler(this.ElementParentÇalışmaDönemi_Click);
             // 
             // ElementCildCalismaDonemi
             // 
@@ -233,7 +234,7 @@
             this.ElementParentTalepler.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.financial_32x32;
             this.ElementParentTalepler.Name = "ElementParentTalepler";
             this.ElementParentTalepler.Text = "Talepler";
-            this.ElementParentTalepler.Click += new System.EventHandler(this.ElementParentTalepler_Click);
+      
             // 
             // ElementChildTalepler
             // 

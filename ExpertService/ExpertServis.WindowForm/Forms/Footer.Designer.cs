@@ -42,6 +42,7 @@
             this.btnDelete.Size = new System.Drawing.Size(99, 55);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Sil";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -52,6 +53,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(99, 55);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Güncelle";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btneAdd
             // 

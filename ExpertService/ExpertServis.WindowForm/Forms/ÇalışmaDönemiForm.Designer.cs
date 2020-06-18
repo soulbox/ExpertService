@@ -168,26 +168,28 @@
             // dateStart
             // 
             this.dateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateStart.EditValue = null;
+            this.dateStart.EditValue = new System.DateTime(2020, 6, 18, 15, 58, 25, 543);
             this.dateStart.Location = new System.Drawing.Point(277, 3);
             this.dateStart.Name = "dateStart";
             this.dateStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateStart.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateStart.Size = new System.Drawing.Size(163, 20);
             this.dateStart.TabIndex = 68;
             // 
             // dateFinish
             // 
             this.dateFinish.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateFinish.EditValue = null;
+            this.dateFinish.EditValue = new System.DateTime(2020, 6, 18, 15, 58, 25, 543);
             this.dateFinish.Location = new System.Drawing.Point(277, 27);
             this.dateFinish.Name = "dateFinish";
             this.dateFinish.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateFinish.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateFinish.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dateFinish.Size = new System.Drawing.Size(163, 20);
             this.dateFinish.TabIndex = 69;
             // 
@@ -199,6 +201,8 @@
             this.NetTime7.Name = "NetTime7";
             this.NetTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime7.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime7.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime7.Size = new System.Drawing.Size(87, 20);
             this.NetTime7.TabIndex = 133;
             // 
@@ -210,6 +214,8 @@
             this.RestTime7.Name = "RestTime7";
             this.RestTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime7.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime7.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime7.Size = new System.Drawing.Size(87, 20);
             this.RestTime7.TabIndex = 132;
             // 
@@ -221,6 +227,8 @@
             this.EndTime7.Name = "EndTime7";
             this.EndTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime7.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime7.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime7.Size = new System.Drawing.Size(87, 20);
             this.EndTime7.TabIndex = 131;
             // 
@@ -232,7 +240,8 @@
             this.StartTime7.Name = "StartTime7";
             this.StartTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime7.Properties.Mask.EditMask = "t";
+            this.StartTime7.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime7.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime7.Size = new System.Drawing.Size(87, 20);
             this.StartTime7.TabIndex = 130;
             // 
@@ -244,6 +253,8 @@
             this.NetTime6.Name = "NetTime6";
             this.NetTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime6.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime6.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime6.Size = new System.Drawing.Size(87, 20);
             this.NetTime6.TabIndex = 129;
             // 
@@ -255,6 +266,8 @@
             this.RestTime6.Name = "RestTime6";
             this.RestTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime6.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime6.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime6.Size = new System.Drawing.Size(87, 20);
             this.RestTime6.TabIndex = 128;
             // 
@@ -266,6 +279,8 @@
             this.EndTime6.Name = "EndTime6";
             this.EndTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime6.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime6.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime6.Size = new System.Drawing.Size(87, 20);
             this.EndTime6.TabIndex = 127;
             // 
@@ -277,7 +292,8 @@
             this.StartTime6.Name = "StartTime6";
             this.StartTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime6.Properties.Mask.EditMask = "t";
+            this.StartTime6.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime6.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime6.Size = new System.Drawing.Size(87, 20);
             this.StartTime6.TabIndex = 126;
             // 
@@ -289,6 +305,8 @@
             this.NetTime5.Name = "NetTime5";
             this.NetTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime5.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime5.Size = new System.Drawing.Size(87, 20);
             this.NetTime5.TabIndex = 125;
             // 
@@ -300,6 +318,8 @@
             this.RestTime5.Name = "RestTime5";
             this.RestTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime5.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime5.Size = new System.Drawing.Size(87, 20);
             this.RestTime5.TabIndex = 124;
             // 
@@ -311,6 +331,8 @@
             this.EndTime5.Name = "EndTime5";
             this.EndTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime5.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime5.Size = new System.Drawing.Size(87, 20);
             this.EndTime5.TabIndex = 123;
             // 
@@ -322,7 +344,8 @@
             this.StartTime5.Name = "StartTime5";
             this.StartTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime5.Properties.Mask.EditMask = "t";
+            this.StartTime5.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime5.Size = new System.Drawing.Size(87, 20);
             this.StartTime5.TabIndex = 122;
             // 
@@ -334,6 +357,8 @@
             this.NetTime4.Name = "NetTime4";
             this.NetTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime4.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime4.Size = new System.Drawing.Size(87, 20);
             this.NetTime4.TabIndex = 121;
             // 
@@ -345,6 +370,8 @@
             this.RestTime4.Name = "RestTime4";
             this.RestTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime4.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime4.Size = new System.Drawing.Size(87, 20);
             this.RestTime4.TabIndex = 120;
             // 
@@ -356,6 +383,8 @@
             this.EndTime4.Name = "EndTime4";
             this.EndTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime4.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime4.Size = new System.Drawing.Size(87, 20);
             this.EndTime4.TabIndex = 119;
             // 
@@ -367,7 +396,8 @@
             this.StartTime4.Name = "StartTime4";
             this.StartTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime4.Properties.Mask.EditMask = "t";
+            this.StartTime4.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime4.Size = new System.Drawing.Size(87, 20);
             this.StartTime4.TabIndex = 118;
             // 
@@ -379,6 +409,8 @@
             this.NetTime3.Name = "NetTime3";
             this.NetTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime3.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime3.Size = new System.Drawing.Size(87, 20);
             this.NetTime3.TabIndex = 117;
             // 
@@ -390,6 +422,8 @@
             this.RestTime3.Name = "RestTime3";
             this.RestTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime3.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime3.Size = new System.Drawing.Size(87, 20);
             this.RestTime3.TabIndex = 116;
             // 
@@ -401,6 +435,8 @@
             this.EndTime3.Name = "EndTime3";
             this.EndTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime3.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime3.Size = new System.Drawing.Size(87, 20);
             this.EndTime3.TabIndex = 115;
             // 
@@ -412,7 +448,8 @@
             this.StartTime3.Name = "StartTime3";
             this.StartTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime3.Properties.Mask.EditMask = "t";
+            this.StartTime3.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime3.Size = new System.Drawing.Size(87, 20);
             this.StartTime3.TabIndex = 114;
             // 
@@ -424,6 +461,8 @@
             this.NetTime2.Name = "NetTime2";
             this.NetTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime2.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime2.Size = new System.Drawing.Size(87, 20);
             this.NetTime2.TabIndex = 113;
             // 
@@ -435,6 +474,8 @@
             this.RestTime2.Name = "RestTime2";
             this.RestTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime2.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime2.Size = new System.Drawing.Size(87, 20);
             this.RestTime2.TabIndex = 112;
             // 
@@ -446,6 +487,8 @@
             this.EndTime2.Name = "EndTime2";
             this.EndTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime2.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime2.Size = new System.Drawing.Size(87, 20);
             this.EndTime2.TabIndex = 111;
             // 
@@ -457,7 +500,8 @@
             this.StartTime2.Name = "StartTime2";
             this.StartTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime2.Properties.Mask.EditMask = "t";
+            this.StartTime2.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime2.Size = new System.Drawing.Size(87, 20);
             this.StartTime2.TabIndex = 110;
             // 
@@ -469,6 +513,8 @@
             this.NetTime1.Name = "NetTime1";
             this.NetTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NetTime1.Properties.Mask.EditMask = "HH\\:mm";
+            this.NetTime1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.NetTime1.Size = new System.Drawing.Size(87, 20);
             this.NetTime1.TabIndex = 109;
             // 
@@ -480,6 +526,8 @@
             this.RestTime1.Name = "RestTime1";
             this.RestTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RestTime1.Properties.Mask.EditMask = "HH\\:mm";
+            this.RestTime1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.RestTime1.Size = new System.Drawing.Size(87, 20);
             this.RestTime1.TabIndex = 108;
             // 
@@ -491,6 +539,8 @@
             this.EndTime1.Name = "EndTime1";
             this.EndTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EndTime1.Properties.Mask.EditMask = "HH\\:mm";
+            this.EndTime1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.EndTime1.Size = new System.Drawing.Size(87, 20);
             this.EndTime1.TabIndex = 107;
             // 
@@ -502,7 +552,8 @@
             this.StartTime1.Name = "StartTime1";
             this.StartTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.StartTime1.Properties.Mask.EditMask = "t";
+            this.StartTime1.Properties.Mask.EditMask = "HH\\:mm";
+            this.StartTime1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.StartTime1.Size = new System.Drawing.Size(87, 20);
             this.StartTime1.TabIndex = 106;
             // 

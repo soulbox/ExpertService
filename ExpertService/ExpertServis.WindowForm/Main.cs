@@ -24,6 +24,7 @@ namespace ExpertServis.WindowForm
     {
         public UserTable User { get; set; }
         public static Main MainForm;
+        public Dosya ÇalışmaDosyası { get; set; }
         public Main(UserTable user)
         {
             User = user;
@@ -32,21 +33,27 @@ namespace ExpertServis.WindowForm
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             //Container.AddControl(new TaleplerForm());
             ElementDosyaParent.Elements.Clear();
             ElementParentTalepler.Elements.Clear();
             ElementParentUcretBilgileri.Elements.Clear();
             ElementParentÇalışmaDönemi.Elements.Clear();
+            ElementParentKıdemTaz.Elements.Clear();
+            Container.Controls.Clear();
             ElementTest.HeaderControl = simpleButton2;
+            ÇalışmaDosyası = null;
             DosyaDoldur();
         }
 
+
         public void DosyaDoldur(Func<Dosya, bool> prediticate = null)
         {
+
             var element = ElementDosyaParent;
             element.Elements.Clear();
+
             User.Dosya?
                 .Where(x => x.AnaDosyaID == null && x.isActive)
                 .Where(prediticate == null ? a => true : prediticate)
@@ -107,6 +114,7 @@ namespace ExpertServis.WindowForm
                     ÜcretBilgileriDoldur(x);
                     RaporDoldur(x);
                     Container.Controls.Add(new Forms.DosyaForm(x));
+                    ÇalışmaDosyası = x;
                     break;
                 case CalismaDonemi x:
                     Container.Controls.Add(new Forms.ÇalışmaDönemiForm(x));
@@ -154,7 +162,7 @@ namespace ExpertServis.WindowForm
             var element = ElementParentÇalışmaDönemi.Elements.FirstOrDefault(x => x.Tag == Donem);
             element.Elements.Clear();
             string format = @"hh\:mm";
-            Donem?.ZamanCizelgesis?
+            Donem?.ZamanCizelgesi?
                     .Where(predicate == null ? a => true : predicate)
                     .Where(x => x.isActive)
                     .ForEach(x =>
@@ -247,19 +255,17 @@ namespace ExpertServis.WindowForm
 
         private void ElementDosyaParent_Click(object sender, EventArgs e)
         {
+            Form1_Load(null, null);
             Container.Controls.Clear();
-            var form = new Forms.DosyaForm();
-            form.Dock = DockStyle.Fill;
-            Container.Controls.Add(form);
+            Container.Controls.Add(new Forms.DosyaForm());
         }
-
-        private void ElementParentTalepler_Click(object sender, EventArgs e)
+        private void ElementParentÇalışmaDönemi_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void accordionControl1_Click(object sender, EventArgs e)
-        {
+            if (ÇalışmaDosyası != null)
+            {
+                Container.Controls.Clear();
+                Container.Controls.Add(new Forms.ÇalışmaDönemiForm());
+            }
 
         }
     }

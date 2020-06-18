@@ -11,7 +11,6 @@ namespace ExpertService.Model
     public class ZamanCizelgesi : BaseEntity
     {
 
-        public int DonemId { get; set; }
         public Günler Gün { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
@@ -20,8 +19,7 @@ namespace ExpertService.Model
         //public TimeSpan? TotalTime { get => EndTime.Subtract(StartTime).Subtract(RestTime); private set { } }
         public TimeSpan NetTime { get => WorkTime.Subtract(RestTime); }
         public TimeSpan WorkTime { get => EndTime.Subtract(StartTime); }
-
-
+        public int CalismaDonemiId { get; set; }
         public CalismaDonemi CalismaDonemi { get; set; }
     }
 }

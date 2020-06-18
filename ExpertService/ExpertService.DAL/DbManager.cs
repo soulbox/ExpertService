@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace ExpertService.DAL
 {
-    public class DbManager
+    public static  class DbManager
     {
         static DbEntity entity;
-        public static DbEntity DB { get => entity; }
+        static UnitOfWork unit;
+        public static UnitOfWork UnitWork { get => unit = unit ?? new UnitOfWork(); }
+        public static DbEntity DB { get => entity = entity ?? new DbEntity(); }
         static DbManager()
         {
 
             entity = new DbEntity();
+            unit = new UnitOfWork();
             //entity.c
         }
     }

@@ -176,12 +176,18 @@
     <Compile Include="DbManager.cs" />
     <Compile Include="IUnitofWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repo\Abstract\ICalismaDonemi.cs" />
     <Compile Include="Repo\Abstract\IDosyaRepository.cs" />
+    <Compile Include="Repo\Abstract\ITalepRepository.cs" />
+    <Compile Include="Repo\Abstract\IZamanCizelgesi.cs" />
     <Compile Include="Repo\Abstract\IRepository.cs" />
     <Compile Include="Repo\Abstract\IUserRepository.cs" />
+    <Compile Include="Repo\Concreate\CalismaDonemiRepository.cs" />
     <Compile Include="Repo\Concreate\DosyaRepository.cs" />
     <Compile Include="Repo\Concreate\Repository.cs" />
+    <Compile Include="Repo\Concreate\TalepRepository.cs" />
     <Compile Include="Repo\Concreate\UserRepository.cs" />
+    <Compile Include="Repo\Concreate\ZamanCizelgesiRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,12 +12,21 @@ namespace ExpertService.Model
         bool active = true;
         [Key]
         public int Id { get; set; }
-        public DateTime CreatedDate { get; private set; } = DateTime.Now;
-        //new DateTime(2020,6,13);
-        public DateTime? DeletedDate { get;  set; }
-        public DateTime? UpdatedDate { get; set; }
-        public bool isActive { get; set; } = true;
-
+        public DateTime CreatedDate { get; private set; } = DateTime.UtcNow;        //new DateTime(2020,6,13);
+        public DateTime? DeletedDate { get; private set; }
+        public DateTime? ModifiedDate { get; private set; }
+        public bool isActive
+        {
+            get => active;
+            set
+            {
+                active = value;
+                if (Id > 0 && active && CreatedDate < DateTime.UtcNow)
+                    ModifiedDate = DateTime.UtcNow;
+                else if (Id > 0 && !active)
+                    DeletedDate = DateTime.UtcNow;
+            }
+        }
 
     }
 }

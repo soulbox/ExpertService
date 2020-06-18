@@ -46,6 +46,5 @@ namespace ExpertService.DAL.Repo.Concreate
 
         }
 
-      
     }
 }

@@ -12,16 +12,15 @@ namespace ExpertService.Model
     {
         public CalismaDonemi()
         {
-            ZamanCizelgesis = new HashSet<ZamanCizelgesi>();
-
+            ZamanCizelgesi = new HashSet<ZamanCizelgesi>();
         }
-        public int DosyaId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }
         public Boolean KıdemAlındı { get; set; }
         public Boolean ihbarAlındı { get; set; }
         public Boolean FazlaMesaiAlındı { get; set; }
-        public ICollection<ZamanCizelgesi> ZamanCizelgesis { get; set; }
+        public ICollection<ZamanCizelgesi> ZamanCizelgesi { get; set; }
+        public int DosyaId { get; set; }
         public Dosya Dosya { get; set; }
         public Period Period { get => NodaTime.Period.Between(StartDate.ToLocalDate(), FinishDate.AddDays(1).ToLocalDate(), PeriodUnits.YearMonthDay); }
         public int Yıl { get => Period.Years; }

@@ -11,13 +11,14 @@ namespace ExpertService.DAL.Repo.Abstract
     {
        
         Entity GetbyQuery(Expression<Func<Entity, bool>> expression);
-
         IEnumerable<Entity> GetAll();        
         IEnumerable<Entity> QueryGetAll(Expression<Func<Entity, bool>> expression);
         void Add(Entity entity);
         void Add(IEnumerable<Entity> entity);
         void Remove(Entity entity);
         void Remove(IEnumerable<Entity> entity);
-        
+
+
+
     }
 }

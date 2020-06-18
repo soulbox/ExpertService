@@ -1,4 +1,5 @@
 ﻿using ExpertService.DAL.Repo.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,13 @@ namespace ExpertService.DAL
 {
     public interface IUnitofWork
     {
+
         IDosyaRepository DosyaRepo { get; }
         IUserRepository UserRepo { get; }
+        IZamanCizelgesi ZamanRepo { get; }
+        ICalismaDonemi  CalismaRepo { get; }
+        ITalepRepository  TalepRepo { get; }
+
 
         int Complete();
 

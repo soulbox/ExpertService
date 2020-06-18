@@ -241,7 +241,7 @@ namespace ExpertService.DAL
                     liste.Add(new ZamanCizelgesi()
                     {
                         Id = index,
-                        DonemId = i,
+                        CalismaDonemiId = i,
                         Gün = (Tanımlamalar.Günler)j,
                         StartTime = j == 6 ? new TimeSpan(9, 0, 0) : j == 7 ? new TimeSpan(0, 0, 0) : new TimeSpan(9, 0, 0),
                         EndTime = j == 6 ? new TimeSpan(16, 0, 0) : j == 7 ? new TimeSpan(0, 0, 0) : new TimeSpan(20, 30, 0),

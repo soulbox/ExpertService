@@ -12,6 +12,7 @@ using ExpertService.Data;
 using ExpertService.Model;
 using Microsoft.EntityFrameworkCore;
 using Z.EntityFramework.Plus;
+using static ExpertService.DAL.DbManager;
 
 namespace ExpertServis.WindowForm
 {
@@ -26,21 +27,8 @@ namespace ExpertServis.WindowForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
-            Thread.Sleep(1000);
-            var db = DbManager.DB;
-            var user = db.UserTable
-                .Include(x => x.Dosya)
-                    .ThenInclude(x => x.UcretBilgileris)
-                .Include(x => x.Dosya)
-                    .ThenInclude(x => x.Taleplers)
-                .Include(x => x.Dosya )
-                    .ThenInclude(x => x.CalismaDonemis )
-                        .ThenInclude(x=>x.ZamanCizelgesis)
-                .Include(x => x.Dosya)
-                    .ThenInclude(x => x.EkDosya)
-                    .FirstOrDefault();
-            var an = TavanUcreti.TavanDonemleri;         
+            var an = TavanUcreti.TavanDonemleri;
+            var user = UnitWork.UserRepo.GetWithDosya(x => x.Id == 1);
             Application.Run(new Main(user));
 
 
