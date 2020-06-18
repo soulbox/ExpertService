@@ -42,6 +42,7 @@ namespace ExpertService.DAL.Repo.Concreate
         }
         public Entity GetbyQuery(Expression<Func<Entity, bool>> expression)
         {
+       
             return Db.Set<Entity>().FirstOrDefault(expression);
 
         }

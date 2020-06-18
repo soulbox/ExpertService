@@ -8,18 +8,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using ExpertService.DAL.Repo.Abstract;
+using ExpertService.DAL.Repo.Concreate;
 
 namespace ExpertServis.WindowForm.Forms
 {
     public partial class Footer : DevExpress.XtraEditors.XtraUserControl
     {
-        public string Update { get; set; }
-        public string Delete { get; set; }
+        public string Updatestr { get; set; }
+        public string Deletestr { get; set; }
 
         public Footer()
         {
             InitializeComponent();
         }
+
         private void Footer_Load(object sender, EventArgs e)
         {
 

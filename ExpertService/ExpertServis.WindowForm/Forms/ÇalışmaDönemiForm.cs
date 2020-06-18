@@ -40,11 +40,14 @@ namespace ExpertServis.WindowForm.Forms
             this.Dock = DockStyle.Fill;
             MainForm = Main.MainForm;
 
-            footer1.btneAdd.Click += BtneAdd_Click;
-            footer1.btnDelete.Click += BtnDelete_Click;
-            footer1.btnUpdate.Click += BtnUpdate_Click;
+            FooterLogic<CalismaDonemi> foot = new FooterLogic<CalismaDonemi>(
+                new Func<CalismaDonemi>(() => CreateDonem()),
+                new Func<CalismaDonemi>(() => UpdateDonem()),
+                new Func<CalismaDonemi>(() => DeleteDonem()),
+                footer1);
+            foot.UpdorDeleteStr = $"DosyaNo:{MainForm.ÇalışmaDosyası.DosyaNo}\nDönemi:{CalismaDonemi?.StartDate.ToShortDateString()} - {CalismaDonemi?.FinishDate.ToShortDateString()}";
 
-            //var aaaa = ((TimeSpan)StartTime1.EditValue);
+
             this.Controls.OfType<TimeEdit>().ForEach(x => x.EditValue = new TimeSpan(0, 0, 0));
             if (CalismaDonemi == null)
             {
@@ -152,7 +155,8 @@ namespace ExpertServis.WindowForm.Forms
                 return ((DateTime)c.EditValue).TimeOfDay;
         }
 
-        //CalismaDonemi Create() { }
+
+        #region AddUpdateDelete
         private void BtneAdd_Click(object sender, EventArgs e)
         {
             var yeni = CreateDonem();
@@ -166,7 +170,6 @@ namespace ExpertServis.WindowForm.Forms
 
             }
         }
-
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
@@ -198,6 +201,7 @@ namespace ExpertServis.WindowForm.Forms
                 }
             }
         }
+        #endregion
 
 
 

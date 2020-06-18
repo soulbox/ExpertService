@@ -239,12 +239,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\CalismaZamaniForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\CalismaZamaniForm.Designer.cs">
-      <DependentUpon>CalismaZamaniForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\DosyaForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,6 +252,7 @@
     <Compile Include="Forms\Footer.Designer.cs">
       <DependentUpon>Footer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FooterLogic.cs" />
     <Compile Include="Forms\TaleplerForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -292,9 +287,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DxHelper.cs" />
     <Compile Include="Rapor\KıdemTazminatı.cs" />
-    <EmbeddedResource Include="Forms\CalismaZamaniForm.resx">
-      <DependentUpon>CalismaZamaniForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DosyaForm.resx">
       <DependentUpon>DosyaForm.cs</DependentUpon>
     </EmbeddedResource>
