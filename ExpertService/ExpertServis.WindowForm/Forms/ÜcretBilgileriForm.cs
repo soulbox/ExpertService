@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ExpertService.Model;
 using System.Globalization;
+using static ExpertServis.WindowForm.Forms.Ext;
+using static ExpertService.Model.Tanımlamalar;
 
 namespace ExpertServis.WindowForm.Forms
 {
@@ -29,23 +31,52 @@ namespace ExpertServis.WindowForm.Forms
         {
             this.Dock = DockStyle.Fill;
             txtTutar.Properties.Mask.Culture = CultureInfo.CreateSpecificCulture("tr-TR");
-            listeUcretler.DataSource = Enum.GetValues(typeof(Tanımlamalar.ÜcretTipi)).Cast<Tanımlamalar.ÜcretTipi>();
+            Enum.GetValues(typeof(Tanımlamalar.ÜcretTipi)).Cast<Tanımlamalar.ÜcretTipi>()
+               .ToList()
+               .ForEach(x =>
+           {
+               listeUcretler.Items.Add(x);
+           });
+
+            FooterLogic<UcretBilgileri> foot = new FooterLogic<UcretBilgileri>
+                (
+                new Func<UcretBilgileri>(() => SetValues(new UcretBilgileri(), ormtype.add)),
+                new Func<UcretBilgileri>(() => SetValues(UcretBilgileri, ormtype.update)),
+                new Func<UcretBilgileri>(() => SetValues(UcretBilgileri, ormtype.delete)),
+                footer1
+
+                );
+            foot.UpdStr = $"Açıklama:{UcretBilgileri?.Açıklama}\nTutar:{UcretBilgileri?.Tutar.ToCultureString()}";
+            foot.DelStr = foot.UpdStr;
+
             if (UcretBilgileri == null)
             {
                 footer1.btnUpdate.Visible = false;
+                footer1.btnDelete.Visible = false;
             }
             else
             {
                 footer1.btneAdd.Visible = false;
-
                 GetValues();
             }
         }
         void GetValues()
         {
             listeUcretler.SetSelected(listeUcretler.Items.IndexOf(UcretBilgileri.Açıklama), true);
-            //chckHesapla.Checked = Talepler.Hesapla;
             txtTutar.EditValue = UcretBilgileri.Tutar;
+        }
+
+        UcretBilgileri SetValues(UcretBilgileri u, ormtype Otype)
+        {
+            u.isActive = Otype != ormtype.delete;
+            if (Otype != ormtype.delete)
+            {
+                u.Tutar = (decimal)txtTutar.EditValue;
+                u.DosyaId = Main.MainForm.ÇalışmaDosyası.Id;
+                u.Açıklama = (ÜcretTipi)listeUcretler.SelectedValue;
+
+            }
+            return u;
         }
     }
 }

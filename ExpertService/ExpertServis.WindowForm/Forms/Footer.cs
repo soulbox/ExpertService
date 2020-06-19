@@ -15,8 +15,7 @@ namespace ExpertServis.WindowForm.Forms
 {
     public partial class Footer : DevExpress.XtraEditors.XtraUserControl
     {
-        public string Updatestr { get; set; }
-        public string Deletestr { get; set; }
+
 
         public Footer()
         {

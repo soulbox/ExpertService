@@ -56,6 +56,7 @@
             this.accordionControlSeparator4 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.ElementRapor = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ElementParentKıdemTaz = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Elementİhbar = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.ElementTest = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -111,9 +112,9 @@
             // 
             this.fluentDesignFormContainer1.Controls.Add(this.Container);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(248, 31);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(323, 31);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(815, 620);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(740, 620);
             this.fluentDesignFormContainer1.TabIndex = 1;
             // 
             // Container
@@ -121,7 +122,7 @@
             this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Container.Location = new System.Drawing.Point(0, 0);
             this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(815, 620);
+            this.Container.Size = new System.Drawing.Size(740, 620);
             this.Container.TabIndex = 0;
             // 
             // accordionControl1
@@ -134,15 +135,14 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(248, 620);
+            this.accordionControl1.Size = new System.Drawing.Size(323, 620);
             this.accordionControl1.TabIndex = 2;
-        
             // 
             // simpleButton2
             // 
             this.simpleButton2.Enabled = false;
             this.simpleButton2.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.apply_16x16;
-            this.simpleButton2.Location = new System.Drawing.Point(199, 84);
+            this.simpleButton2.Location = new System.Drawing.Point(274, 84);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.ShowToolTips = false;
             this.simpleButton2.Size = new System.Drawing.Size(22, 23);
@@ -151,7 +151,7 @@
             // accordionContentContainer1
             // 
             this.accordionContentContainer1.Name = "accordionContentContainer1";
-            this.accordionContentContainer1.Size = new System.Drawing.Size(208, 163);
+            this.accordionContentContainer1.Size = new System.Drawing.Size(283, 163);
             this.accordionContentContainer1.TabIndex = 3;
             // 
             // ElementBilgi
@@ -234,7 +234,7 @@
             this.ElementParentTalepler.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.financial_32x32;
             this.ElementParentTalepler.Name = "ElementParentTalepler";
             this.ElementParentTalepler.Text = "Talepler";
-      
+            this.ElementParentTalepler.Click += new System.EventHandler(this.ElementParentTalepler_Click);
             // 
             // ElementChildTalepler
             // 
@@ -254,6 +254,7 @@
             this.ElementParentUcretBilgileri.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.salesperiodmonth_32x32;
             this.ElementParentUcretBilgileri.Name = "ElementParentUcretBilgileri";
             this.ElementParentUcretBilgileri.Text = "Ücret Bilgileri";
+            this.ElementParentUcretBilgileri.Click += new System.EventHandler(this.ElementParentUcretBilgileri_Click);
             // 
             // ElementChildUcretBilgileri
             // 
@@ -270,6 +271,7 @@
             // 
             this.ElementRapor.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.ElementParentKıdemTaz,
+            this.Elementİhbar,
             this.ElementTest});
             this.ElementRapor.Expanded = true;
             this.ElementRapor.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.showtestreport_32x32;
@@ -279,10 +281,17 @@
             // ElementParentKıdemTaz
             // 
             this.ElementParentKıdemTaz.Expanded = true;
-            this.ElementParentKıdemTaz.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.paycheque_32px;
+            this.ElementParentKıdemTaz.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.icons8_refund_32px;
             this.ElementParentKıdemTaz.Name = "ElementParentKıdemTaz";
             this.ElementParentKıdemTaz.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.ElementParentKıdemTaz.Text = "Kıdem Tazminatı";
+            // 
+            // Elementİhbar
+            // 
+            this.Elementİhbar.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.icons8_receive_cash_32px;
+            this.Elementİhbar.Name = "Elementİhbar";
+            this.Elementİhbar.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Elementİhbar.Text = "İhbar Tazminatı";
             // 
             // ElementTest
             // 
@@ -371,6 +380,7 @@
         public DevExpress.XtraBars.Navigation.AccordionControlElement ElementParentKıdemTaz;
         public DevExpress.XtraBars.Navigation.AccordionControlElement ElementDosyaParent;
         public DevExpress.XtraEditors.PanelControl Container;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Elementİhbar;
     }
 }
 

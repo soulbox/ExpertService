@@ -45,8 +45,8 @@ namespace ExpertServis.WindowForm.Forms
                 new Func<CalismaDonemi>(() => UpdateDonem()),
                 new Func<CalismaDonemi>(() => DeleteDonem()),
                 footer1);
-            foot.UpdorDeleteStr = $"DosyaNo:{MainForm.ÇalışmaDosyası.DosyaNo}\nDönemi:{CalismaDonemi?.StartDate.ToShortDateString()} - {CalismaDonemi?.FinishDate.ToShortDateString()}";
-
+            foot.UpdStr = $"DosyaNo:{MainForm.ÇalışmaDosyası.DosyaNo}\nDönemi:{CalismaDonemi?.StartDate.ToShortDateString()} - {CalismaDonemi?.FinishDate.ToShortDateString()}";
+            foot.DelStr = foot.UpdStr;
 
             this.Controls.OfType<TimeEdit>().ForEach(x => x.EditValue = new TimeSpan(0, 0, 0));
             if (CalismaDonemi == null)
@@ -156,52 +156,7 @@ namespace ExpertServis.WindowForm.Forms
         }
 
 
-        #region AddUpdateDelete
-        private void BtneAdd_Click(object sender, EventArgs e)
-        {
-            var yeni = CreateDonem();
-            UnitWork.CalismaRepo.Add(yeni);
-            if (UnitWork.Complete() > 0)
-            {
-                MainForm.User.Dosya.Select(x => x.CalismaDonemis).ToList().Add(new List<CalismaDonemi>() { yeni });
-
-                Msg("Eklendi");
-                MainForm.Form1_Load(null, null);
-
-            }
-        }
-
-        private void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            if (MsgQuestion($"DosyaNo:{MainForm.ÇalışmaDosyası.DosyaNo}\nDönemi:{CalismaDonemi.StartDate.ToShortDateString()} - {CalismaDonemi.FinishDate.ToShortDateString()}\nGüncellensin mi?", "Güncelle") == DialogResult.Yes)
-            {
-                var güncel = UpdateDonem();
-                if (UnitWork.Complete() > 0)
-                {
-
-                    Msg("Güncellendi");
-                    MainForm.Form1_Load(null, null);
-
-                }
-            }
-
-        }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            if (MsgErrorQuestion($"DosyaNo:{MainForm.ÇalışmaDosyası.DosyaNo}\nDönemi:{CalismaDonemi.StartDate.ToShortDateString()} - {CalismaDonemi.FinishDate.ToShortDateString()}\nSilinsin mi?", "Sil") == DialogResult.Yes)
-            {
-                var sil = DeleteDonem();
-                if (UnitWork.Complete() > 0)
-                {
-
-                    Msg("Silindi.!");
-                    MainForm.Form1_Load(null, null);
-
-                }
-            }
-        }
-        #endregion
+   
 
 
 

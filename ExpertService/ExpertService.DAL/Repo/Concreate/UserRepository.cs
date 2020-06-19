@@ -18,12 +18,12 @@ namespace ExpertService.DAL.Repo.Concreate
         {
             return Db.UserTable
                 .Include(x => x.Dosya)
-                    .ThenInclude(x => x.CalismaDonemis)
+                    .ThenInclude(x => x.CalismaDonemi)
                         .ThenInclude(x => x.ZamanCizelgesi)
                  .Include(x => x.Dosya)
-                    .ThenInclude(x => x.UcretBilgileris)
+                    .ThenInclude(x => x.UcretBilgileri)
                 .Include(x => x.Dosya)
-                    .ThenInclude(x => x.Taleplers)
+                    .ThenInclude(x => x.Talepler)
                 .Include(x => x.Dosya)
                     .ThenInclude(x => x.EkDosya)
                 .FirstOrDefault(expression);

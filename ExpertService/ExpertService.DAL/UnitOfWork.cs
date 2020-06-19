@@ -17,8 +17,8 @@ namespace ExpertService.DAL
             UserRepo = new UserRepository();
             ZamanRepo = new ZamanCizelgesiRepository();
             CalismaRepo = new CalismaDonemiRepository();
-            TalepRepo  = new TalepRepository();
-
+            TalepRepo = new TalepRepository();
+            UcretRepo = new UcretRepository();
         }
 
         public IDosyaRepository DosyaRepo { get; }
@@ -29,6 +29,8 @@ namespace ExpertService.DAL
         public ICalismaDonemi CalismaRepo { get; }
 
         public ITalepRepository TalepRepo { get; }
+
+        public IUcretRepository UcretRepo { get; }
 
         public int Complete()
         {

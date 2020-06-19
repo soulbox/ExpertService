@@ -28,9 +28,6 @@ namespace ExpertServis.WindowForm.Forms
         {
             Talepler = talep;
             InitializeComponent();
-            footer1.btneAdd.Click += BtneAdd_Click;
-            footer1.btnUpdate.Click += BtnUpdate_Click;
-            footer1.btnDelete.Click += BtnDelete_Click; ;
 
         }
 
@@ -42,7 +39,16 @@ namespace ExpertServis.WindowForm.Forms
             {
                 lisTalepTipi.Items.Add(x);
             });
-            //dgviewTalepler.Columns[0].Caption = "Talepler";
+            FooterLogic<Talepler> foot = new FooterLogic<Talepler>
+                (
+                new Func<Talepler>(() => CreateTalep()),
+                new Func<Talepler>(() => UpdateTalep()),
+                new Func<Talepler>(() => DeleteTalep()),
+                footer1
+
+                );
+            foot.UpdStr = $"{Talepler?.TalepTipi.ToString()}";
+            foot.DelStr = foot.UpdStr;
             if (Talepler == null)
             {
                 footer1.btnUpdate.Visible = false;
@@ -66,9 +72,9 @@ namespace ExpertServis.WindowForm.Forms
             t.isActive = Otype != ormtype.delete;
             if (Otype != ormtype.delete)
             {
-                Talepler.Hesapla = chckHesapla.Checked;
-                Talepler.TalepTipi = (TalepTipi)lisTalepTipi.SelectedValue;
-                Talepler.DosyaId = Main.MainForm.ÇalışmaDosyası.Id;
+               t.Hesapla = chckHesapla.Checked;
+               t.TalepTipi = (TalepTipi)lisTalepTipi.SelectedValue;
+               t.DosyaId = Main.MainForm.ÇalışmaDosyası.Id;
 
             }
             return t;
@@ -79,28 +85,6 @@ namespace ExpertServis.WindowForm.Forms
         Talepler DeleteTalep() => SetValues(Talepler, ormtype.delete);
 
 
-
-        private void BtneAdd_Click(object sender, EventArgs e)
-        {
-            var yeni = CreateTalep();
-            UnitWork.TalepRepo.Add(yeni);
-            if (UnitWork.Complete() > 0)
-            {
-                Main.MainForm.User.Dosya.Select(x => x.Taleplers).ToList().Add(new List<Talepler>() { yeni });
-                Msg("Eklendi");
-                Main.MainForm.Form1_Load(null, null);
-
-            }
-        }
-        private void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }

@@ -26,7 +26,7 @@ namespace ExpertServis.WindowForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+         
             var an = TavanUcreti.TavanDonemleri;
             var user = UnitWork.UserRepo.GetWithDosya(x => x.Id == 1);
             Application.Run(new Main(user));

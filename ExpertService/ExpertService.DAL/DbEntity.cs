@@ -19,8 +19,7 @@ namespace ExpertService.DAL
 
 
             Database.EnsureDeleted();
-            //Database.
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
             Database.Migrate();
 
             //Configuration.AutoDetectChangesEnabled = false;
@@ -50,14 +49,13 @@ namespace ExpertService.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            TestSeedData(modelBuilder);
+            SeedAdminData(modelBuilder);
+            //TestSeedData(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
 
-        void TestSeedData(ModelBuilder modelBuilder)
+        void SeedAdminData(ModelBuilder modelBuilder) 
         {
-
             #region User
             modelBuilder.Entity<UserTable>()
             .HasData(
@@ -72,6 +70,11 @@ namespace ExpertService.DAL
             Tel = "admin",
         });
             #endregion
+        }
+        void TestSeedData(ModelBuilder modelBuilder)
+        {
+
+         
             #region Dosyalar
             modelBuilder.Entity<Dosya>()
            .HasData(new Dosya()

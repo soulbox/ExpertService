@@ -42,7 +42,7 @@ namespace ExpertServis.WindowForm.Forms
 
 
 
-            dgDonemControl.DataSource = KıdemTazminatı.Dosya.CalismaDonemis
+            dgDonemControl.DataSource = KıdemTazminatı.Dosya.CalismaDonemi
                 .OrderByDescending(x => x.Id)
                 .Select(x => new { x.StartDate, x.FinishDate, x.Yıl, x.Ay, x.Gün, x.ToplamGün })
                 .ToList();
@@ -64,10 +64,10 @@ namespace ExpertServis.WindowForm.Forms
             txtTavanDonemi.Text = $"{KıdemTazminatı.TavanDönemi.StartDate.ToShortDateString()} - {KıdemTazminatı.TavanDönemi.EndDate.ToShortDateString()}";
             txtTavan.Text = $"{KıdemTazminatı.Tavan.ToCultureString()}";
             txtBrüt.Text = $"{KıdemTazminatı.Brüt.ToCultureString()}";
-            txtTazminatEsasYıllık.Text = $"{KıdemTazminatı.TazminatYıllıkÜcret.ToCultureString()}";
-            txtYılToplamı.Text = $"{KıdemTazminatı.TazminatYıllıkÜcret.ToCultureString()} / 1yıl X {KıdemTazminatı.HizmetYıl}yıl ={KıdemTazminatı.YıllıkToplamÜcret.ToCultureString() } ";
-            txtAyToplamı.Text = $"{KıdemTazminatı.TazminatYıllıkÜcret.ToCultureString()} / 12ay X {KıdemTazminatı.HizmetAy }ay ={KıdemTazminatı.AylıkToplamÜcret.ToCultureString() } ";
-            txtGünToplamı.Text = $"{KıdemTazminatı.TazminatYıllıkÜcret.ToCultureString()} / 365gün X {KıdemTazminatı.HizmetGün }gün ={KıdemTazminatı.GünlükToplamÜcret.ToCultureString() } ";
+            txtTazminatEsasYıllık.Text = $"{KıdemTazminatı.TazminatEsasAylık  .ToCultureString()}";
+            txtYılToplamı.Text = $"{KıdemTazminatı.TazminatEsasAylık.ToCultureString()} / 1yıl X {KıdemTazminatı.HizmetYıl}yıl ={KıdemTazminatı.YıllıkToplamÜcret.ToCultureString() } ";
+            txtAyToplamı.Text = $"{KıdemTazminatı.TazminatEsasAylık.ToCultureString()} / 12ay X {KıdemTazminatı.HizmetAy }ay ={KıdemTazminatı.AylıkToplamÜcret.ToCultureString() } ";
+            txtGünToplamı.Text = $"{KıdemTazminatı.TazminatEsasAylık.ToCultureString()} / 365gün X {KıdemTazminatı.HizmetGün }gün ={KıdemTazminatı.GünlükToplamÜcret.ToCultureString() } ";
             txtToplamBrüt.Text = $"{KıdemTazminatı.ToplamBrütKıdemTazminatı.ToCultureString()}";
             txtDamgaVergisi.Text = $"{KıdemTazminatı.DamgaVergisi.ToCultureString()}";
             txtNetKıdemTazminatı.Text = $"{KıdemTazminatı.NetKıdemTazminatı.ToCultureString()}";

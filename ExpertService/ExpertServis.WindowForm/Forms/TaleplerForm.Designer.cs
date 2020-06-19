@@ -38,7 +38,7 @@
             // chckHesapla
             // 
             this.chckHesapla.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chckHesapla.Location = new System.Drawing.Point(140, 16);
+            this.chckHesapla.Location = new System.Drawing.Point(141, 36);
             this.chckHesapla.Name = "chckHesapla";
             this.chckHesapla.Properties.Caption = "Hesaplansın mı?";
             this.chckHesapla.Size = new System.Drawing.Size(180, 18);
@@ -47,17 +47,17 @@
             // lisTalepTipi
             // 
             this.lisTalepTipi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lisTalepTipi.Location = new System.Drawing.Point(140, 40);
+            this.lisTalepTipi.Location = new System.Drawing.Point(141, 60);
             this.lisTalepTipi.Name = "lisTalepTipi";
-            this.lisTalepTipi.Size = new System.Drawing.Size(212, 271);
+            this.lisTalepTipi.Size = new System.Drawing.Size(212, 269);
             this.lisTalepTipi.TabIndex = 3;
             // 
             // footer1
             // 
             this.footer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footer1.Location = new System.Drawing.Point(0, 317);
+            this.footer1.Location = new System.Drawing.Point(0, 316);
             this.footer1.Name = "footer1";
-            this.footer1.Size = new System.Drawing.Size(500, 53);
+            this.footer1.Size = new System.Drawing.Size(502, 95);
             this.footer1.TabIndex = 1;
             // 
             // TaleplerForm
@@ -68,7 +68,7 @@
             this.Controls.Add(this.chckHesapla);
             this.Controls.Add(this.footer1);
             this.Name = "TaleplerForm";
-            this.Size = new System.Drawing.Size(500, 370);
+            this.Size = new System.Drawing.Size(502, 411);
             this.Load += new System.EventHandler(this.TaleplerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chckHesapla.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lisTalepTipi)).EndInit();

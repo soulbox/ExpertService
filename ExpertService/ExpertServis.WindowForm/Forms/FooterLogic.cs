@@ -25,7 +25,9 @@ namespace ExpertServis.WindowForm.Forms
         public Func<Entity> UpdateEntity { get; set; }
         public Func<Entity> DeleteEntity { get; set; }
         //public string DelStr { get; set; }
-        public string UpdorDeleteStr { get; set; }
+        public string UpdStr { get; set; }
+        public string DelStr { get; set; }
+
 
         public FooterLogic(Func<Entity> add, Func<Entity> Upd, Func<Entity> del, Footer footer)
         {
@@ -53,7 +55,7 @@ namespace ExpertServis.WindowForm.Forms
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (MsgErrorQuestion($"{UpdorDeleteStr}\nSilinsin mi?", "Sil") == DialogResult.Yes)
+            if (MsgErrorQuestion($"{DelStr }\nSilinsin mi?", "Sil") == DialogResult.Yes)
             {
                 var sil = DeleteEntity();
                 if (DbManager.UnitWork.Complete() > 0)
@@ -70,16 +72,16 @@ namespace ExpertServis.WindowForm.Forms
 
             foreach (var item in obje.GetType().GetProperties())
             {
-                var obj = item.GetValue(obje) as ICollection<Entity>;
-                var obj2 = item.GetValue(obje);
-                if (obj != null)
+                var obj = item.GetValue(obje);
+                var name = item.Name;
+                if (!name.Contains("EkDosya") && obj is ICollection<Entity>)
                 {
-                    obj.Add(add);
+                    ((ICollection<Entity>)obj).Add(add);
                     break;
                 }
-                else if (obj2 is ICollection)
+                else if (!name.Contains("EkDosya") && obj is ICollection)
                 {
-                    addcollection(obj2, add);
+                    addcollection(obj, add);
                 }
 
             }
@@ -100,7 +102,7 @@ namespace ExpertServis.WindowForm.Forms
         }
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            if (MsgQuestion($"{UpdorDeleteStr}\nGüncellensin mi?", "Güncelle") == DialogResult.Yes)
+            if (MsgQuestion($"{UpdStr }\nGüncellensin mi?", "Güncelle") == DialogResult.Yes)
             {
                 var güncel = UpdateEntity();
                 if (DbManager.UnitWork.Complete() > 0)

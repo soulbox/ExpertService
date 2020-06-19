@@ -14,9 +14,9 @@ namespace ExpertService.Model
     {
         public Dosya() 
         {
-            CalismaDonemis = new HashSet<CalismaDonemi>();
-            UcretBilgileris = new HashSet<UcretBilgileri>();
-            Taleplers = new HashSet<Talepler>();
+            CalismaDonemi = new HashSet<CalismaDonemi>();
+            UcretBilgileri = new HashSet<UcretBilgileri>();
+            Talepler = new HashSet<Talepler>();
             EkDosya = new HashSet<Dosya>();
             //AnaDosya = new Dosya();
         }
@@ -29,9 +29,9 @@ namespace ExpertService.Model
         public string Açıklama { get; set; }
         public DateTime DavaTarihi { get; set; }
         public Boolean ZamanAsimi { get; set; }
-        public ICollection<CalismaDonemi> CalismaDonemis { get; set; }
-        public ICollection<UcretBilgileri> UcretBilgileris { get; set; }
-        public ICollection<Talepler> Taleplers { get; set; }
+        public ICollection<CalismaDonemi> CalismaDonemi { get; set; }
+        public ICollection<UcretBilgileri> UcretBilgileri { get; set; }
+        public ICollection<Talepler> Talepler { get; set; }
         public int UserId { get; set; }
         public UserTable User { get; set; }
         //Ek Dosyalar  

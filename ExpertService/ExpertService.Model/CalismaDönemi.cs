@@ -27,6 +27,8 @@ namespace ExpertService.Model
         public int Ay { get => Period.Months; }
         public int Gün { get => Period.Days; }
         public int ToplamGün { get => NodaTime.Period.Between(StartDate.ToLocalDate(), FinishDate.AddDays(1).ToLocalDate(), PeriodUnits.Days).Days; }
+        public int ToplamAy { get => NodaTime.Period.Between(StartDate.ToLocalDate(), FinishDate.AddDays(1).ToLocalDate(), PeriodUnits.Months).Months; }
+
 
     }
     public static class MyExtensions

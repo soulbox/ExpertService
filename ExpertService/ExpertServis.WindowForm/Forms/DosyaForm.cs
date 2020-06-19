@@ -43,9 +43,24 @@ namespace ExpertServis.WindowForm.Forms
         {
             MainForm = Main.MainForm;
             this.Dock = DockStyle.Fill;
-            footer1.btneAdd.Click += BtneAdd_Click;
-            footer1.btnUpdate.Click += BtnUpdate_Click;
-            footer1.btnDelete.Click += BtnDelete_Click;
+            //footer1.btneAdd.Click += BtneAdd_Click;
+            //footer1.btnUpdate.Click += BtnUpdate_Click;
+            //footer1.btnDelete.Click += BtnDelete_Click;
+            FooterLogic<Dosya> footerLogic = new FooterLogic<Dosya>
+                (
+                new Func<Dosya>(() => !hasDosya ? YeniDosyaOluştur() : EkdosyaOluştur()),
+                new Func<Dosya>(() => DosyaGüncelle()),
+                new Func<Dosya>(() => DosyaSilLogic()),
+                footer1
+                );
+            footerLogic.UpdStr = $"{dosya?.DosyaNo}";
+            var str = "";
+            if (dosya?.EkDosya?.Where(x => x.isActive).Count() > 0)
+                str = $"Dosya No:{dosya?.DosyaNo}\nBu dosyaya ait ek dosyalarla beraber";
+            else str = $"{dosya?.DosyaNo }";
+            footerLogic.DelStr = str;
+
+
             footer1.btneAdd.Text = hasDosya ? "Ek Dosya Ekle" : "Yeni Dosya";
 
             if (hasDosya)
@@ -90,24 +105,10 @@ namespace ExpertServis.WindowForm.Forms
             dos.isActive = isActive;
             return dos;
         }
-        Dosya YeniDosyaOluştur()
-        {
-
-            return SetValues(new Dosya(), true, (int?)null);
-        }
-        Dosya EkdosyaOluştur()
-        {
-            return SetValues(new Dosya(), true, dosya.Id);
-        }
-        Dosya DosyaGüncelle(Dosya dos)
-        {
-
-            return SetValues(dos, true, dosya.AnaDosyaID);
-        }
-        Dosya DosyaSil(Dosya dos)
-        {
-            return SetValues(dos, false, dos.AnaDosyaID);
-        }
+        Dosya YeniDosyaOluştur() => SetValues(new Dosya(), true, (int?)null);
+        Dosya EkdosyaOluştur() => SetValues(new Dosya(), true, dosya.Id);
+        Dosya DosyaGüncelle() => SetValues(dosya, true, dosya.AnaDosyaID);
+        Dosya DosyaSil(Dosya dos) => SetValues(dos, false, dos.AnaDosyaID);
         void EkdosyaSil(Dosya ekdosya)
         {
             ekdosya.EkDosya.ToList().ForEach(x =>
@@ -118,77 +119,19 @@ namespace ExpertServis.WindowForm.Forms
             });
 
         }
-        private void BtneAdd_Click(object sender, EventArgs e)
+
+        Dosya DosyaSilLogic()
         {
-            var yeni = !hasDosya ? YeniDosyaOluştur() : EkdosyaOluştur();
-
-            UnitWork.DosyaRepo.Add(yeni);
-            if (UnitWork.Complete() > 0)
-            {
-                MainForm.User.Dosya.Add(yeni);
-                Msg("Eklendi");
-                MainForm.Form1_Load(null, null);
-
-            }
-
-        }
-        void Msg(string message) => XtraMessageBox.Show(message);
-
-        private void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            if (XtraMessageBox.Show($"{dosya.DosyaNo} Güncellensin mi?", "Güncelle", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                DosyaGüncelle(dosya);
-
-                if (UnitWork.Complete() > 0)
-                {
-                    //MainForm.User.Dosya.Add(yeni);
-                    //MainForm.DosyaDoldur();
-                    Msg("Güncellendi.");
-                    MainForm.Form1_Load(null, null);
-
-
-                }
-            }
-        }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            var str = "";
             if (dosya.EkDosya?.Count > 0)
-                str = $"Dosya No:{dosya.DosyaNo}\nBu dosyaya ait ek dosyalarla beraber silisin mi?";
-            else str = $"{dosya.DosyaNo } Silinsin mi?";
-
-            if (XtraMessageBox.Show($"{str } Silinsin mi?", "Sil", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (dosya.EkDosya?.Count > 0)
-                {
-                    DosyaSil(dosya);
-                    EkdosyaSil(dosya);
-                }
-                else
-                    DosyaSil(dosya);
-                if (UnitWork.Complete() > 0)
-                {
-                    //MainForm.User.Dosya.Add(yeni);
-                    //MainForm.DosyaDoldur();
-                    Msg("Silindi!.");
-                    //MainForm.Container.Controls.Clear();
-                    MainForm.Form1_Load(null, null);
-
-
-                }
+                DosyaSil(dosya);
+                EkdosyaSil(dosya);
             }
+            else
+                DosyaSil(dosya);
+            return dosya;
         }
 
-
-
-
-
-        private void footer1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

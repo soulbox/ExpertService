@@ -35,13 +35,14 @@ namespace ExpertServis.WindowForm
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            //Container.AddControl(new TaleplerForm());
             ElementDosyaParent.Elements.Clear();
             ElementParentTalepler.Elements.Clear();
             ElementParentUcretBilgileri.Elements.Clear();
             ElementParentÇalışmaDönemi.Elements.Clear();
             ElementParentKıdemTaz.Elements.Clear();
             Container.Controls.Clear();
+            Container.AddControl(new Forms.İhbarTazminatıForm());
+
             ElementTest.HeaderControl = simpleButton2;
             ÇalışmaDosyası = null;
             DosyaDoldur();
@@ -138,7 +139,7 @@ namespace ExpertServis.WindowForm
             var element = ElementParentÇalışmaDönemi;
 
             element.Elements.Clear();
-            dosya?.CalismaDonemis?
+            dosya?.CalismaDonemi?
                 .Where(predicate == null ? a => true : predicate)
                 .Where(x => x.isActive)
 
@@ -186,7 +187,7 @@ namespace ExpertServis.WindowForm
             var element = ElementParentTalepler;
 
             element.Elements.Clear();
-            dosya?.Taleplers?
+            dosya?.Talepler?
                 .Where(predicate == null ? a => true : predicate)
                  .Where(x => x.isActive)
 
@@ -211,7 +212,7 @@ namespace ExpertServis.WindowForm
             var element = ElementParentUcretBilgileri;
 
             element.Elements.Clear();
-            dosya?.UcretBilgileris?
+            dosya?.UcretBilgileri?
                 .Where(predicate == null ? a => true : predicate)
                 .Where(x => x.isActive)
                 .ForEach(x =>
@@ -221,7 +222,7 @@ namespace ExpertServis.WindowForm
                         Image = GetImage(ElementTipi.UcretBilgileri),
                         Style = ElementStyle.Item,
                         Tag = x,
-                        Text = $"{x.Açıklama}"
+                        Text = $"{x.Açıklama}-{x.Tutar.ToCultureString()}"
 
                     };
                     element.Elements.Add(yeni);
@@ -233,7 +234,7 @@ namespace ExpertServis.WindowForm
         {
             var element = ElementParentKıdemTaz;
             element.Elements.Clear();
-            if (dosya == null || dosya.CalismaDonemis?.Count == 0)
+            if (dosya == null || dosya.CalismaDonemi?.Count == 0)
             {
                 element.Style = ElementStyle.Item;
                 return;
@@ -243,7 +244,7 @@ namespace ExpertServis.WindowForm
             var KıdemTazminatı = new Rapor.KıdemTazminatı(TavanUcreti.TavanDonemleri, dosya);
             var yeni = new AccordionControlElement()
             {
-                Image = GetImage(ElementTipi.UcretBilgileri),
+                Image = GetImage(ElementTipi.Tazminat),
                 Style = ElementStyle.Item,
                 Tag = KıdemTazminatı,
                 Text = $"{KıdemTazminatı.ÖdenecekNetKıdemTazminatı.ToString("C2", CultureInfo.CreateSpecificCulture("tr-TR")) }"
@@ -256,7 +257,6 @@ namespace ExpertServis.WindowForm
         private void ElementDosyaParent_Click(object sender, EventArgs e)
         {
             Form1_Load(null, null);
-            Container.Controls.Clear();
             Container.Controls.Add(new Forms.DosyaForm());
         }
         private void ElementParentÇalışmaDönemi_Click(object sender, EventArgs e)
@@ -267,6 +267,24 @@ namespace ExpertServis.WindowForm
                 Container.Controls.Add(new Forms.ÇalışmaDönemiForm());
             }
 
+        }
+
+        private void ElementParentTalepler_Click(object sender, EventArgs e)
+        {
+            if (ÇalışmaDosyası != null)
+            {
+                Container.Controls.Clear();
+                Container.Controls.Add(new Forms.TaleplerForm());
+            }
+        }
+
+        private void ElementParentUcretBilgileri_Click(object sender, EventArgs e)
+        {
+            if (ÇalışmaDosyası != null)
+            {
+                Container.Controls.Clear();
+                Container.Controls.Add(new Forms.ÜcretBilgileriForm());
+            }
         }
     }
 }

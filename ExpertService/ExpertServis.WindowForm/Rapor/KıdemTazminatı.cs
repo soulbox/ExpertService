@@ -13,18 +13,17 @@ namespace ExpertServis.WindowForm.Rapor
     {
         public List<TavanDonem> TavanUcretler { get; set; }//ctor
         public Dosya Dosya { get; set; }//ctor
-        public DateTime işeBaşlamatarihi { get; private set; }
-        public DateTime iştençıkıştarihi { get; private set; }
-        public int HizmetYıl { get; private set; }
-        public int HizmetAy { get; private set; }
-        public int HizmetGün { get; private set; }
+        public DateTime? işeBaşlamatarihi { get => Dosya?.CalismaDonemi?.Min(x => x.StartDate); }
+        public DateTime? iştençıkıştarihi { get => Dosya?.CalismaDonemi?.Max(x => x.FinishDate); }
+        public int? HizmetYıl { get => Dosya?.CalismaDonemi?.Sum(x => x.Yıl); }
+        public int? HizmetAy { get => Dosya?.CalismaDonemi?.Sum(x => x.Ay); }
+        public int? HizmetGün { get => Dosya?.CalismaDonemi?.Sum(x => x.Gün); }
         public decimal Tavan { get => TavanDönemi.Tutar; }
         public decimal Brüt { get; private set; }
-        public decimal TazminatYıllıkÜcret { get => Brüt > Tavan ? Tavan : Brüt; }
-
-        public decimal YıllıkToplamÜcret { get => TazminatYıllıkÜcret * HizmetYıl; }
-        public decimal AylıkToplamÜcret { get => TazminatYıllıkÜcret * HizmetAy / 12; }
-        public decimal GünlükToplamÜcret { get => TazminatYıllıkÜcret * HizmetGün / 365; }
+        public decimal TazminatEsasAylık { get => Brüt > Tavan ? Tavan : Brüt; }
+        public decimal YıllıkToplamÜcret { get => TazminatEsasAylık * (HizmetYıl ?? 0); }
+        public decimal AylıkToplamÜcret { get => TazminatEsasAylık * (HizmetAy ?? 0) / 12; }
+        public decimal GünlükToplamÜcret { get => TazminatEsasAylık * (HizmetGün ?? 0) / 365; }
         public decimal ToplamBrütKıdemTazminatı { get => (YıllıkToplamÜcret + AylıkToplamÜcret + GünlükToplamÜcret); }
         public decimal DamgaVergisi { get => 0.00759m * ToplamBrütKıdemTazminatı; }
         public decimal NetKıdemTazminatı { get => ToplamBrütKıdemTazminatı - DamgaVergisi; }
@@ -41,13 +40,11 @@ namespace ExpertServis.WindowForm.Rapor
         }
         public void Hesapla()
         {
-            if (Dosya.CalismaDonemis == null) return;
+            if (Dosya.CalismaDonemi == null) return;
             ToplamÇalışma();
-            if (Dosya.CalismaDonemis?.Count > 1)
+            if (Dosya.CalismaDonemi?.Count > 1)
                 FasılalıÇalışma = true;
-            işeBaşlamatarihi = Dosya.CalismaDonemis.Min(x => x.StartDate);
-            iştençıkıştarihi = Dosya.CalismaDonemis.Max(x => x.FinishDate);
-            Brüt = Dosya.UcretBilgileris.Select(x => x.Tutar).Sum();
+            Brüt = Dosya.UcretBilgileri.Select(x => x.Tutar).Sum();
             TavanDönemi = TavanUcretler
                 .FirstOrDefault(x => iştençıkıştarihi >= x.StartDate && iştençıkıştarihi <= x.EndDate);
 
@@ -55,7 +52,7 @@ namespace ExpertServis.WindowForm.Rapor
         void ToplamÇalışma()
         {
 
-            if (Dosya?.CalismaDonemis?.Count > 0)
+            if (Dosya?.CalismaDonemi?.Count > 0)
             {
                 //string str = "";
                 //var a = Dosya.CalismaDonemis.OrderByDescending(x => x.DonemId)
@@ -70,9 +67,7 @@ namespace ExpertServis.WindowForm.Rapor
                 //        Ay = NodaTime.Period.Between(x.StartDate.ToLocalDate(), x.FinishDate.AddDays(1).ToLocalDate(), PeriodUnits.YearMonthDay).Days,
                 //    })
                 //    .ToList();
-                HizmetYıl = Dosya.CalismaDonemis.Sum(x => x.Period.Years);
-                HizmetAy = Dosya.CalismaDonemis.Sum(x => x.Period.Months);
-                HizmetGün = Dosya.CalismaDonemis.Sum(x => x.Period.Days);
+
 
 
                 //a.ForEach(x =>

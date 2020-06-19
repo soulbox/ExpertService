@@ -72,9 +72,9 @@
             // footer1
             // 
             this.footer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footer1.Location = new System.Drawing.Point(0, 383);
+            this.footer1.Location = new System.Drawing.Point(0, 356);
             this.footer1.Name = "footer1";
-            this.footer1.Size = new System.Drawing.Size(523, 53);
+            this.footer1.Size = new System.Drawing.Size(523, 80);
             this.footer1.TabIndex = 5;
             // 
             // ÜcretBilgileriForm

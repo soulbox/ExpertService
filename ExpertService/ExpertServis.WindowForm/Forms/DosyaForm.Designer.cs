@@ -194,7 +194,7 @@
             this.footer1.Name = "footer1";
             this.footer1.Size = new System.Drawing.Size(506, 79);
             this.footer1.TabIndex = 8;
-            this.footer1.Load += new System.EventHandler(this.footer1_Load);
+        
             // 
             // DosyaForm
             // 

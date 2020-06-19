@@ -16,6 +16,8 @@ namespace ExpertService.DAL
         IZamanCizelgesi ZamanRepo { get; }
         ICalismaDonemi  CalismaRepo { get; }
         ITalepRepository  TalepRepo { get; }
+        IUcretRepository  UcretRepo { get; }
+
 
 
         int Complete();
