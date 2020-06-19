@@ -41,7 +41,7 @@ namespace ExpertServis.WindowForm
             ElementParentÇalışmaDönemi.Elements.Clear();
             ElementParentKıdemTaz.Elements.Clear();
             Container.Controls.Clear();
-            Container.AddControl(new Forms.İhbarTazminatıForm());
+            //Container.AddControl(new Forms.İhbarTazminatıForm());
 
             ElementTest.HeaderControl = simpleButton2;
             ÇalışmaDosyası = null;
@@ -113,7 +113,8 @@ namespace ExpertServis.WindowForm
                     ÇalışmaDönemiDodur(x);
                     TalepDoldur(x);
                     ÜcretBilgileriDoldur(x);
-                    RaporDoldur(x);
+                    KıdemTazminatıDoldur(x);
+                    ihbarTazminatıDoldur(x);
                     Container.Controls.Add(new Forms.DosyaForm(x));
                     ÇalışmaDosyası = x;
                     break;
@@ -128,6 +129,9 @@ namespace ExpertServis.WindowForm
                     break;
                 case UcretBilgileri x:
                     Container.Controls.Add(new Forms.ÜcretBilgileriForm(x));
+                    break;
+                case İhbarTazminatı x:
+                    Container.Controls.Add(new Forms.İhbarTazminatıForm(x));
                     break;
                 default:
                     break;
@@ -230,7 +234,7 @@ namespace ExpertServis.WindowForm
 
                 });
         }
-        void RaporDoldur(Dosya dosya)
+        void KıdemTazminatıDoldur(Dosya dosya)
         {
             var element = ElementParentKıdemTaz;
             element.Elements.Clear();
@@ -253,7 +257,29 @@ namespace ExpertServis.WindowForm
             element.Elements.Add(yeni);
             yeni.Click += Element_Click;
         }
+        void ihbarTazminatıDoldur(Dosya dosya)
+        {
+            var element = Elementİhbar;
+            element.Elements.Clear();
+            if (dosya == null || dosya.CalismaDonemi?.Count == 0)
+            {
+                element.Style = ElementStyle.Item;
+                return;
+            }
+            element.Style = ElementStyle.Group;
 
+            var ihbartaz = new Rapor.İhbarTazminatı( dosya);
+            var yeni = new AccordionControlElement()
+            {
+                Image = GetImage(ElementTipi.Tazminat),
+                Style = ElementStyle.Item,
+                Tag = ihbartaz,
+                Text = $"Ödenecek Net İhbar Taz. :{ihbartaz.ÖdenecekNetİhbar.ToCultureString()}\nÖdenecek Net Kötü Niyet Taz. :{ihbartaz.ÖdenecekNetİhbar.ToCultureString()}"
+
+            };
+            element.Elements.Add(yeni);
+            yeni.Click += Element_Click;
+        }
         private void ElementDosyaParent_Click(object sender, EventArgs e)
         {
             Form1_Load(null, null);

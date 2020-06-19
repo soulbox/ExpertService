@@ -101,10 +101,6 @@ namespace ExpertServis.WindowForm.Forms
 }
 public static class ext
 {
-    static CultureInfo culture = CultureInfo.CreateSpecificCulture("tr-TR");
-    public static string ToCultureString(this decimal source)
-    {
-        return source.ToString("C2", culture);
-    }
+
 }
 

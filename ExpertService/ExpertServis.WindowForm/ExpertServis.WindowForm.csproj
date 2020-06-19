@@ -239,6 +239,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControl\MyGroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\MyGroupControl.Designer.cs">
+      <DependentUpon>MyGroupControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DosyaForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     <Compile Include="Rapor\BaseRapor.cs" />
     <Compile Include="Rapor\KıdemTazminatı.cs" />
     <Compile Include="Rapor\İhbarTazminatı.cs" />
+    <EmbeddedResource Include="CustomControl\MyGroupControl.resx">
+      <DependentUpon>MyGroupControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DosyaForm.resx">
       <DependentUpon>DosyaForm.cs</DependentUpon>
     </EmbeddedResource>

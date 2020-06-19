@@ -112,9 +112,9 @@
             // 
             this.fluentDesignFormContainer1.Controls.Add(this.Container);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(323, 31);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(279, 31);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(740, 620);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(784, 620);
             this.fluentDesignFormContainer1.TabIndex = 1;
             // 
             // Container
@@ -122,7 +122,7 @@
             this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Container.Location = new System.Drawing.Point(0, 0);
             this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(740, 620);
+            this.Container.Size = new System.Drawing.Size(784, 620);
             this.Container.TabIndex = 0;
             // 
             // accordionControl1
@@ -135,14 +135,14 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(323, 620);
+            this.accordionControl1.Size = new System.Drawing.Size(279, 620);
             this.accordionControl1.TabIndex = 2;
             // 
             // simpleButton2
             // 
             this.simpleButton2.Enabled = false;
             this.simpleButton2.ImageOptions.Image = global::ExpertServis.WindowForm.Properties.Resources.apply_16x16;
-            this.simpleButton2.Location = new System.Drawing.Point(274, 84);
+            this.simpleButton2.Location = new System.Drawing.Point(230, 84);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.ShowToolTips = false;
             this.simpleButton2.Size = new System.Drawing.Size(22, 23);
@@ -151,7 +151,7 @@
             // accordionContentContainer1
             // 
             this.accordionContentContainer1.Name = "accordionContentContainer1";
-            this.accordionContentContainer1.Size = new System.Drawing.Size(283, 163);
+            this.accordionContentContainer1.Size = new System.Drawing.Size(239, 163);
             this.accordionContentContainer1.TabIndex = 3;
             // 
             // ElementBilgi
@@ -298,7 +298,7 @@
             this.ElementTest.ContentContainer = this.accordionContentContainer1;
             this.ElementTest.Name = "ElementTest";
             this.ElementTest.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ElementTest.Text = "Element1";
+            this.ElementTest.Text = "Element \\n deneme";
             // 
             // fluentDesignFormControl1
             // 

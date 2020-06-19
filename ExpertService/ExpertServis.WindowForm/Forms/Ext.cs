@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace ExpertServis.WindowForm.Forms
             add,
             update,
             delete
+        }
+        static CultureInfo culture = CultureInfo.CreateSpecificCulture("tr-TR");
+        public static string ToCultureString(this decimal source)
+        {
+            return source.ToString("C2", culture);
         }
     }
 }
