@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsgariUcret.cs" />
     <Compile Include="TavanUcreti.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -49,6 +49,8 @@ namespace ExpertServis.WindowForm.Forms
             foot.DelStr = foot.UpdStr;
 
             this.Controls.OfType<TimeEdit>().ForEach(x => x.EditValue = new TimeSpan(0, 0, 0));
+            GetValues();
+
             if (CalismaDonemi == null)
             {
 
@@ -58,7 +60,6 @@ namespace ExpertServis.WindowForm.Forms
             }
             else
             {
-                GetValues();
                 footer1.btneAdd.Visible = false;
 
 
@@ -68,11 +69,24 @@ namespace ExpertServis.WindowForm.Forms
 
         void GetValues()
         {
-            dateStart.EditValue = CalismaDonemi.StartDate;
-            dateFinish.EditValue = CalismaDonemi.FinishDate;
-            chckFazlaMesai.Checked = CalismaDonemi.FazlaMesaiAlındı;
-            chckKıdem.Checked = CalismaDonemi.KıdemAlındı;
-            chckİhbar.Checked = CalismaDonemi.ihbarAlındı;
+            dateStart.EditValue = CalismaDonemi?.StartDate;
+            dateFinish.EditValue = CalismaDonemi?.FinishDate;
+            chckFazlaMesai.Checked = CalismaDonemi?.FazlaMesaiAlındı ?? false;
+            chckKıdem.Checked = CalismaDonemi?.KıdemAlındı ?? false;
+            chckİhbar.Checked = CalismaDonemi?.ihbarAlındı ?? false;
+
+            List<ZamanCizelgesi> newtag = new List<ZamanCizelgesi>()
+            {
+                new ZamanCizelgesi(),
+                new ZamanCizelgesi() ,
+                new ZamanCizelgesi() ,
+                new ZamanCizelgesi() ,
+                new ZamanCizelgesi() ,
+                new ZamanCizelgesi(),
+                new ZamanCizelgesi() ,
+
+            };
+            
             foreach (var item in this.Controls)
             {
 
@@ -84,10 +98,29 @@ namespace ExpertServis.WindowForm.Forms
                     mask.UseMaskAsDisplayFormat = true;
                     mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
                     var propname = tedit.Name.Substring(0, tedit.Name.Length - 1);
+                    var index = Convert.ToInt32(tedit.Name.Substring(tedit.Name.Length - 1, 1));
                     var Gün = (Tanımlamalar.Günler)Enum.Parse(typeof(Tanımlamalar.Günler), tedit.Name.Replace(propname, ""));
-                    var GünItem = CalismaDonemi.ZamanCizelgesi.FirstOrDefault(x => x.Gün == Gün);
+                    var GünItem = CalismaDonemi?.ZamanCizelgesi?.FirstOrDefault(x => x.Gün == Gün);
                     var value = GünItem.GetPropValue(propname);
-                    tedit.EditValue = value;
+                    tedit.EditValue = value ?? new TimeSpan(0, 0, 0);
+                    //var newtag = new ZamanCizelgesi();
+
+
+                    tedit.Tag = newtag[index-1 ];
+                    //var aaa=    GetControl("NetTime" + index)
+                    if (!tedit.Name.Contains("NetTime"))
+                    {
+                        tedit.EditValueChanged += (sender, i) =>
+                       {
+                            var timeitem = (TimeEdit)sender;
+
+                           timeitem.Tag.GetType().GetProperty(propname).SetValue(timeitem.Tag, GetControlTimeValue(propname + index));
+
+                           GetControl("NetTime" + index).EditValue = ((ZamanCizelgesi)timeitem.Tag).NetTime ;
+
+                       };
+                    }
+
 
                 }
             }
@@ -156,7 +189,7 @@ namespace ExpertServis.WindowForm.Forms
         }
 
 
-   
+
 
 
 
@@ -169,7 +202,7 @@ namespace ExpertServis.WindowForm.Forms
         public static object GetPropValue<T>(this T src, string propName)
            where T : class
         {
-            return src.GetType().GetProperty(propName).GetValue(src, null);
+            return src?.GetType().GetProperty(propName).GetValue(src, null);
         }
     }
 }

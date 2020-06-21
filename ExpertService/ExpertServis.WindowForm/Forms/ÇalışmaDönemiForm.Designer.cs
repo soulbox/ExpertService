@@ -197,6 +197,7 @@
             // 
             this.NetTime7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime7.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime7.Enabled = false;
             this.NetTime7.Location = new System.Drawing.Point(448, 320);
             this.NetTime7.Name = "NetTime7";
             this.NetTime7.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -249,6 +250,7 @@
             // 
             this.NetTime6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime6.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime6.Enabled = false;
             this.NetTime6.Location = new System.Drawing.Point(448, 294);
             this.NetTime6.Name = "NetTime6";
             this.NetTime6.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -301,6 +303,7 @@
             // 
             this.NetTime5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime5.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime5.Enabled = false;
             this.NetTime5.Location = new System.Drawing.Point(448, 268);
             this.NetTime5.Name = "NetTime5";
             this.NetTime5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -353,6 +356,7 @@
             // 
             this.NetTime4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime4.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime4.Enabled = false;
             this.NetTime4.Location = new System.Drawing.Point(448, 242);
             this.NetTime4.Name = "NetTime4";
             this.NetTime4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -405,6 +409,7 @@
             // 
             this.NetTime3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime3.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime3.Enabled = false;
             this.NetTime3.Location = new System.Drawing.Point(448, 216);
             this.NetTime3.Name = "NetTime3";
             this.NetTime3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -457,6 +462,7 @@
             // 
             this.NetTime2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime2.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime2.Enabled = false;
             this.NetTime2.Location = new System.Drawing.Point(448, 190);
             this.NetTime2.Name = "NetTime2";
             this.NetTime2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -509,6 +515,7 @@
             // 
             this.NetTime1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NetTime1.EditValue = new System.DateTime(2020, 6, 15, 0, 0, 0, 0);
+            this.NetTime1.Enabled = false;
             this.NetTime1.Location = new System.Drawing.Point(448, 164);
             this.NetTime1.Name = "NetTime1";
             this.NetTime1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

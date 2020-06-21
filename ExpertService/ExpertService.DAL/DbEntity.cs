@@ -18,7 +18,7 @@ namespace ExpertService.DAL
         {
 
 
-            Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             //Database.EnsureCreated();
             Database.Migrate();
 

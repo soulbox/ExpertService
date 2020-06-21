@@ -28,7 +28,7 @@ namespace ExpertServis.WindowForm.Rapor
         public decimal IslahZATutar { get; set; }
         public decimal ÖdenecekNetİhbar { get => Netİhbar - MahsupEdilicek + IslahZATutar; }
         //kötü niyet
-        public decimal ÖneliSüresiKötü { get => ÖneliSüresi * 2; }
+        public int ÖneliSüresiKötü { get => ÖneliSüresi * 2; }
         public decimal BrütİhbarKötü { get => ÖneliSüresiKötü * GünlükÜcret; }
         public decimal GelirvergisiKötü { get => hesapla(BrütİhbarKötü).Sum(x => x.Vergi); }
         public decimal DamgaVergisiKötü { get => BrütİhbarKötü * 0.00759m; }

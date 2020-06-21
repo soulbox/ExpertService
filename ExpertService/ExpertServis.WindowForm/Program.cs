@@ -28,6 +28,7 @@ namespace ExpertServis.WindowForm
             Application.SetCompatibleTextRenderingDefault(false);
          
             var an = TavanUcreti.TavanDonemleri;
+            var b = AsgariUcret.AsgariDonemleri;
             var user = UnitWork.UserRepo.GetWithDosya(x => x.Id == 1);
             Application.Run(new Main(user));
 

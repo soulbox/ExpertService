@@ -39,7 +39,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.Damgavergisi = new DevExpress.XtraEditors.LabelControl();
+            this.DamgaVergisi = new DevExpress.XtraEditors.LabelControl();
             this.panel9 = new System.Windows.Forms.Panel();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -60,6 +60,18 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.myGroupControl1 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
+            this.İşeBaşlama1 = new DevExpress.XtraEditors.LabelControl();
+            this.myGroupControl2 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
+            this.İştenÇıkış1 = new DevExpress.XtraEditors.LabelControl();
+            this.myGroupControl3 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
+            this.ÖneliSüresi = new DevExpress.XtraEditors.LabelControl();
+            this.myGroupControl4 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
+            this.Brüt1 = new DevExpress.XtraEditors.LabelControl();
+            this.myGroupControl5 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
+            this.GünlükÜcret1 = new DevExpress.XtraEditors.LabelControl();
+            this.myGroupControl6 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
+            this.Brütİhbar1 = new DevExpress.XtraEditors.LabelControl();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -74,7 +86,7 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.DamgavergisiKötü = new DevExpress.XtraEditors.LabelControl();
+            this.DamgaVergisiKötü = new DevExpress.XtraEditors.LabelControl();
             this.panel26 = new System.Windows.Forms.Panel();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.panel29 = new System.Windows.Forms.Panel();
@@ -95,20 +107,6 @@
             this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
             this.panel37 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
-            this.myGroupControl1 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
-            this.İşeBaşlama1 = new DevExpress.XtraEditors.LabelControl();
-            this.myGroupControl2 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
-            this.İştenÇıkış1 = new DevExpress.XtraEditors.LabelControl();
-            this.myGroupControl3 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
-            this.ÖneliSüresi = new DevExpress.XtraEditors.LabelControl();
-            this.myGroupControl4 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
-            this.Brüt1 = new DevExpress.XtraEditors.LabelControl();
-            this.myGroupControl5 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
-            this.GünlükÜcret1 = new DevExpress.XtraEditors.LabelControl();
-            this.myGroupControl6 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
-            this.Brütİhbar1 = new DevExpress.XtraEditors.LabelControl();
             this.myGroupControl7 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
             this.İşeBaşlama2 = new DevExpress.XtraEditors.LabelControl();
             this.myGroupControl8 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
@@ -121,6 +119,8 @@
             this.GünlükÜcret2 = new DevExpress.XtraEditors.LabelControl();
             this.myGroupControl12 = new ExpertServis.WindowForm.CustomControl.MyGroupControl();
             this.BrütİhbarKötü1 = new DevExpress.XtraEditors.LabelControl();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,6 +139,18 @@
             this.panel19.SuspendLayout();
             this.panel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl1)).BeginInit();
+            this.myGroupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl2)).BeginInit();
+            this.myGroupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl3)).BeginInit();
+            this.myGroupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl4)).BeginInit();
+            this.myGroupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl5)).BeginInit();
+            this.myGroupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl6)).BeginInit();
+            this.myGroupControl6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -159,19 +171,6 @@
             this.panel36.SuspendLayout();
             this.panel37.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.panel38.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl1)).BeginInit();
-            this.myGroupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl2)).BeginInit();
-            this.myGroupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl3)).BeginInit();
-            this.myGroupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl4)).BeginInit();
-            this.myGroupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl5)).BeginInit();
-            this.myGroupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl6)).BeginInit();
-            this.myGroupControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl7)).BeginInit();
             this.myGroupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl8)).BeginInit();
@@ -184,6 +183,7 @@
             this.myGroupControl11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl12)).BeginInit();
             this.myGroupControl12.SuspendLayout();
+            this.panel38.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -285,19 +285,19 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.Damgavergisi);
+            this.panel8.Controls.Add(this.DamgaVergisi);
             this.panel8.Location = new System.Drawing.Point(644, 53);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(122, 19);
             this.panel8.TabIndex = 4;
             // 
-            // Damgavergisi
+            // DamgaVergisi
             // 
-            this.Damgavergisi.Location = new System.Drawing.Point(13, 3);
-            this.Damgavergisi.Name = "Damgavergisi";
-            this.Damgavergisi.Size = new System.Drawing.Size(96, 13);
-            this.Damgavergisi.TabIndex = 6;
-            this.Damgavergisi.Text = "₺100.000.000,00";
+            this.DamgaVergisi.Location = new System.Drawing.Point(13, 3);
+            this.DamgaVergisi.Name = "DamgaVergisi";
+            this.DamgaVergisi.Size = new System.Drawing.Size(96, 13);
+            this.DamgaVergisi.TabIndex = 6;
+            this.DamgaVergisi.Text = "₺100.000.000,00";
             // 
             // panel9
             // 
@@ -482,6 +482,174 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(769, 65);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
+            // myGroupControl1
+            // 
+            this.myGroupControl1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.myGroupControl1.AppearanceCaption.Options.UseFont = true;
+            this.myGroupControl1.AppearanceCaption.Options.UseTextOptions = true;
+            this.myGroupControl1.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.myGroupControl1.Controls.Add(this.İşeBaşlama1);
+            this.myGroupControl1.Location = new System.Drawing.Point(3, 3);
+            this.myGroupControl1.Name = "myGroupControl1";
+            this.myGroupControl1.Size = new System.Drawing.Size(122, 56);
+            this.myGroupControl1.TabIndex = 6;
+            this.myGroupControl1.Text = "İŞE BAŞLAMA TARİHİ";
+            // 
+            // İşeBaşlama1
+            // 
+            this.İşeBaşlama1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.İşeBaşlama1.Appearance.Options.UseFont = true;
+            this.İşeBaşlama1.Appearance.Options.UseTextOptions = true;
+            this.İşeBaşlama1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.İşeBaşlama1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.İşeBaşlama1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.İşeBaşlama1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.İşeBaşlama1.Location = new System.Drawing.Point(2, 25);
+            this.İşeBaşlama1.Name = "İşeBaşlama1";
+            this.İşeBaşlama1.Size = new System.Drawing.Size(118, 29);
+            this.İşeBaşlama1.TabIndex = 2;
+            this.İşeBaşlama1.Text = "01.01.2014";
+            // 
+            // myGroupControl2
+            // 
+            this.myGroupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.myGroupControl2.AppearanceCaption.Options.UseFont = true;
+            this.myGroupControl2.AppearanceCaption.Options.UseTextOptions = true;
+            this.myGroupControl2.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.myGroupControl2.Controls.Add(this.İştenÇıkış1);
+            this.myGroupControl2.Location = new System.Drawing.Point(131, 3);
+            this.myGroupControl2.Name = "myGroupControl2";
+            this.myGroupControl2.Size = new System.Drawing.Size(122, 56);
+            this.myGroupControl2.TabIndex = 7;
+            this.myGroupControl2.Text = "İŞTEN ÇIKIŞ TARİHİ";
+            // 
+            // İştenÇıkış1
+            // 
+            this.İştenÇıkış1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.İştenÇıkış1.Appearance.Options.UseFont = true;
+            this.İştenÇıkış1.Appearance.Options.UseTextOptions = true;
+            this.İştenÇıkış1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.İştenÇıkış1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.İştenÇıkış1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.İştenÇıkış1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.İştenÇıkış1.Location = new System.Drawing.Point(2, 25);
+            this.İştenÇıkış1.Name = "İştenÇıkış1";
+            this.İştenÇıkış1.Size = new System.Drawing.Size(118, 29);
+            this.İştenÇıkış1.TabIndex = 2;
+            this.İştenÇıkış1.Text = "01.01.2014";
+            // 
+            // myGroupControl3
+            // 
+            this.myGroupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.myGroupControl3.AppearanceCaption.Options.UseFont = true;
+            this.myGroupControl3.AppearanceCaption.Options.UseTextOptions = true;
+            this.myGroupControl3.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.myGroupControl3.Controls.Add(this.ÖneliSüresi);
+            this.myGroupControl3.Location = new System.Drawing.Point(259, 3);
+            this.myGroupControl3.Name = "myGroupControl3";
+            this.myGroupControl3.Size = new System.Drawing.Size(122, 56);
+            this.myGroupControl3.TabIndex = 8;
+            this.myGroupControl3.Text = "BİLDİRİM ÖNELİ SÜRESİ ";
+            // 
+            // ÖneliSüresi
+            // 
+            this.ÖneliSüresi.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.ÖneliSüresi.Appearance.Options.UseFont = true;
+            this.ÖneliSüresi.Appearance.Options.UseTextOptions = true;
+            this.ÖneliSüresi.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ÖneliSüresi.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.ÖneliSüresi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.ÖneliSüresi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ÖneliSüresi.Location = new System.Drawing.Point(2, 25);
+            this.ÖneliSüresi.Name = "ÖneliSüresi";
+            this.ÖneliSüresi.Size = new System.Drawing.Size(118, 29);
+            this.ÖneliSüresi.TabIndex = 7;
+            this.ÖneliSüresi.Text = "0.000";
+            // 
+            // myGroupControl4
+            // 
+            this.myGroupControl4.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.myGroupControl4.AppearanceCaption.Options.UseFont = true;
+            this.myGroupControl4.AppearanceCaption.Options.UseTextOptions = true;
+            this.myGroupControl4.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.myGroupControl4.Controls.Add(this.Brüt1);
+            this.myGroupControl4.Location = new System.Drawing.Point(387, 3);
+            this.myGroupControl4.Name = "myGroupControl4";
+            this.myGroupControl4.Size = new System.Drawing.Size(122, 56);
+            this.myGroupControl4.TabIndex = 9;
+            this.myGroupControl4.Text = "TAZMİNATA ESAS AYLIK ÜCRETİ";
+            // 
+            // Brüt1
+            // 
+            this.Brüt1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Brüt1.Appearance.Options.UseFont = true;
+            this.Brüt1.Appearance.Options.UseTextOptions = true;
+            this.Brüt1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Brüt1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Brüt1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.Brüt1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Brüt1.Location = new System.Drawing.Point(2, 25);
+            this.Brüt1.Name = "Brüt1";
+            this.Brüt1.Size = new System.Drawing.Size(118, 29);
+            this.Brüt1.TabIndex = 9;
+            this.Brüt1.Text = "₺100.000.000,00";
+            // 
+            // myGroupControl5
+            // 
+            this.myGroupControl5.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.myGroupControl5.AppearanceCaption.Options.UseFont = true;
+            this.myGroupControl5.AppearanceCaption.Options.UseTextOptions = true;
+            this.myGroupControl5.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.myGroupControl5.Controls.Add(this.GünlükÜcret1);
+            this.myGroupControl5.Location = new System.Drawing.Point(515, 3);
+            this.myGroupControl5.Name = "myGroupControl5";
+            this.myGroupControl5.Size = new System.Drawing.Size(122, 56);
+            this.myGroupControl5.TabIndex = 10;
+            this.myGroupControl5.Text = "TAZMİNATA ESAS GÜNLÜK ÜCRETİ ";
+            // 
+            // GünlükÜcret1
+            // 
+            this.GünlükÜcret1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GünlükÜcret1.Appearance.Options.UseFont = true;
+            this.GünlükÜcret1.Appearance.Options.UseTextOptions = true;
+            this.GünlükÜcret1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GünlükÜcret1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.GünlükÜcret1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.GünlükÜcret1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GünlükÜcret1.Location = new System.Drawing.Point(2, 25);
+            this.GünlükÜcret1.Name = "GünlükÜcret1";
+            this.GünlükÜcret1.Size = new System.Drawing.Size(118, 29);
+            this.GünlükÜcret1.TabIndex = 7;
+            this.GünlükÜcret1.Text = "₺100.000.000,00";
+            // 
+            // myGroupControl6
+            // 
+            this.myGroupControl6.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.myGroupControl6.AppearanceCaption.Options.UseFont = true;
+            this.myGroupControl6.AppearanceCaption.Options.UseTextOptions = true;
+            this.myGroupControl6.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.myGroupControl6.Controls.Add(this.Brütİhbar1);
+            this.myGroupControl6.Location = new System.Drawing.Point(643, 3);
+            this.myGroupControl6.Name = "myGroupControl6";
+            this.myGroupControl6.Size = new System.Drawing.Size(122, 56);
+            this.myGroupControl6.TabIndex = 11;
+            this.myGroupControl6.Text = "BRÜT İHBAR TAZMİNATI ";
+            // 
+            // Brütİhbar1
+            // 
+            this.Brütİhbar1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Brütİhbar1.Appearance.Options.UseFont = true;
+            this.Brütİhbar1.Appearance.Options.UseTextOptions = true;
+            this.Brütİhbar1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Brütİhbar1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Brütİhbar1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.Brütİhbar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Brütİhbar1.Location = new System.Drawing.Point(2, 25);
+            this.Brütİhbar1.Name = "Brütİhbar1";
+            this.Brütİhbar1.Size = new System.Drawing.Size(118, 29);
+            this.Brütİhbar1.TabIndex = 8;
+            this.Brütİhbar1.Text = "₺100.000.000,00";
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.labelControl3);
@@ -513,7 +681,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(793, 574);
             this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel20
             // 
@@ -614,19 +781,19 @@
             // 
             // panel25
             // 
-            this.panel25.Controls.Add(this.DamgavergisiKötü);
+            this.panel25.Controls.Add(this.DamgaVergisiKötü);
             this.panel25.Location = new System.Drawing.Point(644, 53);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(122, 19);
             this.panel25.TabIndex = 4;
             // 
-            // DamgavergisiKötü
+            // DamgaVergisiKötü
             // 
-            this.DamgavergisiKötü.Location = new System.Drawing.Point(13, 3);
-            this.DamgavergisiKötü.Name = "DamgavergisiKötü";
-            this.DamgavergisiKötü.Size = new System.Drawing.Size(96, 13);
-            this.DamgavergisiKötü.TabIndex = 6;
-            this.DamgavergisiKötü.Text = "₺100.000.000,00";
+            this.DamgaVergisiKötü.Location = new System.Drawing.Point(13, 3);
+            this.DamgaVergisiKötü.Name = "DamgaVergisiKötü";
+            this.DamgaVergisiKötü.Size = new System.Drawing.Size(96, 13);
+            this.DamgaVergisiKötü.TabIndex = 6;
+            this.DamgaVergisiKötü.Text = "₺100.000.000,00";
             // 
             // panel26
             // 
@@ -811,164 +978,6 @@
             this.flowLayoutPanel5.Size = new System.Drawing.Size(769, 65);
             this.flowLayoutPanel5.TabIndex = 0;
             // 
-            // panel38
-            // 
-            this.panel38.Controls.Add(this.labelControl46);
-            this.panel38.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel38.Location = new System.Drawing.Point(0, 0);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(769, 37);
-            this.panel38.TabIndex = 1;
-            // 
-            // labelControl46
-            // 
-            this.labelControl46.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl46.Appearance.Font = new System.Drawing.Font("Verdana", 20F);
-            this.labelControl46.Appearance.Options.UseFont = true;
-            this.labelControl46.Location = new System.Drawing.Point(161, 2);
-            this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(446, 32);
-            this.labelControl46.TabIndex = 3;
-            this.labelControl46.Text = "KÖTÜ NİYET TAZMİNATI HESABI";
-            // 
-            // myGroupControl1
-            // 
-            this.myGroupControl1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.myGroupControl1.AppearanceCaption.Options.UseFont = true;
-            this.myGroupControl1.AppearanceCaption.Options.UseTextOptions = true;
-            this.myGroupControl1.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.myGroupControl1.Controls.Add(this.İşeBaşlama1);
-            this.myGroupControl1.Location = new System.Drawing.Point(3, 3);
-            this.myGroupControl1.Name = "myGroupControl1";
-            this.myGroupControl1.Size = new System.Drawing.Size(122, 56);
-            this.myGroupControl1.TabIndex = 6;
-            this.myGroupControl1.Text = "İŞE BAŞLAMA TARİHİ";
-            // 
-            // İşeBaşlama1
-            // 
-            this.İşeBaşlama1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.İşeBaşlama1.Appearance.Options.UseFont = true;
-            this.İşeBaşlama1.Location = new System.Drawing.Point(23, 37);
-            this.İşeBaşlama1.Name = "İşeBaşlama1";
-            this.İşeBaşlama1.Size = new System.Drawing.Size(72, 13);
-            this.İşeBaşlama1.TabIndex = 2;
-            this.İşeBaşlama1.Text = "01.01.2014";
-            // 
-            // myGroupControl2
-            // 
-            this.myGroupControl2.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.myGroupControl2.AppearanceCaption.Options.UseFont = true;
-            this.myGroupControl2.AppearanceCaption.Options.UseTextOptions = true;
-            this.myGroupControl2.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.myGroupControl2.Controls.Add(this.İştenÇıkış1);
-            this.myGroupControl2.Location = new System.Drawing.Point(131, 3);
-            this.myGroupControl2.Name = "myGroupControl2";
-            this.myGroupControl2.Size = new System.Drawing.Size(122, 56);
-            this.myGroupControl2.TabIndex = 7;
-            this.myGroupControl2.Text = "İŞTEN ÇIKIŞ TARİHİ";
-            // 
-            // İştenÇıkış1
-            // 
-            this.İştenÇıkış1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.İştenÇıkış1.Appearance.Options.UseFont = true;
-            this.İştenÇıkış1.Location = new System.Drawing.Point(23, 37);
-            this.İştenÇıkış1.Name = "İştenÇıkış1";
-            this.İştenÇıkış1.Size = new System.Drawing.Size(72, 13);
-            this.İştenÇıkış1.TabIndex = 2;
-            this.İştenÇıkış1.Text = "01.01.2014";
-            // 
-            // myGroupControl3
-            // 
-            this.myGroupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.myGroupControl3.AppearanceCaption.Options.UseFont = true;
-            this.myGroupControl3.AppearanceCaption.Options.UseTextOptions = true;
-            this.myGroupControl3.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.myGroupControl3.Controls.Add(this.ÖneliSüresi);
-            this.myGroupControl3.Location = new System.Drawing.Point(259, 3);
-            this.myGroupControl3.Name = "myGroupControl3";
-            this.myGroupControl3.Size = new System.Drawing.Size(122, 56);
-            this.myGroupControl3.TabIndex = 8;
-            this.myGroupControl3.Text = "BİLDİRİM ÖNELİ SÜRESİ ";
-            // 
-            // ÖneliSüresi
-            // 
-            this.ÖneliSüresi.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ÖneliSüresi.Appearance.Options.UseFont = true;
-            this.ÖneliSüresi.Location = new System.Drawing.Point(43, 37);
-            this.ÖneliSüresi.Name = "ÖneliSüresi";
-            this.ÖneliSüresi.Size = new System.Drawing.Size(36, 13);
-            this.ÖneliSüresi.TabIndex = 7;
-            this.ÖneliSüresi.Text = "0.000";
-            // 
-            // myGroupControl4
-            // 
-            this.myGroupControl4.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.myGroupControl4.AppearanceCaption.Options.UseFont = true;
-            this.myGroupControl4.AppearanceCaption.Options.UseTextOptions = true;
-            this.myGroupControl4.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.myGroupControl4.Controls.Add(this.Brüt1);
-            this.myGroupControl4.Location = new System.Drawing.Point(387, 3);
-            this.myGroupControl4.Name = "myGroupControl4";
-            this.myGroupControl4.Size = new System.Drawing.Size(122, 56);
-            this.myGroupControl4.TabIndex = 9;
-            this.myGroupControl4.Text = "TAZMİNATA ESAS AYLIK ÜCRETİ";
-            // 
-            // Brüt1
-            // 
-            this.Brüt1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Brüt1.Appearance.Options.UseFont = true;
-            this.Brüt1.Location = new System.Drawing.Point(7, 37);
-            this.Brüt1.Name = "Brüt1";
-            this.Brüt1.Size = new System.Drawing.Size(108, 13);
-            this.Brüt1.TabIndex = 9;
-            this.Brüt1.Text = "₺100.000.000,00";
-            // 
-            // myGroupControl5
-            // 
-            this.myGroupControl5.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.myGroupControl5.AppearanceCaption.Options.UseFont = true;
-            this.myGroupControl5.AppearanceCaption.Options.UseTextOptions = true;
-            this.myGroupControl5.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.myGroupControl5.Controls.Add(this.GünlükÜcret1);
-            this.myGroupControl5.Location = new System.Drawing.Point(515, 3);
-            this.myGroupControl5.Name = "myGroupControl5";
-            this.myGroupControl5.Size = new System.Drawing.Size(122, 56);
-            this.myGroupControl5.TabIndex = 10;
-            this.myGroupControl5.Text = "TAZMİNATA ESAS GÜNLÜK ÜCRETİ ";
-            // 
-            // GünlükÜcret1
-            // 
-            this.GünlükÜcret1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.GünlükÜcret1.Appearance.Options.UseFont = true;
-            this.GünlükÜcret1.Location = new System.Drawing.Point(7, 37);
-            this.GünlükÜcret1.Name = "GünlükÜcret1";
-            this.GünlükÜcret1.Size = new System.Drawing.Size(108, 13);
-            this.GünlükÜcret1.TabIndex = 7;
-            this.GünlükÜcret1.Text = "₺100.000.000,00";
-            // 
-            // myGroupControl6
-            // 
-            this.myGroupControl6.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.myGroupControl6.AppearanceCaption.Options.UseFont = true;
-            this.myGroupControl6.AppearanceCaption.Options.UseTextOptions = true;
-            this.myGroupControl6.AppearanceCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.myGroupControl6.Controls.Add(this.Brütİhbar1);
-            this.myGroupControl6.Location = new System.Drawing.Point(643, 3);
-            this.myGroupControl6.Name = "myGroupControl6";
-            this.myGroupControl6.Size = new System.Drawing.Size(122, 56);
-            this.myGroupControl6.TabIndex = 11;
-            this.myGroupControl6.Text = "BRÜT İHBAR TAZMİNATI ";
-            // 
-            // Brütİhbar1
-            // 
-            this.Brütİhbar1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Brütİhbar1.Appearance.Options.UseFont = true;
-            this.Brütİhbar1.Location = new System.Drawing.Point(7, 37);
-            this.Brütİhbar1.Name = "Brütİhbar1";
-            this.Brütİhbar1.Size = new System.Drawing.Size(108, 13);
-            this.Brütİhbar1.TabIndex = 8;
-            this.Brütİhbar1.Text = "₺100.000.000,00";
-            // 
             // myGroupControl7
             // 
             this.myGroupControl7.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
@@ -986,9 +995,14 @@
             // 
             this.İşeBaşlama2.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.İşeBaşlama2.Appearance.Options.UseFont = true;
-            this.İşeBaşlama2.Location = new System.Drawing.Point(23, 37);
+            this.İşeBaşlama2.Appearance.Options.UseTextOptions = true;
+            this.İşeBaşlama2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.İşeBaşlama2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.İşeBaşlama2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.İşeBaşlama2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.İşeBaşlama2.Location = new System.Drawing.Point(2, 25);
             this.İşeBaşlama2.Name = "İşeBaşlama2";
-            this.İşeBaşlama2.Size = new System.Drawing.Size(72, 13);
+            this.İşeBaşlama2.Size = new System.Drawing.Size(118, 29);
             this.İşeBaşlama2.TabIndex = 2;
             this.İşeBaşlama2.Text = "01.01.2014";
             // 
@@ -1009,9 +1023,14 @@
             // 
             this.İştenÇıkış2.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.İştenÇıkış2.Appearance.Options.UseFont = true;
-            this.İştenÇıkış2.Location = new System.Drawing.Point(23, 37);
+            this.İştenÇıkış2.Appearance.Options.UseTextOptions = true;
+            this.İştenÇıkış2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.İştenÇıkış2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.İştenÇıkış2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.İştenÇıkış2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.İştenÇıkış2.Location = new System.Drawing.Point(2, 25);
             this.İştenÇıkış2.Name = "İştenÇıkış2";
-            this.İştenÇıkış2.Size = new System.Drawing.Size(72, 13);
+            this.İştenÇıkış2.Size = new System.Drawing.Size(118, 29);
             this.İştenÇıkış2.TabIndex = 2;
             this.İştenÇıkış2.Text = "01.01.2014";
             // 
@@ -1032,9 +1051,14 @@
             // 
             this.ÖneliSüresiKötü.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.ÖneliSüresiKötü.Appearance.Options.UseFont = true;
-            this.ÖneliSüresiKötü.Location = new System.Drawing.Point(43, 37);
+            this.ÖneliSüresiKötü.Appearance.Options.UseTextOptions = true;
+            this.ÖneliSüresiKötü.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.ÖneliSüresiKötü.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.ÖneliSüresiKötü.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.ÖneliSüresiKötü.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ÖneliSüresiKötü.Location = new System.Drawing.Point(2, 25);
             this.ÖneliSüresiKötü.Name = "ÖneliSüresiKötü";
-            this.ÖneliSüresiKötü.Size = new System.Drawing.Size(36, 13);
+            this.ÖneliSüresiKötü.Size = new System.Drawing.Size(118, 29);
             this.ÖneliSüresiKötü.TabIndex = 7;
             this.ÖneliSüresiKötü.Text = "0.000";
             // 
@@ -1055,9 +1079,14 @@
             // 
             this.Brüt2.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.Brüt2.Appearance.Options.UseFont = true;
-            this.Brüt2.Location = new System.Drawing.Point(7, 37);
+            this.Brüt2.Appearance.Options.UseTextOptions = true;
+            this.Brüt2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.Brüt2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.Brüt2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.Brüt2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Brüt2.Location = new System.Drawing.Point(2, 25);
             this.Brüt2.Name = "Brüt2";
-            this.Brüt2.Size = new System.Drawing.Size(108, 13);
+            this.Brüt2.Size = new System.Drawing.Size(118, 29);
             this.Brüt2.TabIndex = 9;
             this.Brüt2.Text = "₺100.000.000,00";
             // 
@@ -1078,9 +1107,14 @@
             // 
             this.GünlükÜcret2.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.GünlükÜcret2.Appearance.Options.UseFont = true;
-            this.GünlükÜcret2.Location = new System.Drawing.Point(7, 37);
+            this.GünlükÜcret2.Appearance.Options.UseTextOptions = true;
+            this.GünlükÜcret2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.GünlükÜcret2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.GünlükÜcret2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.GünlükÜcret2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GünlükÜcret2.Location = new System.Drawing.Point(2, 25);
             this.GünlükÜcret2.Name = "GünlükÜcret2";
-            this.GünlükÜcret2.Size = new System.Drawing.Size(108, 13);
+            this.GünlükÜcret2.Size = new System.Drawing.Size(118, 29);
             this.GünlükÜcret2.TabIndex = 7;
             this.GünlükÜcret2.Text = "₺100.000.000,00";
             // 
@@ -1101,11 +1135,36 @@
             // 
             this.BrütİhbarKötü1.Appearance.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold);
             this.BrütİhbarKötü1.Appearance.Options.UseFont = true;
-            this.BrütİhbarKötü1.Location = new System.Drawing.Point(7, 37);
+            this.BrütİhbarKötü1.Appearance.Options.UseTextOptions = true;
+            this.BrütİhbarKötü1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.BrütİhbarKötü1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.BrütİhbarKötü1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.BrütİhbarKötü1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BrütİhbarKötü1.Location = new System.Drawing.Point(2, 25);
             this.BrütİhbarKötü1.Name = "BrütİhbarKötü1";
-            this.BrütİhbarKötü1.Size = new System.Drawing.Size(108, 13);
+            this.BrütİhbarKötü1.Size = new System.Drawing.Size(118, 29);
             this.BrütİhbarKötü1.TabIndex = 8;
             this.BrütİhbarKötü1.Text = "₺100.000.000,00";
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.labelControl46);
+            this.panel38.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel38.Location = new System.Drawing.Point(0, 0);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(769, 37);
+            this.panel38.TabIndex = 1;
+            // 
+            // labelControl46
+            // 
+            this.labelControl46.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl46.Appearance.Font = new System.Drawing.Font("Verdana", 20F);
+            this.labelControl46.Appearance.Options.UseFont = true;
+            this.labelControl46.Location = new System.Drawing.Point(161, 2);
+            this.labelControl46.Name = "labelControl46";
+            this.labelControl46.Size = new System.Drawing.Size(446, 32);
+            this.labelControl46.TabIndex = 3;
+            this.labelControl46.Text = "KÖTÜ NİYET TAZMİNATI HESABI";
             // 
             // İhbarTazminatıForm
             // 
@@ -1147,6 +1206,18 @@
             this.panel19.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl1)).EndInit();
+            this.myGroupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl2)).EndInit();
+            this.myGroupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl3)).EndInit();
+            this.myGroupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl4)).EndInit();
+            this.myGroupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl5)).EndInit();
+            this.myGroupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl6)).EndInit();
+            this.myGroupControl6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -1182,44 +1253,20 @@
             this.panel36.PerformLayout();
             this.panel37.ResumeLayout(false);
             this.flowLayoutPanel5.ResumeLayout(false);
-            this.panel38.ResumeLayout(false);
-            this.panel38.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl1)).EndInit();
-            this.myGroupControl1.ResumeLayout(false);
-            this.myGroupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl2)).EndInit();
-            this.myGroupControl2.ResumeLayout(false);
-            this.myGroupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl3)).EndInit();
-            this.myGroupControl3.ResumeLayout(false);
-            this.myGroupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl4)).EndInit();
-            this.myGroupControl4.ResumeLayout(false);
-            this.myGroupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl5)).EndInit();
-            this.myGroupControl5.ResumeLayout(false);
-            this.myGroupControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.myGroupControl6)).EndInit();
-            this.myGroupControl6.ResumeLayout(false);
-            this.myGroupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl7)).EndInit();
             this.myGroupControl7.ResumeLayout(false);
-            this.myGroupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl8)).EndInit();
             this.myGroupControl8.ResumeLayout(false);
-            this.myGroupControl8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl9)).EndInit();
             this.myGroupControl9.ResumeLayout(false);
-            this.myGroupControl9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl10)).EndInit();
             this.myGroupControl10.ResumeLayout(false);
-            this.myGroupControl10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl11)).EndInit();
             this.myGroupControl11.ResumeLayout(false);
-            this.myGroupControl11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myGroupControl12)).EndInit();
             this.myGroupControl12.ResumeLayout(false);
-            this.myGroupControl12.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1242,7 +1289,7 @@
         private System.Windows.Forms.Panel panel7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.Panel panel8;
-        private DevExpress.XtraEditors.LabelControl Damgavergisi;
+        private DevExpress.XtraEditors.LabelControl DamgaVergisi;
         private System.Windows.Forms.Panel panel9;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.Panel panel12;
@@ -1300,7 +1347,7 @@
         private System.Windows.Forms.Panel panel24;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private System.Windows.Forms.Panel panel25;
-        private DevExpress.XtraEditors.LabelControl DamgavergisiKötü;
+        private DevExpress.XtraEditors.LabelControl DamgaVergisiKötü;
         private System.Windows.Forms.Panel panel26;
         private DevExpress.XtraEditors.LabelControl labelControl29;
         private System.Windows.Forms.Panel panel29;
