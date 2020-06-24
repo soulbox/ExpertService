@@ -32,7 +32,7 @@ namespace ExpertService.Model
         public string TalepAdı { get; set; }
         public Tanımlamalar.TalepTipi TalepTipi { get; set; }
         public string Açıklama { get; set; }
-
+        
 
     }
 }

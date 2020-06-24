@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExpertService.DAL.Repo.Concreate;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -17,7 +18,7 @@ namespace ExpertService.DAL.Repo.Abstract
         void Add(IEnumerable<Entity> entity);
         void Remove(Entity entity);
         void Remove(IEnumerable<Entity> entity);
-
+        ResultControl Kontrolet(Entity ent);
 
 
     }

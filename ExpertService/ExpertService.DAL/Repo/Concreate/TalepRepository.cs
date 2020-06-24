@@ -10,5 +10,6 @@ namespace ExpertService.DAL.Repo.Concreate
 {
     public class TalepRepository:Repository<Talepler >,ITalepRepository 
     {
+ //wcf
     }
 }

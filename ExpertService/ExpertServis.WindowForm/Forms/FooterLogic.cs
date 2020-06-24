@@ -91,6 +91,12 @@ namespace ExpertServis.WindowForm.Forms
         private void BtneAdd_Click(object sender, EventArgs e)
         {
             var yeni = AddEntity();
+            var sonuç = Repo.Kontrolet(yeni);
+            if (sonuç.Hata)
+            {
+                MsgError(sonuç.HataAçıklama, "Hata");
+                return;
+            }
             Repo.Add(yeni);
             if (DbManager.UnitWork.Complete() > 0)
             {

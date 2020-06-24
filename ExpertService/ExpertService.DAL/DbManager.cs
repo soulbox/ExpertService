@@ -14,10 +14,10 @@ namespace ExpertService.DAL
         public static DbEntity DB { get => entity = entity ?? new DbEntity(); }
         static DbManager()
         {
-
+            
             entity = new DbEntity();
             unit = new UnitOfWork();
-            //entity.c
+            
         }
     }
 }

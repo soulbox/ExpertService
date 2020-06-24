@@ -16,6 +16,7 @@ namespace ExpertService.Model
         }
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }
+
         public Boolean KıdemAlındı { get; set; }
         public Boolean ihbarAlındı { get; set; }
         public Boolean FazlaMesaiAlındı { get; set; }

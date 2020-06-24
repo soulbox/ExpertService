@@ -13,6 +13,7 @@ using System.Globalization;
 using System.Runtime.CompilerServices;
 using DevExpress.XtraGrid.Views.Grid;
 using ExpertService.Data;
+using ExpertService.DAL;
 
 namespace ExpertServis.WindowForm.Forms
 {
@@ -78,7 +79,13 @@ namespace ExpertServis.WindowForm.Forms
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+            //1.yöntem
+            //using (DbEntity db = new DbEntity())
+            //{
+            //    db.t
+            //}
 
+         
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
